@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EASYMAG | Office</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/backoffice/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/backoffice/css/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700">
+    <link rel="stylesheet" href="{{ asset('assets/vendor/font-awesome/css/font-awesome.min.css') }}">
+    {% block stylesheets %}{% endblock %}
+</head>
+
+<body>
+<!--  Menu nav sidebar left -->
+<div id="wrapper">
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element">
+                        <span>
+                            <img alt="image" class="img-circle" src="">
+                        </span>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Amelia Smith</strong></span>
+                                <span class="text-muted text-xs block">Art Director <b class="caret"></b></span>
+                            </span>
+                        </a>
+                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                            <li><a href="profile.html">Profile</a></li>
+                            <li><a href="contacts.html">Contacts</a></li>
+                            <li><a href="mailbox.html">Mailbox</a></li>
+                            <li class="divider"></li>
+                            <li><a href="login.html">Logout</a></li>
+                        </ul>
+                    </div>
+                    <div class="logo-element">
+                      IN+
+                    </div>
+                </li>
+
+                    <!-- All li elements o navigation -->
+                    {% block main_menu %}{% endblock %}
+
+            </ul>
+        </div>
+    </nav>
+    <!-- End menu -->
+
+    <!-- Top menu / Content -->
+    <div id="page-wrapper" class=" gray-bg">
+        <div class="row border-bottom">
+        <!-- Top menu -->
+            <nav class="navbar navbar-static-top white-bg" role="navigation">
+                <div class="navbar-header">
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                        <form role="search" class="navbar-form-custom" method="post" action="#">
+                            <div class="form-group">
+                                <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
+                            </div>
+                        </form>
+                </div>
+                    {% block top_menu %}{% endblock %}
+            </nav>
+        </div>
+        <!-- End Top menu -->
+
+        <!--  Content -->
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-10">
+                <!-- BreadCrumb -->
+                {% block titre_page %}{% endblock %}
+
+                {% block breadcrumb %}{% endblock %}
+            </div>
+            <!-- End BreadCrumb -->
+
+            <div class="col-lg-2">
+            </div>
+        </div>
+
+        <div class="wrapper wrapper-content">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+    <!-- END Page Content -->
+</div>
+<!-- END Page Content -->
+
+{% block modals %}{% endblock %}
+
+
+
+<script src="{{ asset('assets/vendor/jquery/jquery-2.2.4.min.js') }}"></script>
+<script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('assets/backoffice/js/plugins.js') }}"></script>
+{% block scripts %}{% endblock %}
+
+</body>
+</html>

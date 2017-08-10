@@ -1,0 +1,22 @@
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+easy_mag_back_office_commercial:
+    resource: "@EasyMagUserBundle/Resources/config/routing_commercial.yml"
+    prefix:   /commercial
+
+easy_mag_back_office_graphiste:
+    resource: "@EasyMagUserBundle/Resources/config/routing_graphiste.yml"
+    prefix:   /graphiste
+
+easy_mag_back_office_admin:
+    resource: "@EasyMagUserBundle/Resources/config/routing_admin.yml"
+    prefix:   /admin
+
+easy_mag_order:
+    resource: "@EasyMagOrderBundle/Resources/config/routing.yml"
+    prefix:   /commande
+
+easy_mag_user_front_office:
+    resource: "@EasyMagUserBundle/Resources/config/routing.yml"
+    prefix:   /

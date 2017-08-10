@@ -1,0 +1,5 @@
+easy_mag_user_homepage:
+    path:     /
+    defaults: { _controller: EasyMagUserBundle:FrontOffice:index }
+
+

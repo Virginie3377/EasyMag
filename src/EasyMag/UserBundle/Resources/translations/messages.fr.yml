@@ -1,0 +1,55 @@
+profile:
+    show:
+        username: 'Nom d''utilisateur'
+        email: 'Adresse e-mail'
+    edit:
+        submit: 'Mettre à jour'
+    flash:
+        updated: 'Le profil a été mis à jour.'
+    fields:
+        gender: Civilité
+        firstname: Prénom
+        lastname: Nom
+        address: Adresse
+        city: Ville
+        country: Pays
+        zip_code: Code postal
+        phone: Téléphone
+        email: E-mail
+        password_first: Mot de passe
+        password_second: Mot de passe (validation)
+
+user:
+    imageFile: Image du profil
+group:
+    edit:
+        submit: 'Mettre à jour le groupe'
+    show:
+        name: 'Nom du groupe'
+    new:
+        submit: 'Créer le groupe'
+    flash:
+        updated: 'Le groupe a été mis à jour.'
+        created: 'Le groupe a été créé.'
+        deleted: 'Le groupe a été supprimé.'
+security:
+    login:
+        username: 'Nom d''utilisateur'
+        password: 'Mot de passe'
+        remember_me: 'Se souvenir de moi'
+        submit: 'Se connecter'
+
+layout:
+    logout: Déconnexion
+    login: Connexion
+    register: Inscription
+    logged_in_as: 'Connecté en tant que %username%'
+form:
+    group_name: 'Nom du groupe'
+    username: 'Nom d''utilisateur'
+    email: 'Adresse e-mail'
+    current_password: 'Mot de passe actuel'
+    password: 'Mot de passe'
+    password_confirmation: 'Répéter le mot de passe'
+    new_password: 'Nouveau mot de passe'
+    new_password_confirmation: 'Répéter le nouveau mot de passe'
