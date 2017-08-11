@@ -170,7 +170,7 @@ h5 {
 .nav-header {
   padding: 33px 25px;
   background-color: #2f4050;
-  background-image: url("patterns/header-profile.png");
+  background-image: url('../../img/patterns/header-profile.png');
 }
 .pace-done .nav-header {
   transition: all 0.4s;
@@ -3495,7 +3495,7 @@ body.full-height-layout #page-wrapper {
   min-height: auto;
 }
 body.boxed-layout {
-  background: url('patterns/shattered.png');
+  background: url('../../img/patterns/shattered.png');
 }
 body.boxed-layout #wrapper {
   background-color: #2f4050;
@@ -6828,28 +6828,28 @@ body.body-small .vote-icon {
 .pace-inactive {
   display: none;
 }
-body.landing-page {
+/*body.landing-page {
   color: #676a6c;
   font-family: 'Open Sans', helvetica, arial, sans-serif;
   background-color: #fff;
 }
 .landing-page {
-  /* CUSTOMIZE THE NAVBAR
-  -------------------------------------------------- */
-  /* Flip around the padding for proper display in narrow viewports */
-  /* BACKGROUNDS SLIDER
-  -------------------------------------------------- */
-  /* CUSTOMIZE THE CAROUSEL
-  -------------------------------------------------- */
-  /* Carousel base class */
-  /* Since positioning the image, we need to help out the caption */
-  /* Declare heights because of positioning of img element */
-  /* Sections
-  ------------------------- */
-  /* Buttons - only primary custom button
-  ------------------------- */
-  /* RESPONSIVE CSS
-  -------------------------------------------------- */
+  !* CUSTOMIZE THE NAVBAR
+  -------------------------------------------------- *!
+  !* Flip around the padding for proper display in narrow viewports *!
+  !* BACKGROUNDS SLIDER
+  -------------------------------------------------- *!
+  !* CUSTOMIZE THE CAROUSEL
+  -------------------------------------------------- *!
+  !* Carousel base class *!
+  !* Since positioning the image, we need to help out the caption *!
+  !* Declare heights because of positioning of img element *!
+  !* Sections
+  ------------------------- *!
+  !* Buttons - only primary custom button
+  ------------------------- *!
+  !* RESPONSIVE CSS
+  -------------------------------------------------- *!
 }
 .landing-page .container {
   overflow: hidden;
@@ -7314,7 +7314,7 @@ body.landing-page {
 .landing-page fieldset[disabled] .btn-primary.active {
   background-color: #1dc5a3;
   border-color: #1dc5a3;
-}
+}*/
 @media (min-width: 768px) {
   .landing-page {
     /* Navbar positioning foo */
@@ -7722,14 +7722,14 @@ body.rtls.top-navigation .footer.fixed {
 }
 .blue-skin {
   font-weight: 600;
-  background: url("patterns/header-profile-skin-1.png") repeat scroll 0 0;
+  background: url("../../img/patterns/header-profile-skin-1.png") repeat scroll 0 0;
 }
 .blue-skin:hover {
   background: #0d8ddb;
 }
 .yellow-skin {
   font-weight: 600;
-  background: url("patterns/header-profile-skin-3.png") repeat scroll 0 100%;
+  background: url("../../img/patterns/header-profile-skin-3.png") repeat scroll 0 100%;
 }
 .yellow-skin:hover {
   background: #ce8735;
@@ -7737,10 +7737,10 @@ body.rtls.top-navigation .footer.fixed {
 .ultra-skin {
   padding: 20px 10px;
   font-weight: 600;
-  background: url("patterns/3.png") repeat scroll 0 0;
+  background: url("../../img/patterns/3.png") repeat scroll 0 0;
 }
 .ultra-skin:hover {
-  background: url("patterns/4.png") repeat scroll 0 0;
+  background: url("../../img/patterns/4.png") repeat scroll 0 0;
 }
 /*
  *
@@ -7762,7 +7762,7 @@ body.rtls.top-navigation .footer.fixed {
 }
 .skin-1 .nav-header {
   background-color: #0e9aef;
-  background-image: url('patterns/header-profile-skin-1.png');
+  background-image: url('../../img/patterns/header-profile-skin-1.png');
 }
 .skin-1.mini-navbar .nav-second-level {
   background: #3e495f;
@@ -7868,7 +7868,7 @@ body.skin-2 {
 }
 .skin-2 .nav-header {
   background-color: #23c6c8;
-  background-image: url('patterns/header-profile-skin-2.png');
+  background-image: url('../../img/patterns/header-profile-skin-2.png');
 }
 .skin-2.mini-navbar .nav-second-level {
   background: #ededed;
@@ -8021,7 +8021,7 @@ body.boxed-layout.skin-3 #wrapper {
 }
 .skin-3 .nav-header {
   background-color: #ecba52;
-  background-image: url('patterns/header-profile-skin-3.png');
+  background-image: url('../../img/patterns/header-profile-skin-3.png');
 }
 .skin-3.mini-navbar .nav-second-level {
   background: #3e2c42;
@@ -8112,7 +8112,7 @@ body.md-skin {
   background-color: #ffffff;
 }
 .md-skin .nav-header {
-  background: url("patterns/4.png") no-repeat;
+  background: url("../../img/patterns/4.png") no-repeat;
 }
 .md-skin .label,
 .md-skin .badge {
