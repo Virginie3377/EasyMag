@@ -8,10 +8,14 @@
 {% block stylesheets %}
 {% endblock %}
 
-{% block menu %}
-{{ render(controller('EasyMagUserBundle:Commercial:mainmenu')) }}
+{% block profile %}
+    {{ render(controller('EasyMagUserBundle:Commercial:profile')) }}
 {% endblock %}
 
+
+{% block menu %}
+    {{ render(controller('EasyMagUserBundle:Commercial:mainmenu')) }}
+{% endblock %}
 
 
 {% block content %}

@@ -1,0 +1,25 @@
+<div class="dropdown profile-element">
+
+        <span>
+            <img alt="image" class="img-circle" src="{{ asset('assets/backoffice/img/users/avatar1.jpg') }}" style="width: 48px; height: 48px;" >
+        </span>
+
+        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+            {% for commercial in commercials %}
+            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">{{ commercial.firstname }} {{ commercial.lastname }}</strong></span>
+                {% endfor %}
+                <span class="text-muted text-xs block">Conseiller en Communication <b class="caret"></b></span>
+            </span>
+        </a>
+
+    <ul class="dropdown-menu animated fadeInRight m-t-xs">
+        <li><a href="profile.html">Profil</a></li>
+        <li><a href="contacts.html">Client</a></li>
+        <li><a href="mailbox.html">Boîte Mail</a></li>
+        <li class="divider"></li>
+        <li><a href="login.html">Logout</a></li>
+    </ul>
+</div>
+<div class="logo-element">
+    IN+
+</div>
