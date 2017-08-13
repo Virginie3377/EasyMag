@@ -17,7 +17,7 @@ class CommercialController extends Controller
         ));
     }
 
-    public function menuAction()
+    public function mainMenuAction()
     {
 
         return $this->render('EasyMagUserBundle:BackOffice/Commercial:main_menu.html.twig', array(
@@ -29,11 +29,11 @@ class CommercialController extends Controller
     {
 
         $em = $this->getDoctrine()->getManager();
-        $commercials = $em->getRepository(Commercial::class)->findOneByUser($this->getUser());
+        $commercial = $em->getRepository(Commercial::class)->findOneByUser($this->getUser());
 
 
         return $this->render('EasyMagUserBundle:BackOffice/Commercial:profile.html.twig', array(
-            'commercials' => $commercials,
+            'commercial' => $commercial,
         ));
     }
 
