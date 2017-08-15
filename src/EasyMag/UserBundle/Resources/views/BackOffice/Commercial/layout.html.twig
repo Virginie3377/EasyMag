@@ -17,13 +17,17 @@
     {{ render(controller('EasyMagUserBundle:Commercial:mainMenu')) }}
 {% endblock %}
 
-
-{% block content %}
+{% block top_menu %}
+    {{ render(controller('EasyMagUserBundle:Commercial:topMenu')) }}
 {% endblock %}
+
+
+{% block content %} {% endblock %}
 
 {% block modals %}
 {% endblock %}
 
 
 {% block scripts %}
+
 {% endblock %}

@@ -25,6 +25,14 @@ class CommercialController extends Controller
         ));
     }
 
+    public function topMenuAction()
+    {
+
+        return $this->render('EasyMagUserBundle:BackOffice/Commercial:top_menu.html.twig', array(
+            //....
+        ));
+    }
+
     public function profileAction()
     {
 
