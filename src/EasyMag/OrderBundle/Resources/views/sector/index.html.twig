@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Sectors list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Periodicity</th>
+                <th>Datepublication</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for sector in sectors %}
+            <tr>
+                <td><a href="{{ path('secteur_show', { 'id': sector.id }) }}">{{ sector.id }}</a></td>
+                <td>{{ sector.name }}</td>
+                <td>{{ sector.periodicity }}</td>
+                <td>{% if sector.datepublication %}{{ sector.datepublication|date('Y-m-d') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('secteur_show', { 'id': sector.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('secteur_edit', { 'id': sector.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('secteur_new') }}">Create a new sector</a>
+        </li>
+    </ul>
+{% endblock %}

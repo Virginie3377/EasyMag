@@ -5,3 +5,7 @@ easy_mag_order_client:
 easy_mag_order_back_office_homepage:
     path:     /
     defaults: { _controller: EasyMagOrderBundle:Default:index }
+
+easy_mag_order_secteur:
+        resource: "@EasyMagOrderBundle/Resources/config/routing_sector.yml"
+        prefix:   /secteur
