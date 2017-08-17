@@ -1,0 +1,35 @@
+{% extends '@EasyMagUser/BackOffice/Commercial/layout.html.twig' %}
+
+{% block stylesheets %}
+
+{% endblock %}
+
+
+{% block title %}Title{% endblock %}
+
+{% block breadcrumb %}
+    <h2>Tableau de bord</h2>
+    <ol class="breadcrumb">
+        <li>
+            <a href="index.html">Voici le</a>
+        </li>
+        <li class="active">
+            <strong>Breadcrumb</strong>
+        </li>
+    </ol>
+{% endblock %}
+
+ {% block content %}
+    <h1>Customer creation</h1>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input type="submit" value="Create" />
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('client_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

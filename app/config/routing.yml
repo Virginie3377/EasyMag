@@ -15,7 +15,7 @@ easy_mag_back_office_admin:
 
 easy_mag_order:
     resource: "@EasyMagOrderBundle/Resources/config/routing.yml"
-    prefix:   /commande
+    prefix:   /gestion
 
 easy_mag_user_front_office:
     resource: "@EasyMagUserBundle/Resources/config/routing.yml"

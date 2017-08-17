@@ -1,0 +1,76 @@
+{% extends '@EasyMagUser/BackOffice/Commercial/layout.html.twig' %}
+
+{% block stylesheets %}
+
+{% endblock %}
+
+
+{% block title %}Title{% endblock %}
+
+{% block breadcrumb %}
+    <h2>Tableau de bord</h2>
+    <ol class="breadcrumb">
+        <li>
+            <a href="index.html">Voici le</a>
+        </li>
+        <li class="active">
+            <strong>Breadcrumb</strong>
+        </li>
+    </ol>
+{% endblock %}
+
+ {% block content %}
+    <h1>Customers list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Company</th>
+                <th>Address</th>
+                <th>Postalcode</th>
+                <th>City</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Lastname</th>
+                <th>Firstname</th>
+                <th>Customer</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for customer in customers %}
+            <tr>
+                <td><a href="{{ path('client_show', { 'id': customer.id }) }}">{{ customer.id }}</a></td>
+                <td>{{ customer.company }}</td>
+                <td>{{ customer.address }}</td>
+                <td>{{ customer.postalCode }}</td>
+                <td>{{ customer.city }}</td>
+                <td>{{ customer.phone }}</td>
+                <td>{{ customer.email }}</td>
+                <td>{{ customer.gender }}</td>
+                <td>{{ customer.lastname }}</td>
+                <td>{{ customer.firstname }}</td>
+                <td>{% if customer.customer %}Yes{% else %}No{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('client_show', { 'id': customer.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('client_edit', { 'id': customer.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('client_new') }}">Create a new customer</a>
+        </li>
+    </ul>
+{% endblock %}

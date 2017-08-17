@@ -69,6 +69,10 @@ class Commercial
      */
     private $customers;
 
+    public function __toString()
+    {
+        return $this->firstname;
+    }
 
     /**
      * Get id

@@ -5,9 +5,3 @@ commercial_index:
     path:     /
     defaults: { _controller: EasyMagUserBundle:Commercial:index }
 
-
-
-
-
-# ROUTES LIEES AUX CLIENTS
-#-------------------------
