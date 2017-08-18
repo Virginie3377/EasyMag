@@ -73,7 +73,7 @@ class CustomerController extends Controller
     public function editAction(Request $request, Customer $customer)
     {
         $deleteForm = $this->createDeleteForm($customer);
-        $editForm = $this->createForm('EasyMag\OrderBundle\Form\CustomerType', $customer);
+        $editForm = $this->createForm('EasyMag\OrderBundle\Form\CreateCustomerType', $customer);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {

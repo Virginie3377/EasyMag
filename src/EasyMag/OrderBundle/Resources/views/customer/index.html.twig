@@ -8,69 +8,52 @@
 {% block title %}Title{% endblock %}
 
 {% block breadcrumb %}
-    <h2>Tableau de bord</h2>
+    <h2>Clients</h2>
     <ol class="breadcrumb">
         <li>
-            <a href="index.html">Voici le</a>
+            <a href="{{ path('commercial_index' ) }}">{{ "dashboard._"|trans }}</a>
         </li>
         <li class="active">
-            <strong>Breadcrumb</strong>
+            <a href="{{ path('client_index' ) }}"><strong>Tous mes Clients</strong></a>
         </li>
     </ol>
 {% endblock %}
 
  {% block content %}
-    <h1>Customers list</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Company</th>
-                <th>Address</th>
-                <th>Postalcode</th>
-                <th>City</th>
-                <th>Phone</th>
-                <th>Email</th>
-                <th>Gender</th>
-                <th>Lastname</th>
-                <th>Firstname</th>
-                <th>Customer</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for customer in customers %}
-            <tr>
-                <td><a href="{{ path('client_show', { 'id': customer.id }) }}">{{ customer.id }}</a></td>
-                <td>{{ customer.company }}</td>
-                <td>{{ customer.address }}</td>
-                <td>{{ customer.postalCode }}</td>
-                <td>{{ customer.city }}</td>
-                <td>{{ customer.phone }}</td>
-                <td>{{ customer.email }}</td>
-                <td>{{ customer.gender }}</td>
-                <td>{{ customer.lastname }}</td>
-                <td>{{ customer.firstname }}</td>
-                <td>{% if customer.customer %}Yes{% else %}No{% endif %}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('client_show', { 'id': customer.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('client_edit', { 'id': customer.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+<div class="row">
+    {% for customer in customers %}
+        <div class="col-lg-4">
+            <div class="contact-box">
+                    <div class="col-sm-4">
+                        <div class="text-center">
+                            <img alt="image" class="img-circle m-t-xs img-responsive" src="{{ asset('assets/backoffice/img/cutomers/img_magazine/p8.jpg') }}">
+                           {#A mettre dans le show
+                            <div class="m-t-xs font-bold">{% if customer.customer %}Client {% else %}Prospect{% endif %}</div>
+                            #}
+                        </div>
+                    </div>
 
-    <ul>
-        <li>
-            <a href="{{ path('client_new') }}">Create a new customer</a>
-        </li>
-    </ul>
+                    <div class="col-sm-8">
+                        <h3><strong>{{ customer.company }}</strong></h3>
+                        <p><i class="fa fa-map-marker"></i> {{ customer.address }}<br>{{ customer.postalCode }} {{ customer.city }}</p>
+                    </div>
+                    <div class="col-sm-12">
+                        <address>
+                            <strong>{{ customer.gender }} {{ customer.lastname }} {{ customer.firstname }}</strong><br>
+                            {{ customer.phone }}<br>
+                            {{ customer.email }}
+                        </address>
+
+                        <a href="{{ path('client_show', { 'id': customer.id }) }}"><button type="button" class="btn btn-primary center-block">Voir sa fiche</button></a>
+                    </div>
+
+                    <div class="clearfix"></div>
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+
 {% endblock %}
