@@ -54,16 +54,19 @@ form:
     password_confirmation: 'Répéter le mot de passe'
     new_password: 'Nouveau mot de passe'
     new_password_confirmation: 'Répéter le nouveau mot de passe'
-    required: Veuillez remplir les champs obligatoires
+    required: Veuillez remplir les champs du formulaire
 
 search:
     _: Rechercher
 
 sector:
+    _: Secteur
     publication: Date de publication
 
 
 customer:
+    _: Client
+    new: Nouveau client
     create: Ajouter un client
 
 dashboard:

@@ -23,7 +23,7 @@ class SectorController extends Controller
 
         $sectors = $em->getRepository('EasyMagOrderBundle:Sector')->findAll();
 
-        return $this->render('sector/index.html.twig', array(
+        return $this->render('@EasyMagOrder/sector/index.html.twig', array(
             'sectors' => $sectors,
         ));
     }

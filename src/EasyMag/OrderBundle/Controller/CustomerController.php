@@ -3,7 +3,7 @@
 namespace EasyMag\OrderBundle\Controller;
 
 use EasyMag\OrderBundle\Entity\Customer;
-use EasyMag\OrderBundle\Form\CustomerType;
+use EasyMag\OrderBundle\Form\CreateCustomerType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -35,7 +35,7 @@ class CustomerController extends Controller
     public function newAction(Request $request)
     {
         $customer = new Customer();
-        $form = $this->createForm(CustomerType::class, $customer);
+        $form = $this->createForm(CreateCustomerType::class, $customer);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
