@@ -68,6 +68,7 @@ customer:
     _: Client
     new: Nouveau client
     create: Ajouter un client
+    edit: Modifier la fiche client
 
 dashboard:
     _: Tableau de bord

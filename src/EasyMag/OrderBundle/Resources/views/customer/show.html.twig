@@ -8,80 +8,98 @@
 {% block title %}Title{% endblock %}
 
 {% block breadcrumb %}
-    <h2>Tableau de bord</h2>
+    <h2>Clients</h2>
     <ol class="breadcrumb">
         <li>
-            <a href="index.html">Voici le</a>
+            <a href="{{ path('commercial_index' ) }}">{{ "dashboard._"|trans }}</a>
         </li>
         <li class="active">
-            <strong>Breadcrumb</strong>
+            <a href="{{ path('client_index' ) }}">Client</a>
+        </li>
+        <li class="active">
+            <a href="{{ path('client_index' ) }}"><strong>{{ customer.company }}</strong></a>
         </li>
     </ol>
 {% endblock %}
 
  {% block content %}
-    <h1>Customer</h1>
+     <h1>{{ customer.company }}</h1>
 
-    <table>
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ customer.id }}</td>
-            </tr>
-            <tr>
-                <th>Company</th>
-                <td>{{ customer.company }}</td>
-            </tr>
-            <tr>
-                <th>Address</th>
-                <td>{{ customer.address }}</td>
-            </tr>
-            <tr>
-                <th>Postalcode</th>
-                <td>{{ customer.postalCode }}</td>
-            </tr>
-            <tr>
-                <th>City</th>
-                <td>{{ customer.city }}</td>
-            </tr>
-            <tr>
-                <th>Phone</th>
-                <td>{{ customer.phone }}</td>
-            </tr>
-            <tr>
-                <th>Email</th>
-                <td>{{ customer.email }}</td>
-            </tr>
-            <tr>
-                <th>Gender</th>
-                <td>{{ customer.gender }}</td>
-            </tr>
-            <tr>
-                <th>Lastname</th>
-                <td>{{ customer.lastname }}</td>
-            </tr>
-            <tr>
-                <th>Firstname</th>
-                <td>{{ customer.firstname }}</td>
-            </tr>
-            <tr>
-                <th>Customer</th>
-                <td>{% if customer.customer %}Yes{% else %}No{% endif %}</td>
-            </tr>
-        </tbody>
-    </table>
+     <div class="row m-b-lg m-t-lg">
 
-    <ul>
-        <li>
-            <a href="{{ path('client_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('client_edit', { 'id': customer.id }) }}">Edit</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
-{% endblock %}
+         <div class="col-md-5">
+             <div class="profile-image">
+                 <img src="{{ asset('assets/backoffice/img/cutomers/img_magazine/5.jpg') }}" class=" m-b-md"
+                      alt="profile">
+             </div>
+         </div>
+
+         <div class="col-md-4">
+             <div class="ibox-content text-center">
+                 <div class="profile-info">
+
+                     <div>
+                         <h2 class="no-margins">
+                             {{ customer.gender }} {{ customer.firstname }} {{ customer.lastname }}
+                         </h2>
+                         <h2>{{ customer.phone }}</h2>
+                         <h4>{{ customer.email }}</h4>
+                         <h4>
+                             {{ customer.address }} {{ customer.postalCode }} {{ customer.city }}
+                         </h4>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <div class="col-md-3 m-b-xs">
+             <h2 class="no-margins">
+                 <center> product.type</center>
+             </h2>
+
+             faire un if avec pub, web ou print
+             <div class="widget style1 yellow-bg">
+                 <div class="row vertical-align">
+                     <div class="col-xs-3">
+                         <i class="fa fa-paperclip fa-2x"></i>
+                     </div>
+                     <div class="col-xs-4 text-right">
+                         <h3 class="font-bold">Format</h3>
+                     </div>
+                     <div class="col-xs-5 text-right">
+                         <h3 class="font-bold">5*6</h3>
+                     </div>
+                 </div>
+             </div>
+
+
+             <div class="widget style1 lazur-bg">
+                 <div class="row vertical-align">
+                     <div class="col-xs-3">
+                         <i class="fa fa-euro fa-3x"></i>
+                     </div>
+                     <div class="col-xs-9 text-right">
+                         <h2 class="font-bold">462</h2>
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+     </div>
+     <div class="row m-b-lg m-t-lg">
+         <div class="col-sm-2">
+             {{ form_start(delete_form) }}
+             <input type="submit" class="btn btn-danger" value="Effacer cette fiche">
+             {{ form_end(delete_form) }}
+         </div>
+         <div class="col-sm-4">
+             <a href="{{ path('client_index') }}">
+                 <button type="button" class="btn btn-info" style="margin-right: 20px;">Retour fiche client</button>
+             </a>
+             <a href="{{ path('client_edit', { 'id': customer.id }) }}">
+                 <button type="button" class="btn btn-warning">Modifier</button>
+             </a>
+         </div>
+
+     </div>
+ {% endblock %}
+

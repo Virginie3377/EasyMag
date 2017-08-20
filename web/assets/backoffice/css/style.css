@@ -4640,13 +4640,13 @@ body.mini-navbar.fixed-sidebar .logo-element {
   border: 1px solid #e7eaec;
   padding: 0;
 }
-.contact-box.center-version > a {
+.contact-box.center-version {
   display: block;
   background-color: #ffffff;
   padding: 20px;
   text-align: center;
 }
-.contact-box.center-version > a img {
+.contact-box.center-version > img {
   width: 80px;
   height: 80px;
   margin-top: 10px;
@@ -5041,11 +5041,11 @@ a.compose-mail {
   float: left;
 }
 .profile-image img {
-  width: 96px;
-  height: 96px;
+  width: 350px;
+  height: 200px;
 }
 .profile-info {
-  margin-left: 120px;
+  margin-left: 0px;
 }
 .feed-activity-list .feed-element {
   border-bottom: 1px solid #e7eaec;

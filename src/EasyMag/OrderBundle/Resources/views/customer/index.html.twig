@@ -23,14 +23,46 @@
 
 <div class="row">
     {% for customer in customers %}
+        <div class="col-lg-3">
+            <div class="contact-box center-version">
+
+                <img alt="image" class="img-circle m-t"  src="{{ asset('assets/backoffice/img/cutomers/img_magazine/p8.jpg') }}">
+                {# TODO
+                A mettre dans le show
+                            <div class="m-t-xs font-bold">{% if customer.customer %}Client {% else %}Prospect{% endif %}</div>
+                           la date depuis quand
+                           afficher de quel secteur il est aussi !!!
+                                                      #}
+                <h3 class="m-b-xs"><strong>{{ customer.company }}</strong></h3>
+
+                    <div class="font-bold">{{ customer.gender }} {{ customer.lastname }} {{ customer.firstname }}</div>
+                    <address class="m-t-md">
+                        <strong>  {{ customer.phone }}</strong><br>
+                        {{ customer.address }}<br>{{ customer.postalCode }} {{ customer.city }}<br>
+                        {{ customer.email }}
+                    </address>
+<br>
+                <div class="contact-box-footer">
+                    <div class="m-t-xs btn-group">
+                        <a class="btn btn-xs btn-white"><i class="fa fa-envelope"></i>Envoyer un Email</a>
+
+                    </div>
+                </div>
+                <a href="{{ path('client_show', { 'id': customer.id }) }}"><button type="button" class="btn btn-primary center-block">Voir sa fiche</button></a>
+
+            </div>
+        </div>
+
+
+
+
+        {#<div class="row">
         <div class="col-lg-4">
             <div class="contact-box">
                     <div class="col-sm-4">
                         <div class="text-center">
                             <img alt="image" class="img-circle m-t-xs img-responsive" src="{{ asset('assets/backoffice/img/cutomers/img_magazine/p8.jpg') }}">
-                           {#A mettre dans le show
-                            <div class="m-t-xs font-bold">{% if customer.customer %}Client {% else %}Prospect{% endif %}</div>
-                            #}
+
                         </div>
                     </div>
 
@@ -49,9 +81,8 @@
                     </div>
 
                     <div class="clearfix"></div>
-                </a>
             </div>
-        </div>
+        </div>#}
     {% endfor %}
 </div>
 
