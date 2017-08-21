@@ -9,3 +9,7 @@ easy_mag_order_back_office_homepage:
 easy_mag_order_secteur:
         resource: "@EasyMagOrderBundle/Resources/config/routing_sector.yml"
         prefix:   /secteur
+
+easy_mag_order_command:
+    resource: "@EasyMagOrderBundle/Resources/config/routing_command.yml"
+    prefix:   /commande

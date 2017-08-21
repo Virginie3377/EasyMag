@@ -1,0 +1,30 @@
+{% extends '@EasyMagUser/BackOffice/Commercial/layout.html.twig' %}
+
+{% block title %}Title{% endblock %}
+
+{% block breadcrumb %}
+    <h2>Clients</h2>
+    <ol class="breadcrumb">
+        <li>
+            <a href="{{ path('commercial_index' ) }}">{{ "dashboard._"|trans }}</a>
+        </li>
+        <li class="active">
+            <a href="{{ path('command_index' ) }}"><strong>Mes Commandes</strong></a>
+        </li>
+    </ol>
+{% endblock %}
+
+{% block content %}
+    <h1>Command creation</h1>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input type="submit" value="Create" />
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('command_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

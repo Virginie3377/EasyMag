@@ -1,0 +1,55 @@
+{% extends '@EasyMagUser/BackOffice/Commercial/layout.html.twig' %}
+
+{% block title %}Title{% endblock %}
+
+{% block breadcrumb %}
+    <h2>Clients</h2>
+    <ol class="breadcrumb">
+        <li>
+            <a href="{{ path('commercial_index' ) }}">{{ "dashboard._"|trans }}</a>
+        </li>
+        <li class="active">
+            <a href="{{ path('command_index' ) }}"><strong>Mes Commandes</strong></a>
+        </li>
+    </ol>
+{% endblock %}
+
+{% block content %}
+    <h1>Commands list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for command in commands %}
+            <tr>
+                <td><a href="{{ path('command_show', { 'id': command.id }) }}">{{ command.id }}</a></td>
+                <td>{% if command.date %}{{ command.date|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ command.status }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('command_show', { 'id': command.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('command_edit', { 'id': command.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('command_new') }}">Create a new command</a>
+        </li>
+    </ul>
+{% endblock %}
