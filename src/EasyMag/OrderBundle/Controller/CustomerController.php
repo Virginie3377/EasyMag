@@ -79,7 +79,7 @@ class CustomerController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('client_edit', array('id' => $customer->getId()));
+            return $this->redirectToRoute('client_show', array('id' => $customer->getId()));
         }
 
         return $this->render('@EasyMagOrder/customer/edit.html.twig', array(

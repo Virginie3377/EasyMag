@@ -20,7 +20,7 @@
 {% endblock %}
 
  {% block content %}
-<h1>{{ "customer.create" |trans }}</h1>
+<h1>{{ "customer.edit" |trans }}</h1>
 
 <div class="row">
     <div class="col-lg-12">
@@ -29,7 +29,7 @@
                 <h5>{{ "form.required" |trans }}</h5>
             </div>
             <div class="ibox-content">
-                {{ form_start(edit_form, {'attr': {'class': 'form-horizontal', 'action': path('client_new') }}) }}
+                {{ form_start(edit_form, {'attr': {'class': 'form-horizontal', 'action': path('client_edit', { 'id': customer.id }) }}) }}
 
                 <div class="form-group">
                     {{ form_label(edit_form.company, 'profile.fields.company', {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
