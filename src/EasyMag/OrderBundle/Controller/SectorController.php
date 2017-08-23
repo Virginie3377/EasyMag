@@ -2,8 +2,10 @@
 
 namespace EasyMag\OrderBundle\Controller;
 
+use EasyMag\OrderBundle\Entity\Customer;
 use EasyMag\OrderBundle\Entity\Sector;
 use EasyMag\OrderBundle\Form\SectorType;
+use EasyMag\UserBundle\Entity\Commercial;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -56,12 +58,16 @@ class SectorController extends Controller
      * Finds and displays a sector entity.
      *
      */
-    public function showAction(Sector $sector)
+    public function showAction(Request $request, Sector $sector)
     {
         $deleteForm = $this->createDeleteForm($sector);
 
+        $em = $this->getDoctrine()->getManager();
+        $customers = $sector->getCustomers();
+
         return $this->render('@EasyMagOrder/sector/show.html.twig', array(
             'sector' => $sector,
+            'customers' => $customers,
             'delete_form' => $deleteForm->createView(),
         ));
     }
