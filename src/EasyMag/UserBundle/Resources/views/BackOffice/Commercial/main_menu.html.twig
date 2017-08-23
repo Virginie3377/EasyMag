@@ -14,11 +14,11 @@
 <li>
     <a href="{{  path('commercial_index') }}"><i class="fa fa-th-large"></i> <span class="nav-label">Secteurs</span> <span class="fa arrow"></span></a>
     <ul class="nav nav-second-level">
-        <li  class="active"><a href="{{ path('commercial_index') }}">Tous</a></li>
-        <li><a href="dashboard_2.html">Saint Quentin</a></li>
-        <li><a href="#">Peronne</a></li>
-        <li><a href="#">Bohain</a></li>
-        <li><a href="#">Ajouter un secteur</a></li>
+        <li  class="active"><a href="{{ path('secteur_index') }}">Tous</a></li>
+        <li><a href="">Par année</a></li>
+        {% for sector in sectors %}
+        <li><a href="{{ path('secteur_show', {'id':sector.id}) }}">{{ sector.name }}</a></li>
+       {% endfor %}
     </ul>
 </li>
 <li>

@@ -54,6 +54,13 @@ class Sector
      */
     private $customers;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="string", length=455, nullable=true)
+     */
+    private $description;
+
 
     public function __toString()
     {
@@ -205,5 +212,29 @@ class Sector
     public function getCustomers()
     {
         return $this->customers;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Sector
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
     }
 }

@@ -43,6 +43,7 @@ class SectorType extends AbstractType
                 'label' => 'sector.publication',
                 'required' => false,
             ))
+            ->add('customers')
            ;
 
     }

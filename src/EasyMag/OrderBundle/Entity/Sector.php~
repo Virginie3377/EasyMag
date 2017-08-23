@@ -55,6 +55,19 @@ class Sector
     private $customers;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="string", length=455, nullable=true)
+     */
+    private $description;
+
+
+    public function __toString()
+    {
+        return $this->name;
+    }
+
+    /**
      * Get id
      *
      * @return int

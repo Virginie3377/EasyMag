@@ -1,6 +1,25 @@
-{% extends 'base.html.twig' %}
+{% extends '@EasyMagUser/BackOffice/Commercial/layout.html.twig' %}
 
-{% block body %}
+{% block stylesheets %}
+
+{% endblock %}
+
+
+{% block title %}Title{% endblock %}
+
+{% block breadcrumb %}
+    <h2>Clients</h2>
+    <ol class="breadcrumb">
+        <li>
+            <a href="{{ path('commercial_index' ) }}">{{ "dashboard._"|trans }}</a>
+        </li>
+        <li class="active">
+            <a href="{{ path('client_index' ) }}"><strong>Tous mes Clients</strong></a>
+        </li>
+    </ol>
+{% endblock %}
+
+ {% block content %}
     <h1>Sector edit</h1>
 
     {{ form_start(edit_form) }}
