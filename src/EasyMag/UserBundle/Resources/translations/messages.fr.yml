@@ -73,3 +73,11 @@ customer:
 dashboard:
     _: Tableau de bord
 
+command:
+    quantity: Quantité
+    date: Vendu le
+    web: Site web
+    pubNumber: Emplacement de la maquette
+    pubLengthSize: Hauteur
+    pubWidthSize: Longueur
+

@@ -71,7 +71,7 @@ class Product
     private $price;
 
     /**
-     * @ORM\OneToMany(targetEntity="EasyMag\OrderBundle\Entity\Command_Product", mappedBy="product")
+     * @ORM\OneToMany(targetEntity="EasyMag\OrderBundle\Entity\Command_Product", mappedBy="product", cascade={"persist"})
      *
      */
     private $command_products;

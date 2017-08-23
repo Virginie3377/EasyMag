@@ -48,7 +48,7 @@ class Command
     private $documents;
 
     /**
-     * @ORM\OneToMany(targetEntity="EasyMag\OrderBundle\Entity\Command_Product", mappedBy="command")
+     * @ORM\OneToMany(targetEntity="EasyMag\OrderBundle\Entity\Command_Product", mappedBy="command", cascade={"persist"})
      *
      */
     private $commands_product;

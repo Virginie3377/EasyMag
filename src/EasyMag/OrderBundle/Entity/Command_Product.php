@@ -30,13 +30,13 @@ class Command_Product
 
 
     /**
-     * @ORM\ManyToOne(targetEntity="EasyMag\OrderBundle\Entity\Command", inversedBy="commands_product")
+     * @ORM\ManyToOne(targetEntity="EasyMag\OrderBundle\Entity\Command", inversedBy="commands_product", cascade={"persist"})
      *
      */
     private $command;
 
     /**
-     * @ORM\ManyToOne(targetEntity="EasyMag\OrderBundle\Entity\Product", inversedBy="command_products")
+     * @ORM\ManyToOne(targetEntity="EasyMag\OrderBundle\Entity\Product", inversedBy="command_products", cascade={"persist"})
      *
      */
     private $product;
