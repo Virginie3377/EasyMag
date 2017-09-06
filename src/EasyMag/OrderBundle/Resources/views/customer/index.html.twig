@@ -24,9 +24,10 @@
 <div class="row">
     {% for customer in customers %}
         <div class="col-lg-4">
+            <div class="ibox-content no-padding border-left-right">
+                <img alt="image" class="img-responsive" src="{{ asset('assets/backoffice/img/cutomers/img_magazine/p8.jpg') }}">
+            </div>
             <div class="contact-box center-version">
-
-                <img alt="image" class="img-circle m-t"  src="{{ asset('assets/backoffice/img/cutomers/img_magazine/p8.jpg') }}">
                 {# TODO
                 A mettre dans le show
                             <div class="m-t-xs font-bold">{% if customer.customer %}Client {% else %}Prospect{% endif %}</div>

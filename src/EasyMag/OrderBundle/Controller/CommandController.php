@@ -3,6 +3,7 @@
 namespace EasyMag\OrderBundle\Controller;
 
 use EasyMag\OrderBundle\Entity\Command;
+use EasyMag\OrderBundle\Form\CommandType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -22,6 +23,7 @@ class CommandController extends Controller
 
         $commands = $em->getRepository('EasyMagOrderBundle:Command')->findAll();
 
+
         return $this->render('@EasyMagOrder/command/index.html.twig', array(
             'commands' => $commands,
         ));
@@ -38,7 +40,15 @@ class CommandController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $command->setDate(new \DateTime());
             $em = $this->getDoctrine()->getManager();
+
+
+            foreach ($command->getCommandsProduct() as $commandProduct) {
+                $commandProduct->setCommand($command);
+                $em->persist($commandProduct);
+            }
+
             $em->persist($command);
             $em->flush();
 

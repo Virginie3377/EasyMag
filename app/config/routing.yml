@@ -20,3 +20,4 @@ easy_mag_order:
 easy_mag_user_front_office:
     resource: "@EasyMagUserBundle/Resources/config/routing.yml"
     prefix:   /
+

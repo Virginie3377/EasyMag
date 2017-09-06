@@ -20,4 +20,16 @@ class SectorRepository extends \Doctrine\ORM\EntityRepository
             ->getResult();
         return $qb;
     }
+
+
+    public function findSectorByCommercialByYear($commercial) {
+        $qb = $this->createQueryBuilder('s')
+            ->where('s.commercial = :commercial')
+            ->setParameter('commercial', $commercial)
+            ->orderBy('s.datepublication', 'desc')
+            ->setMaxResults(1)
+            ->getQuery()
+            ->getResult();
+        return $qb;
+    }
 }

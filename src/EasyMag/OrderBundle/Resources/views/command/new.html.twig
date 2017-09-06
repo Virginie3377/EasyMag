@@ -41,13 +41,20 @@
                 </div>
 
                 <div class="form-group">
-                    {{ form_label(form.commands_product, null, {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
-                    {{ form_errors(form.commands_product) }}
+                    {{ form_label(form.status, null, {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+                    {{ form_errors(form.status) }}
                     <div class="col-sm-10">
-                        {{ form_widget(form.commands_product, { 'attr': {'class': 'form-control'}}) }}
+                        {{ form_widget(form.status, { 'attr': {'class': 'form-control'}}) }}
                     </div>
                 </div>
 
+                <div class="form-group">
+                    {{ form_label(form.product, null, {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+                    {{ form_errors(form.product) }}
+                    <div class="col-sm-10">
+                        {{ form_widget(form.product, { 'attr': {'class': 'form-control'}}) }}
+                    </div>
+                </div>
 
 
                 <div class="form-group">
@@ -65,5 +72,81 @@
 
     {{ form_rest(form) }}
     {{ form_end(form) }}
+
+{% endblock %}
+
+
+{% block scripts %}
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            // On récupère la balise <div> en question qui contient l'attribut « data-prototype » qui nous intéresse.
+            var $container = $('div#easymag_orderbundle_command_product');
+
+            // On ajoute un lien pour ajouter une nouvelle 'commandProduct'
+            var $addLink = $('<a href="#" id="add_category" class="btn btn-primary">Ajouter un produit</a>');
+            $container.append($addLink);
+
+            // On ajoute un nouveau champ à chaque clic sur le lien d'ajout.
+            $addLink.click(function(e) {
+                addProduct($container);
+                e.preventDefault(); // évite qu'un # apparaisse dans l'URL
+                return false;
+            });
+
+            // On définit un compteur unique pour nommer les champs qu'on va ajouter dynamiquement
+            var index = $container.find(':input').length;
+
+            // On ajoute un nouveau champ à chaque clic sur le lien d'ajout.
+           /* $('#add_commandsProduct').click(function(e) {
+                addCommandsProduct($container);
+                e.preventDefault(); // évite qu'un # apparaisse dans l'URL
+                return false;
+            });*/
+
+            // On ajoute un premier champ automatiquement s'il n'en existe pas déjà un.
+            if(index == 0){
+                addProduct($container);
+        }else {
+                // S'il existe déjà des 'commandProduct', on ajoute un lien de suppression pour chacune d'entre elles
+                $container.children('div').each(function () {
+                addDeleteLink($(this));
+            });
+        }
+            // La fonction qui ajoute un formulaire Command_ProductType
+            function addProduct($container) {
+                // Dans le contenu de l'attribut « data-prototype », on remplace :
+                // - le texte "__name__label__" qu'il contient par le label du champ
+                // - le texte "__name__" qu'il contient par le numéro du champ
+            var template = $container.attr('data-prototype')
+            .replace(/__name__label__/g, 'Type de Produit' + (index + 1))
+            .replace(/__name__/g, index)
+            ;
+
+            // On crée un objet jquery qui contient ce template
+            var $prototype = $(template);
+            // On ajoute au prototype un lien pour pouvoir supprimer la 'command_product'
+            addDeleteLink($prototype);
+            // On ajoute le prototype modifié à la fin de la balise <div>
+            $container.append($prototype);
+            // Enfin, on incrémente le compteur pour que le prochain ajout se fasse avec un autre numéro
+            index++;
+        }
+            // La fonction qui ajoute un lien de suppression d'une 'command_product'
+        function addDeleteLink($prototype) {
+            var $deleteLink = $('<a href="#" class="btn btn-danger">Supprimer</a>');
+            // Ajout du lien
+            $prototype.append($deleteLink);
+
+            // Ajout du listener sur le clic du lien pour effectivement supprimer la 'command_product'
+            $deleteLink.click(function (e) {
+                $prototype.remove();
+                e.preventDefault(); // évite qu'un # apparaisse dans l'URL
+                return false;
+            });
+        }
+        });
+
+    </script>
 
 {% endblock %}

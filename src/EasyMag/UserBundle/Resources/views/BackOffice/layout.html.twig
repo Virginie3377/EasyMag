@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="{{ asset('assets/vendor/font-awesome/css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/vendor/font-awesome/css/font-awesome.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/backoffice/css/plugins/iCheck/custom.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/backoffice/css/plugins/fullcalendar/fullcalendar.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/backoffice/css/plugins/fullcalendar/fullcalendar.print.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/backoffice/css/animate.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/backoffice/css/style.css') }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700">
@@ -86,6 +89,7 @@
 
 
 <!-- Mainly scripts -->
+<script src="{{ asset('assets/backoffice/js/plugins/fullcalendar/moment.min.js') }}"></script>
 <script src="{{ asset('assets/vendor/jquery/jquery-3.1.1.min.js') }}"></script>
 <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('assets/backoffice/js/plugins/metisMenu/jquery.metisMenu.js') }}"></script>
@@ -124,6 +128,20 @@
 
 <!-- Footable-->
 <script src="{{ asset('assets/backoffice/js/plugins/footable/footable.all.min.js') }}"></script>
+
+<!-- jQuery UI  -->
+<script src="{{ asset('assets/backoffice/js/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
+
+
+<!-- iCheck -->
+<script src="{{ asset('assets/backoffice/js/plugins/iCheck/icheck.min.js') }}"></script>
+
+
+<!-- Full Calendar -->
+<script src="{{ asset('assets/backoffice/js/plugins/fullcalendar/fullcalendar.min.js') }}"></script>
+
+
+
 {% block scripts %}{% endblock %}
 
 </body>

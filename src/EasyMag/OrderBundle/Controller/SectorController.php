@@ -24,7 +24,6 @@ class SectorController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $sectors = $em->getRepository('EasyMagOrderBundle:Sector')->findAll();
-
         return $this->render('@EasyMagOrder/sector/index.html.twig', array(
             'sectors' => $sectors,
         ));
@@ -92,6 +91,22 @@ class SectorController extends Controller
             'sector' => $sector,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
+        ));
+    }
+
+    /**
+     * Lists all sector entities by year.
+     *
+     */
+    public function indexYearAction(Request $request, Sector $sector)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $sectors = $sector->getDatePublication();
+
+        return $this->render('@EasyMagOrder/sector/indexYear.html.twig', array(
+            'sectors' => $sectors,
+
         ));
     }
 

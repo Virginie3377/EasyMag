@@ -2,13 +2,12 @@
 
 namespace EasyMag\OrderBundle\Form;
 
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
-use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -26,17 +25,19 @@ class CommandType extends AbstractType
                 'label' => 'command.date',
                 'required' => false,
             ))
-//            ->add('status')
-            ->add('commands_product', CollectionType::class, array(
-                'entry_type' => Command_ProductType::class,
+           ->add('status', ChoiceType::class, array(
+                'label' => 'command.status',
+                'choices' => array(
+                    'command.in_progress' => 'En cours',
+                    'command.validate' => 'Validé',
+            ),
+            ))
+            ->add('product', CollectionType::class, array(
+                'entry_type' => ProductType::class,
                 'allow_add' => true,
                 'allow_delete' => true,
-                /*'label' => 'command.quantity',
-                'property_path' => 'commands_product',
-                'class' => 'EasyMag\OrderBundle\Entity\Command_Product',*/
-
+                'label' => 'product._'
             ))
-
             ->add('submit',SubmitType::class, array(
                 'label' => 'Enregistrer'
             ))

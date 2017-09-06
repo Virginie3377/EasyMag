@@ -2,7 +2,7 @@
 
 namespace EasyMag\OrderBundle\Form;
 
-use Doctrine\DBAL\Types\FloatType;
+
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
@@ -48,7 +48,7 @@ class ProductType extends AbstractType
 
             ));
     }
-    
+
     /**
      * {@inheritdoc}
      */

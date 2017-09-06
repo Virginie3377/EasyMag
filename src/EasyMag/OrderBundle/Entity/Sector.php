@@ -38,7 +38,7 @@ class Sector
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="datepublication", type="date", nullable=true)
+     * @ORM\Column(name="datepublication", type="datetime", nullable=true)
      */
     private $datepublication;
 
@@ -153,6 +153,7 @@ class Sector
      */
     public function __construct()
     {
+        $this->datepublication = new  \DateTime("now");
         $this->customers = new \Doctrine\Common\Collections\ArrayCollection();
     }
 

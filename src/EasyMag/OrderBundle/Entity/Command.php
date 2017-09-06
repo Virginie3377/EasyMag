@@ -48,10 +48,10 @@ class Command
     private $documents;
 
     /**
-     * @ORM\OneToMany(targetEntity="EasyMag\OrderBundle\Entity\Command_Product", mappedBy="command", cascade={"persist"})
+     * @ORM\ManyToOne(targetEntity="EasyMag\OrderBundle\Entity\Product", inversedBy="commands")
      *
      */
-    private $commands_product;
+    private $product;
 
 
     /**
@@ -187,8 +187,8 @@ class Command
      */
     public function addCommandsProduct(\EasyMag\OrderBundle\Entity\Command_Product $commandsProduct)
     {
-        $this->commands_product[] = $commandsProduct;
-
+        $this->commandsProduct[] = $commandsProduct;
+        $commandsProduct->setCommand($this);
         return $this;
     }
 
@@ -199,7 +199,7 @@ class Command
      */
     public function removeCommandsProduct(\EasyMag\OrderBundle\Entity\Command_Product $commandsProduct)
     {
-        $this->commands_product->removeElement($commandsProduct);
+        $this->commandsProduct->removeElement($commandsProduct);
     }
 
     /**
@@ -209,6 +209,30 @@ class Command
      */
     public function getCommandsProduct()
     {
-        return $this->commands_product;
+        return $this->commandsProduct;
+    }
+
+    /**
+     * Set product
+     *
+     * @param \EasyMag\OrderBundle\Entity\Product $product
+     *
+     * @return Command
+     */
+    public function setProduct(\EasyMag\OrderBundle\Entity\Product $product = null)
+    {
+        $this->product = $product;
+
+        return $this;
+    }
+
+    /**
+     * Get product
+     *
+     * @return \EasyMag\OrderBundle\Entity\Product
+     */
+    public function getProduct()
+    {
+        return $this->product;
     }
 }

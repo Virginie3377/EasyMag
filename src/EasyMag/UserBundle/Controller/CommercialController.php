@@ -23,9 +23,12 @@ class CommercialController extends Controller
         $em = $this->getDoctrine()->getManager();
         $commercial = $em->getRepository(Commercial::class)->findOneByUser($this->getUser());
         $sectors = $em->getRepository(Sector::class)->find3LastSectorByCommercial($commercial);
+        $sectorbyyear = $em->getRepository(Sector::class)->findSectorByCommercialByYear($commercial);
+
 
         return $this->render('EasyMagUserBundle:BackOffice/Commercial:main_menu.html.twig', array(
            'sectors' => $sectors,
+            'sectorYear' => $sectorbyyear,
         ));
     }
 

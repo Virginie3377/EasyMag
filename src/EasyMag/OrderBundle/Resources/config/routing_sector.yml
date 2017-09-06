@@ -22,3 +22,8 @@ secteur_delete:
     path:     /{id}/delete
     defaults: { _controller: "EasyMagOrderBundle:Sector:delete" }
     methods:  DELETE
+
+secteur_index_year:
+    path:     /{datepublication}
+    defaults: { _controller: "EasyMagOrderBundle:Sector:indexYear" }
+    methods:  GET

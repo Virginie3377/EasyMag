@@ -60,7 +60,7 @@ search:
     _: Rechercher
 
 sector:
-    _: Secteur
+    _: Secteurs
     publication: Date de publication
 
 
@@ -74,10 +74,28 @@ dashboard:
     _: Tableau de bord
 
 command:
+    _: Bons de commande
+    create: Ajouter un bon de commande
     quantity: Quantité
+    status: Etat
     date: Vendu le
     web: Site web
     pubNumber: Emplacement de la maquette
     pubLengthSize: Hauteur
     pubWidthSize: Longueur
+    validate: Validé
+    in_progress: En cours
+
+product:
+    _: Produits
+
+bill:
+    _: Factures
+    create: Créer une facture
+
+message:
+    _: Messagerie
+
+calendar:
+    _: Mes rendez-vous
 

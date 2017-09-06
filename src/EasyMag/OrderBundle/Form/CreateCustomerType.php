@@ -35,7 +35,8 @@ class CreateCustomerType extends AbstractType
             ->add('lastname')
             ->add('firstname')
             ->add('customer', ChoiceType::class, array(
-                'choices'=> ['client'=> true],
+                'label'=> '',
+                'choices'=> [''=> true],
                 'multiple' => false,
                 'expanded' => true,
             ))

@@ -71,10 +71,17 @@ class Product
     private $price;
 
     /**
-     * @ORM\OneToMany(targetEntity="EasyMag\OrderBundle\Entity\Command_Product", mappedBy="product", cascade={"persist"})
+     * @ORM\OneToMany(targetEntity="EasyMag\OrderBundle\Entity\Command", mappedBy="product")
      *
      */
-    private $command_products;
+    private $commands;
+
+
+    public function __toString()
+    {
+        return $this->type;
+    }
+
 
     /**
      * Get id
@@ -258,7 +265,7 @@ class Product
      */
     public function __construct()
     {
-        $this->command_products = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->commandProducts = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
@@ -294,7 +301,7 @@ class Product
      */
     public function addCommandProduct(\EasyMag\OrderBundle\Entity\Command_Product $commandProduct)
     {
-        $this->command_products[] = $commandProduct;
+        $this->commandProducts[] = $commandProduct;
 
         return $this;
     }
@@ -306,7 +313,7 @@ class Product
      */
     public function removeCommandProduct(\EasyMag\OrderBundle\Entity\Command_Product $commandProduct)
     {
-        $this->command_products->removeElement($commandProduct);
+        $this->commandProducts->removeElement($commandProduct);
     }
 
     /**
@@ -316,6 +323,40 @@ class Product
      */
     public function getCommandProducts()
     {
-        return $this->command_products;
+        return $this->commandProducts;
+    }
+
+    /**
+     * Add command
+     *
+     * @param \EasyMag\OrderBundle\Entity\Command $command
+     *
+     * @return Product
+     */
+    public function addCommand(\EasyMag\OrderBundle\Entity\Command $command)
+    {
+        $this->commands[] = $command;
+
+        return $this;
+    }
+
+    /**
+     * Remove command
+     *
+     * @param \EasyMag\OrderBundle\Entity\Command $command
+     */
+    public function removeCommand(\EasyMag\OrderBundle\Entity\Command $command)
+    {
+        $this->commands->removeElement($command);
+    }
+
+    /**
+     * Get commands
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCommands()
+    {
+        return $this->commands;
     }
 }
