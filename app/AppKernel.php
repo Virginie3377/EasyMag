@@ -18,6 +18,8 @@ class AppKernel extends Kernel
             new EasyMag\UserBundle\EasyMagUserBundle(),
             new EasyMag\OrderBundle\EasyMagOrderBundle(),
             new FOS\UserBundle\FOSUserBundle(),
+            new Vich\UploaderBundle\VichUploaderBundle(),
+
 
         ];
 

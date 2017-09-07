@@ -3,7 +3,8 @@
 namespace EasyMag\OrderBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 /**
  * Document
  *
@@ -33,6 +34,25 @@ class Document
      *
      */
     private $command;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date_ajout", type="datetime")
+     */
+    private $createdAt;
+
+    /**
+     * @Vich\UploadableField(mapping="documents_files", fileNameProperty="nom")
+     * @var File
+     */
+    private $fichier;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom", type="string", length=255)
+     */
+    private $nom;
 
     /**
      * Get id
@@ -90,5 +110,58 @@ class Document
     public function getCommand()
     {
         return $this->command;
+    }
+
+    public function setcreatedAt()
+    {
+        $this->createdAt = new \DateTime();
+        return $this;
+    }
+
+    /**
+     * Get createdAt
+     *
+     * @return \DateTime
+     */
+    public function getcreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+
+    /**
+     * @param File|null $fichier
+     */
+    public function setFichier(File $fichier = null)
+    {
+        $this->fichier = $fichier;
+
+        if ($fichier) {
+            $this->createdAt = new \DateTimeImmutable();
+        }
+
+        return $this;
+    }
+    /**
+     * @return File
+     */
+    public function getFichier()
+    {
+        return $this->fichier;
+    }
+    /**
+     * @param $nom
+     */
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+        return $this;
+    }
+    /**
+     * @return string
+     */
+    public function getNom()
+    {
+        return $this->nom;
     }
 }

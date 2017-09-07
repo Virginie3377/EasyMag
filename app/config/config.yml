@@ -7,6 +7,9 @@ imports:
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: fr
+    app.path.publicities_images: /assets/backoffice/img/publicities
+    app.path.documents_files: /assets/backoffice/img/documents
+
 
 framework:
     #esi: ~
@@ -88,3 +91,21 @@ fos_user:
 #    resetting:
 #        email:
 #            template: '@FOSUser/Resetting/email.txt.twig'
+
+vich_uploader:
+    db_driver: orm
+    mappings:
+        publicities_images:
+            uri_prefix:         '%app.path.publicities_images%'
+            upload_destination: '%kernel.root_dir%/../web/assets/backoffice/img/publicities'
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   false
+            namer:              vich_uploader.namer_uniqid
+        documents_files:
+            uri_prefix:         '%app.path.documents_files%'
+            upload_destination: '%kernel.root_dir%/../web/assets/backoffice/img/documents'
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   false
+            namer:              vich_uploader.namer_uniqid

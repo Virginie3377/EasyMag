@@ -36,7 +36,7 @@ class CommandType extends AbstractType
                 'entry_type' => ProductType::class,
                 'allow_add' => true,
                 'allow_delete' => true,
-                'label' => 'product._'
+                'label' => false,
             ))
             ->add('submit',SubmitType::class, array(
                 'label' => 'Enregistrer'
