@@ -2,8 +2,10 @@
 
 namespace EasyMag\OrderBundle\Controller;
 
+use EasyMag\OrderBundle\Datatables\CommandDatatable;
 use EasyMag\OrderBundle\Entity\Command;
 use EasyMag\OrderBundle\Form\CommandType;
+use Sg\DatatablesBundle\Datatable\DatatableInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -17,15 +19,33 @@ class CommandController extends Controller
      * Lists all command entities.
      *
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
-        $em = $this->getDoctrine()->getManager();
+       /* $em = $this->getDoctrine()->getManager();
 
         $commands = $em->getRepository('EasyMagOrderBundle:Command')->findAll();
 
 
         return $this->render('@EasyMagOrder/command/index.html.twig', array(
             'commands' => $commands,
+        ));*/
+
+        $isAjax = $request->isXmlHttpRequest();
+
+        /** @var DatatableInterface $datatable */
+        $datatable = $this->get('sg_datatables.factory')->create(CommandDatatable::class);
+        $datatable->buildDatatable();
+
+        if ($isAjax) {
+            $responseService = $this->get('sg_datatables.response');
+            $responseService->setDatatable($datatable);
+            $responseService->getDatatableQueryBuilder();
+
+            return $responseService->getResponse();
+        }
+
+        return $this->render('@EasyMagOrder/command/index.html.twig', array(
+            'datatable' => $datatable,
         ));
     }
 

@@ -325,4 +325,38 @@ class Product
     {
         return $this->commandProducts;
     }
+
+    /**
+     * Add command
+     *
+     * @param \EasyMag\OrderBundle\Entity\Command $command
+     *
+     * @return Product
+     */
+    public function addCommand(\EasyMag\OrderBundle\Entity\Command $command)
+    {
+        $this->commands[] = $command;
+
+        return $this;
+    }
+
+    /**
+     * Remove command
+     *
+     * @param \EasyMag\OrderBundle\Entity\Command $command
+     */
+    public function removeCommand(\EasyMag\OrderBundle\Entity\Command $command)
+    {
+        $this->commands->removeElement($command);
+    }
+
+    /**
+     * Get commands
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCommands()
+    {
+        return $this->commands;
+    }
 }
