@@ -19,48 +19,78 @@ class ProductType extends AbstractType
     {
         $builder
             ->add('type', ChoiceType::class, array(
-                'choices' => ['Maquette' => 'maquette', 'Print' => 'print', 'Site Web' => 'command.web'],
-                'label_attr' => array('class'=> 'col-sm-2 control-label'),
-                'attr' => array('class'=> 'col-sm-10 form-control'),
+                'choices' => ['Maquette' => 'command.maquette', 'print' => 'command.print', 'command.web' => 'command.web'],
+                'label_attr' => array(
+                    'class'=> 'col-sm-2 control-label'
+                ),
+                'attr' => array(
+                    'class'=> 'col-sm-3 form-control',
+                    'style' =>'margin-left:12px; width:80%'
+                ),
                 'required' => true
-
             ))
             ->add('pubNumber', TextType::class, array(
                 'label' => 'command.pubNumber',
-                'property_path' => 'command_products.pubNumber',
-                'label_attr' => array('class'=> 'col-sm-2 control-label'),
-                'attr' => array('class'=> 'col-sm-6 form-control')
+                'label_attr' => array(
+                    'class'=> 'col-sm-2 control-label',
+                    'style' =>'margin-top:10px;'
+                ),
+                'attr' => array(
+                    'class'=> 'col-sm-9 form-control',
+                    'style' =>'display:block; margin-top:10px; margin-left:12px; width:80%;',
+                    'placeholder' => 'command.number'),
+
             ))
             ->add('pubWidthSize', IntegerType::class, array(
                 'label' => 'command.pubWidthSize',
-                'property_path' => 'command_products.pubWidthSize',
-                'label_attr' => array('class'=> 'col-sm-2 control-label'),
-                'attr' => array('class'=> 'col-sm-6 form-control')
-            ))
+                'label_attr' => array(
+                    'class'=> 'col-xs-2 control-label',
+                    'style' =>'margin-top:10px;'
+                ),
+                'attr' => array(
+                    'class'=> 'col-xs-3 form-control',
+                    'style' =>'display:block; margin-top:10px; margin-left:12px; width:80%;',
+                )))
             ->add('pubLengthSize', IntegerType::class, array(
                 'label' => 'command.pubLengthSize',
-                'property_path' => 'command_products.pubLengthSize',
-                'label_attr' => array('class'=> 'col-sm-2 control-label'),
-                'attr' => array('class'=> 'col-sm-6 form-control')
-            ))
+                'label_attr' => array(
+                    'class'=> 'col-xs-2 control-label',
+                    'style' =>'margin-top:10px;'
+                ),
+                'attr' => array(
+                    'class'=> 'col-xs-3 form-control',
+                    'style' =>'display:block; margin-top:10px; margin-left:12px; width:80%;',
+                )))
+
             ->add('printName', TextType::class, array(
-                'property_path' => 'command_products.printName',
-                'label_attr' => array('class'=> 'col-sm-2 control-label'),
-                'attr' => array('class'=> 'col-sm-6 form-control')
+                'label' => 'command.print',
+                'label_attr' => array('class'=> 'col-xs-2 control-label', 'style' =>'margin-top:10px;'),
+                'attr' => array(
+                    'class'=> 'col-xs-3 form-control',
+                    'style' =>'margin-top:10px; margin-left:12px; width:80%;',
+                    'placeholder' => 'command.size',
+                ),
+                'required' => false
+                ))
 
-            ))
             ->add('webName', TextType::class, array(
-                'property_path' => 'command_products.webName',
-                'label_attr' => array('class'=> 'col-sm-2 control-label'),
-                'attr' => array('class'=> 'col-sm-6 form-control')
-
+                'label' => 'command.web',
+                'label_attr' => array('class'=> 'col-xs-2 control-label', 'style' =>'margin-top:10px;'),
+                'attr' => array(
+                    'class'=> 'col-xs-3 form-control',
+                    'style' =>'display:block; margin-top:10px; margin-left:12px; width:80%;',
+                ),
+                'required' => false
             ))
-            ->add('price', IntegerType::class, array(
-                'property_path' => 'command_products.price',
-                'label_attr' => array('class'=> 'col-sm-2 control-label'),
-                'attr' => array('class'=> 'col-sm-6 form-control')
 
-            ));
+            ->add('price', TextType::class, array(
+                'label' => 'command.price',
+                'label_attr' => array('class'=> 'col-xs-2 control-label', 'style' =>'margin-top:10px;'),
+                'attr' => array(
+                    'class'=> 'col-xs-3 form-control',
+                    'style' =>'display:block; margin-top:10px; margin-left:12px; width:80%;',
+
+            )));
     }
 
     /**

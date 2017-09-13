@@ -3,7 +3,7 @@
 {% block title %}Title{% endblock %}
 
 {% block breadcrumb %}
-    <h2>Clients</h2>
+    <h2>Commande</h2>
     <ol class="breadcrumb">
         <li>
             <a href="{{ path('commercial_index' ) }}">{{ "dashboard._"|trans }}</a>
@@ -16,28 +16,56 @@
 
 {% block content %}
 <div class="row">
-    <div class="col-lg-12">
+    <div class="col-sm-12">
         <div class="ibox float-e-margins">
             <div class="ibox-title">
-                <h5>{{ "command._" |trans }}</h5>
-            <div class="ibox-tools">
-                <div class="btn-group">
-                    <a href="{{ path('command_new') }}" class="btn btn-primary btn-xl">
+                <h2>{{ "command._" |trans }}</h2>
+                <div class="ibox-tools">
+                    <div class="btn-group">
+                        <a href="{{ path('command_new') }}" class="btn btn-primary btn-xl">
                         <span class="{{ 'command.create'|trans }}"></span>
                         {{ 'command.create'|trans }}
-                    </a>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <div class="table-responsive">
+                    {{ sg_datatables_render_html(datatable) }}
                 </div>
             </div>
         </div>
-        <div class="ibox-content">
-            <div class="table-responsive">
-                {{ sg_datatables_render_html(datatable) }}
+    </div>
+
+    {#<div class="col-sm-4">
+        <div class="ibox ">
+            <div class="ibox-content">
+                <div class="tab-content">
+                    <div id="command-1" class="tab-pane active">
+                        <div class="row m-b-lg">
+                            <div class="col-lg-4 text-center">
+                                <h2>{{ customer.company }}</h2>
+
+                                <div class="m-b-sm">
+                                    <img alt="image" class="img-circle" src="img/a2.jpg"
+                                         style="width: 62px">
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <strong>
+                                    About me
+                                </strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
+    </div>#}
 </div>
 
+
+    visualiser les actions - faire un bon de commande détaillé à droite ou en modal - numéro de page ?
    {# <table>
         <thead>
             <tr>
@@ -68,11 +96,7 @@
         </tbody>
     </table>#}
 
-    <ul>
-        <li>
-            <a href="{{ path('command_new') }}">Create a new command</a>
-        </li>
-    </ul>
+
 {% endblock %}
 
 {% block javascript %}

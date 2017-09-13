@@ -17,3 +17,7 @@ easy_mag_order_command:
 easy_mag_order_calendar:
     path:     /calendar
     defaults: { _controller: EasyMagOrderBundle:Calendar:index }
+
+sg_datatables_bundle:
+    resource: "@SgDatatablesBundle/Controller/DatatableController.php"
+    type:     annotation

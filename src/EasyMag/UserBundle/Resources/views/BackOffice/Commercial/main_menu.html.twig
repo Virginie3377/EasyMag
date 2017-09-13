@@ -15,9 +15,9 @@
     <a href="{{  path('commercial_index') }}"><i class="fa fa-th-large"></i> <span class="nav-label">{{ "sector._"|trans }}</span> <span class="fa arrow"></span></a>
     <ul class="nav nav-second-level">
         <li  class="active"><a href="{{ path('secteur_index') }}">Tous</a></li>
-        {% for sector in sectorYear %}
-            <li><a href="{{ path('secteur_index_year', {'datepublication':sector.datepublication|date('Y')}) }}">{{ sector.datepublication|date('Y') }}</a></li>
-        {% endfor %}
+        {#{% for sector in sectorYear %}#}
+            <li><a href="{{ path('secteur_index_year', {'datepublication':2017}) }}">2017</a></li>
+        {#{% endfor %}#}
         {% for sector in sectors %}
         <li><a href="{{ path('secteur_show', {'id':sector.id}) }}">{{ sector.name }}</a></li>
        {% endfor %}
@@ -28,9 +28,7 @@
     <ul class="nav nav-second-level collapse">
         <li><a href="{{ path('command_index') }}">Tous</a></li>
         <li><a href="dashboard_2.html">Par magazine</a></li>
-        <li><a href="#">Print</a></li>
-        <li><a href="#">Web</a></li>
-        <li><a href="{{ path('command_new') }}">{{ "command.create"|trans }}</a></li>
+        {#<li><a href="{{ path('command_new') }}">{{ "command.create"|trans }}</a></li>#}
     </ul>
 </li>
 <li>

@@ -64,9 +64,9 @@ class Product
     private $webName;
 
     /**
-     * @var float
+     * @var string
      *
-     * @ORM\Column(name="price", type="float")
+     * @ORM\Column(name="price", type="string")
      */
     private $price;
 
@@ -260,13 +260,6 @@ class Product
     {
         return $this->price;
     }
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->commandProducts = new \Doctrine\Common\Collections\ArrayCollection();
-    }
 
     /**
      * Set pubLengthSize
@@ -290,40 +283,6 @@ class Product
     public function getPubLengthSize()
     {
         return $this->pubLengthSize;
-    }
-
-    /**
-     * Add commandProduct
-     *
-     * @param \EasyMag\OrderBundle\Entity\Command_Product $commandProduct
-     *
-     * @return Product
-     */
-    public function addCommandProduct(\EasyMag\OrderBundle\Entity\Command_Product $commandProduct)
-    {
-        $this->commandProducts[] = $commandProduct;
-
-        return $this;
-    }
-
-    /**
-     * Remove commandProduct
-     *
-     * @param \EasyMag\OrderBundle\Entity\Command_Product $commandProduct
-     */
-    public function removeCommandProduct(\EasyMag\OrderBundle\Entity\Command_Product $commandProduct)
-    {
-        $this->commandProducts->removeElement($commandProduct);
-    }
-
-    /**
-     * Get commandProducts
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getCommandProducts()
-    {
-        return $this->commandProducts;
     }
 
     /**

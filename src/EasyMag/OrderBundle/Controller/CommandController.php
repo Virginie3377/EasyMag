@@ -4,10 +4,13 @@ namespace EasyMag\OrderBundle\Controller;
 
 use EasyMag\OrderBundle\Datatables\CommandDatatable;
 use EasyMag\OrderBundle\Entity\Command;
-use EasyMag\OrderBundle\Form\CommandType;
 use Sg\DatatablesBundle\Datatable\DatatableInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
 /**
  * Command controller.
@@ -16,22 +19,17 @@ use Symfony\Component\HttpFoundation\Request;
 class CommandController extends Controller
 {
     /**
-     * Lists all command entities.
+     * Lists all Command entities.
      *
      */
     public function indexAction(Request $request)
     {
-       /* $em = $this->getDoctrine()->getManager();
-
-        $commands = $em->getRepository('EasyMagOrderBundle:Command')->findAll();
-
-
-        return $this->render('@EasyMagOrder/command/index.html.twig', array(
-            'commands' => $commands,
-        ));*/
-
         $isAjax = $request->isXmlHttpRequest();
+        // Get your Datatable ...
+        //$datatable = $this->get('app.datatable.post');
+        //$datatable->buildDatatable();
 
+        // or use the DatatableFactory
         /** @var DatatableInterface $datatable */
         $datatable = $this->get('sg_datatables.factory')->create(CommandDatatable::class);
         $datatable->buildDatatable();
@@ -44,6 +42,7 @@ class CommandController extends Controller
             return $responseService->getResponse();
         }
 
+
         return $this->render('@EasyMagOrder/command/index.html.twig', array(
             'datatable' => $datatable,
         ));
@@ -52,6 +51,8 @@ class CommandController extends Controller
     /**
      * Creates a new command entity.
      *
+     * @Route("/new", name="command_new")
+     * @Method("GET")
      */
     public function newAction(Request $request)
     {
@@ -62,12 +63,6 @@ class CommandController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
             $command->setDate(new \DateTime());
             $em = $this->getDoctrine()->getManager();
-
-
-            foreach ($command->getCommandsProduct() as $commandProduct) {
-                $commandProduct->setCommand($command);
-                $em->persist($commandProduct);
-            }
 
             $em->persist($command);
             $em->flush();
@@ -82,15 +77,27 @@ class CommandController extends Controller
     }
 
     /**
-     * Finds and displays a command entity.
+     * Finds and displays a Command entity.
      *
+     * @param Command $command
+     *
+     * @Route("/{id}/show", name = "command_show")
+     * @Method("GET")
      */
     public function showAction(Command $command)
     {
         $deleteForm = $this->createDeleteForm($command);
-
+        //Show customer
+        $customer = $command->getCustomer();
+        //Show Documents
+        $document = $command->getDocuments();
+        //Show Sector
+        $sector = $customer->getSector();
         return $this->render('@EasyMagOrder/command/show.html.twig', array(
             'command' => $command,
+            'customer' => $customer,
+            'document' => $document,
+            'sector' => $sector,
             'delete_form' => $deleteForm->createView(),
         ));
     }
@@ -98,6 +105,10 @@ class CommandController extends Controller
     /**
      * Displays a form to edit an existing command entity.
      *
+     * @param Command $command
+     *
+     * @Route("/{id}/edit", name = "command_edit")
+     * @Method("GET", "POST")
      */
     public function editAction(Request $request, Command $command)
     {
@@ -121,6 +132,10 @@ class CommandController extends Controller
     /**
      * Deletes a command entity.
      *
+     * @param Command $command
+     *
+     * @Route("/{id}/delete", name = "command_delete")
+     * @Method("DELETE")
      */
     public function deleteAction(Request $request, Command $command)
     {

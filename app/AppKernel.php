@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new Vich\UploaderBundle\VichUploaderBundle(),
             new Sg\DatatablesBundle\SgDatatablesBundle(),
+            new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
 
 
         ];

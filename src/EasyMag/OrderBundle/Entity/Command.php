@@ -31,6 +31,13 @@ class Command
     /**
      * @var string
      *
+     * @ORM\Column(name="commandnumber", type="string", length=255)
+     */
+    private $commandnumber;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="status", type="string", length=255)
      */
     private $status;
@@ -48,7 +55,7 @@ class Command
     private $documents;
 
     /**
-     * @ORM\ManyToOne(targetEntity="EasyMag\OrderBundle\Entity\Product", inversedBy="commands")
+     * @ORM\ManyToOne(targetEntity="EasyMag\OrderBundle\Entity\Product", inversedBy="commands", cascade={"persist"})
      *
      */
     private $product;
@@ -89,6 +96,30 @@ class Command
     }
 
     /**
+     * Set coomandnumber
+     *
+     * @param string $commandnumber
+     *
+     * @return Command
+     */
+    public function setCommandnumber($commandnumber)
+    {
+        $this->commandnumber = $commandnumber;
+
+        return $this;
+    }
+
+    /**
+     * Get commandnumber
+     *
+     * @return string
+     */
+    public function getCommandnumber()
+    {
+        return $this->commandnumber;
+    }
+
+    /**
      * Set status
      *
      * @param string $status
@@ -117,7 +148,6 @@ class Command
     public function __construct()
     {
         $this->documents = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->commands_product = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
@@ -178,39 +208,6 @@ class Command
         return $this->documents;
     }
 
-    /**
-     * Add commandsProduct
-     *
-     * @param \EasyMag\OrderBundle\Entity\Command_Product $commandsProduct
-     *
-     * @return Command
-     */
-    public function addCommandsProduct(\EasyMag\OrderBundle\Entity\Command_Product $commandsProduct)
-    {
-        $this->commandsProduct[] = $commandsProduct;
-        $commandsProduct->setCommand($this);
-        return $this;
-    }
-
-    /**
-     * Remove commandsProduct
-     *
-     * @param \EasyMag\OrderBundle\Entity\Command_Product $commandsProduct
-     */
-    public function removeCommandsProduct(\EasyMag\OrderBundle\Entity\Command_Product $commandsProduct)
-    {
-        $this->commandsProduct->removeElement($commandsProduct);
-    }
-
-    /**
-     * Get commandsProduct
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getCommandsProduct()
-    {
-        return $this->commandsProduct;
-    }
 
     /**
      * Set product

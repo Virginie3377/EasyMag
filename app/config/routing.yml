@@ -24,3 +24,6 @@ easy_mag_user_front_office:
 sg_datatables_bundle:
     resource: "@SgDatatablesBundle/Controller/"
     type:     annotation
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"

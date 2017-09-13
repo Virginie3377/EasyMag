@@ -1,6 +1,8 @@
 <?php
 
 namespace EasyMag\OrderBundle\Repository;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Validator\Constraints\DateTime;
 
 /**
  * SectorRepository
@@ -22,12 +24,15 @@ class SectorRepository extends \Doctrine\ORM\EntityRepository
     }
 
 
-    public function findSectorByCommercialByYear($commercial) {
+    public function findSectorByCommercialByYear($commercial, $year) {
+        $beginDate = $year.'-01-01';
+        $endDate = $year . '-12-31';
         $qb = $this->createQueryBuilder('s')
             ->where('s.commercial = :commercial')
+            ->andWhere('s.datepublication > ' . $beginDate)
+            ->andWhere('s.datepublication < ' . $endDate)
             ->setParameter('commercial', $commercial)
             ->orderBy('s.datepublication', 'desc')
-            ->setMaxResults(1)
             ->getQuery()
             ->getResult();
         return $qb;

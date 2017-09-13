@@ -98,15 +98,15 @@ class SectorController extends Controller
      * Lists all sector entities by year.
      *
      */
-    public function indexYearAction(Request $request, Sector $sector)
+    public function indexYearAction(Request $request, $datepublication)
     {
         $em = $this->getDoctrine()->getManager();
+        $commercial = $em->getRepository(Commercial::class)->findOneByUser($this->getUser());
+        $sectorbyyear = $em->getRepository(Sector::class)->findSectorByCommercialByYear($commercial, $datepublication);
 
-        $sectors = $sector->getDatePublication();
-
+//        var_dump($sectorbyyear);die();
         return $this->render('@EasyMagOrder/sector/indexYear.html.twig', array(
-            'sectors' => $sectors,
-
+            'sectors' => $sectorbyyear,
         ));
     }
 

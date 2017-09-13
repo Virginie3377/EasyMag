@@ -80,14 +80,21 @@ command:
     status: Etat
     date: Vendu le
     web: Site web
-    pubNumber: Emplacement de la maquette
+    print: Print
+    size: Longueur x Hauteur
+    maquette: Maquette
+    pubNumber: Emplacement
     pubLengthSize: Hauteur
     pubWidthSize: Longueur
     validate: Validé
     in_progress: En cours
+    number: Numéro de la maquette
+    price: Prix TTC
+    commandnumber: Commande N°
 
 product:
     _: Produits
+    price: Prix
 
 bill:
     _: Factures
@@ -98,4 +105,7 @@ message:
 
 calendar:
     _: Mes rendez-vous
+
+datatable:
+    all: Tous
 

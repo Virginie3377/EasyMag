@@ -28,7 +28,15 @@
                     {{ form_label(form.customer, 'customer._', {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
                     {{ form_errors(form.customer) }}
                     <div class="col-sm-10">
-                        {{ form_widget(form.customer, { 'attr': {'class': 'form-control', 'style': 'margin-top:5px;'}}) }}
+                        {{ form_widget(form.customer, { 'attr': {'class': 'form-control'}}) }}
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    {{ form_label(form.commandnumber, 'command.commandnumber', {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+                    {{ form_errors(form.commandnumber) }}
+                    <div class="col-sm-10">
+                        {{ form_widget(form.commandnumber, { 'attr': {'class': 'form-control', 'placeholder':'ex: 2017STQ001'}}) }}
                     </div>
                 </div>
 
@@ -49,14 +57,16 @@
                 </div>
 
                 <div class="form-group">
-                    {{ form_label(form.product) }}
+                    {{ form_label(form.product, null, {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
                     {{ form_errors(form.product) }}
+                    <div class="col-sm-12">
                     {{ form_widget(form.product) }}
+                    </div>
                 </div>
 
                 <div class="form-group">
                     <div class="col-sm-3" style="float: right">
-                        <button type="button" class="btn btn-white">Annuler</button>
+                        <a href="{{ path('command_index') }}"><button type="button" class="btn btn-white">Annuler</button></a>
                         {{ form_widget(form.submit, {'attr': {'class': 'btn btn-primary'}}) }}
                     </div>
                 </div>
@@ -75,13 +85,13 @@
 
 {% block scripts %}
 
-        <script type="text/javascript">
+        {#<script type="text/javascript">
             $(document).ready(function() {
                 // On récupère la balise <div> en question qui contient l'attribut « data-prototype » qui nous intéresse.
                 var $container = $('div#easymag_orderbundle_command_product');
 
                 // On ajoute un lien pour ajouter une nouvelle catégorie
-                var $addLink = $('<a href="#" id="add_category" class="btn btn-default">Ajouter un produit</a>');
+                var $addLink = $('<a href="#" id="add_category" class="col-sm-2 btn btn-default">Produit</a>');
                 $container.append($addLink);
 
                 // On ajoute un nouveau champ à chaque clic sur le lien d'ajout.
@@ -95,14 +105,14 @@
                 var index = $container.find(':input').length;
                 addCategory($container);
                /// On ajoute un premier champ automatiquement s'il n'en existe pas déjà un (cas d'une nouvelle annonce par exemple).
-                if (index == 0) {
+              /*  if (index == 0) {
                     addCategory($container);
                 } else {
                     // Pour chaque catégorie déjà existante, on ajoute un lien de suppression
                     $container.children('div').each(function() {
                         addDeleteLink($(this));
                     });
-                }
+                }*/
 
                 // La fonction qui ajoute un formulaire Categorie
                 function addCategory($container) {
@@ -139,6 +149,6 @@
                 }
             });
     </script>
-
+#}
 
 {% endblock %}
