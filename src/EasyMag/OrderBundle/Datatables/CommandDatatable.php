@@ -63,9 +63,9 @@ class CommandDatatable extends AbstractDatatable
                 'title' => 'Date',
                 'width'=> '70px',
             ))
-            ->add('status', BooleanColumn::class, array(
-                'title' => 'Status',
-                'width'=> '110px',
+            ->add('status', Column::class, array(
+                'title' => $this->translator->trans('command.status'),
+                'width'=> '100px',
                 'searchable'=> true,
                 'orderable' => true,
                 'filter' => array(SelectFilter::class, array(
@@ -103,7 +103,7 @@ class CommandDatatable extends AbstractDatatable
                  'data' => 'documents[, ].nom'
                  ))*/
 
-            ->add('product.type', BooleanColumn::class, array(
+            ->add('product.type', Column::class, array(
                 'title' => $this->translator->trans('product._'),
                 'width'=> '110px',
                 'searchable'=> true,

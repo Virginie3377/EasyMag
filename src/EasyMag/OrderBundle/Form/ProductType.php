@@ -19,7 +19,7 @@ class ProductType extends AbstractType
     {
         $builder
             ->add('type', ChoiceType::class, array(
-                'choices' => ['Maquette' => 'command.maquette', 'print' => 'command.print', 'command.web' => 'command.web'],
+                'choices' => ['Maquette' => 'Maquette', 'Print' => 'print', 'Web' => 'web'],
                 'label_attr' => array(
                     'class'=> 'col-sm-2 control-label'
                 ),

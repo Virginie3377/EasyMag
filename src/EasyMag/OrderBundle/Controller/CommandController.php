@@ -132,7 +132,7 @@ class CommandController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('command_s', array('id' => $command->getId()));
+            return $this->redirectToRoute('command_index');
         }
 
         return $this->render('@EasyMagOrder/command/edit.html.twig', array(
