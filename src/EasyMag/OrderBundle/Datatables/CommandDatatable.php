@@ -19,8 +19,6 @@ use Sg\DatatablesBundle\Datatable\Filter\SelectFilter;
  */
 class CommandDatatable extends AbstractDatatable
 {
-
-
     /**
      * {@inheritdoc}
      */
@@ -32,7 +30,7 @@ class CommandDatatable extends AbstractDatatable
 
         $this->ajax->set(array(
             'type' => 'POST',
-            'pipeline' => 5
+
         ));
 
         $this->options->set(array(
@@ -47,20 +45,27 @@ class CommandDatatable extends AbstractDatatable
         ));
 
         $this->columnBuilder
-            ->add('customer.company', Column::class, array(
+            ->add('id',Column::class, array(
+                'title' => $this->translator->trans('command.id'),
+                'width'=> '20px',
+            ))
+            ->add('commandnumber', Column::class, array(
+                'title' => $this->translator->trans('command.commandnumber'),
+                'width'=> '70px',
+            ))
+            ->add('customer.company',Column::class, array(
                 'title' => $this->translator->trans('profile.fields.company'),
-                'width'=> '110px',
+                'width'=> '100px',
                 'filter' => array(TextFilter::class, array(
                     'search_type' => 'like',
-
                 ))))
             ->add('date', DateTimeColumn::class, array(
                 'title' => 'Date',
                 'width'=> '70px',
-
             ))
             ->add('status', BooleanColumn::class, array(
                 'title' => 'Status',
+                'width'=> '110px',
                 'searchable'=> true,
                 'orderable' => true,
                 'filter' => array(SelectFilter::class, array(
@@ -72,25 +77,14 @@ class CommandDatatable extends AbstractDatatable
                     ),
                 ))))
 
-            ->add('customer.sector', Column::class, array(
+            /* ->add('customer.sector', Column::class, array(
                 'title' => $this->translator->trans('sector._'),
                 'width'=> '90px',
                 'filter' => array(TextFilter::class, array(
                     'search_type' => 'like',
 
                 ))))
-            /* ->add('customer.address', Column::class, array(
-                 'title' => $this->translator->trans('profile.fields.address'),
 
-                 ))
-             ->add('customer.postalCode', Column::class, array(
-                 'title' => $this->translator->trans('profile.fields.zip_code'),
-                 'width'=> '80px',
-             ))
-             ->add('customer.city', Column::class, array(
-                 'title' => $this->translator->trans('profile.fields.city'),
-                 'width'=> '90px',
-             ))
              ->add('customer.phone', Column::class, array(
                  'title' => $this->translator->trans('profile.fields.phone'),
 
@@ -98,18 +92,8 @@ class CommandDatatable extends AbstractDatatable
              ->add('customer.email', Column::class, array(
                  'title' => 'Customer Email',
                  ))
-             ->add('customer.gender', Column::class, array(
-                 'title' => 'Customer Gender',
-                 ))
-             ->add('customer.lastname', Column::class, array(
-                 'title' => 'Customer Lastname',
-                 ))
-             ->add('customer.firstname', Column::class, array(
-                 'title' => 'Customer Firstname',
-                 ))
-             ->add('customer.image', Column::class, array(
-                 'title' => 'Customer Image',
-                 ))
+
+
              ->add('documents.type', Column::class, array(
                  'title' => 'Documents Type',
                  'data' => 'documents[, ].type'
@@ -121,6 +105,7 @@ class CommandDatatable extends AbstractDatatable
 
             ->add('product.type', BooleanColumn::class, array(
                 'title' => $this->translator->trans('product._'),
+                'width'=> '110px',
                 'searchable'=> true,
                 'orderable' => true,
                 'filter' => array(SelectFilter::class, array(
@@ -131,27 +116,29 @@ class CommandDatatable extends AbstractDatatable
                         '1' =>$this->translator->trans('command.web')
                     ),
                 ))))
-            /*->add('product.pubNumber', Column::class, array(
-                'title' => 'Product PubNumber',
+            ->add('product.pubNumber', Column::class, array(
+                'title' => $this->translator->trans('product.number'),
+                'width'=> '60px',
                 ))
-            ->add('product.pubLengthSize', Column::class, array(
-                'title' => 'Product PubLengthSize',
-                ))
-            ->add('product.pubWidthSize', Column::class, array(
-                'title' => 'Product PubWidthSize',
-                ))
-            ->add('product.printName', Column::class, array(
-                'title' => 'Product PrintName',
-                ))
-            ->add('product.webName', Column::class, array(
-                'title' => 'Product WebName',
-                ))*/
+            /* ->add('product.pubLengthSize', Column::class, array(
+                 'title' => 'Product PubLengthSize',
+                 ))
+             ->add('product.pubWidthSize', Column::class, array(
+                 'title' => 'Product PubWidthSize',
+                 ))
+             ->add('product.printName', Column::class, array(
+                 'title' => 'Product PrintName',
+                 ))
+             ->add('product.webName', Column::class, array(
+                 'title' => 'Product WebName',
+                 ))*/
             ->add('product.price', Column::class, array(
                 'title' => $this->translator->trans('product.price'),
-                'width'=> '90px',
+                'width'=> '60px',
                 ))
             ->add(null, ActionColumn::class, array(
                 'title' => $this->translator->trans('sg.datatables.actions.title'),
+                'width'=> '110px',
                 'actions' => array(
                     array(
                         'route' => 'command_show',

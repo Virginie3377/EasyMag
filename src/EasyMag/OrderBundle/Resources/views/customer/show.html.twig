@@ -1,5 +1,6 @@
 {% extends '@EasyMagUser/BackOffice/Commercial/layout.html.twig' %}
 
+
 {% block stylesheets %}
 
 {% endblock %}
@@ -22,84 +23,86 @@
     </ol>
 {% endblock %}
 
- {% block content %}
-     <h1>{{ customer.company }}</h1>
 
-     <div class="row m-b-lg m-t-lg">
+{% block content %}
+<div class="row">
+    <div class="col-lg-4">
+        <div class="ibox ">
+            <div class="ibox-content">
+                <div class="tab-content">
+                    <div id="{{ customer.company }}" class="tab-pane active">
+                        <div class="row">
+                            <div class="col-lg-12 text-center">
+                                <h2>{{ customer.company }}</h2>
+                                <h4 class="text-center">{{ customer.gender }} {{ customer.firstname }} {{ customer.lastname }}</h4>
+                                <a href="mailto:{{ customer.email }}">
+                                    <button type="button" class="btn btn-primary btn-sm btn-block"
+                                            style="margin: 10px 0;"><i class="fa fa-envelope"></i>
+                                        Envoyez un Email
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="col-lg-12 text-center">
+                                <strong>
+                                    Commandes réalisées : {{ command.count }} commandes
+                                </strong>
+                                <div class="ibox no-padding">
+                                    <img alt="image" style="margin: 10px 0;" class="img-responsive"
+                                         src="{{ asset('assets/backoffice/img/cutomers/img_magazine/p8.jpg') }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="client-detail">
+                            <div class="full-height-scroll text-center">
+                                <ul class="list-group clear-list">
+                                    <li class="list-group-item first-item">
+                                        <strong>Adresse </strong><br>
+                                        <span class="text-center">{{ customer.address }}
+                                            <br>{{ customer.postalCode }} {{ customer.city }}</span><br>
+                                        <h4 class="text-center">{{ customer.phone }}</h4>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Secteur </strong><br>
+                                        <span class="text-center">{{ customer.sector }}</span><br>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Notes</strong>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua.
+                                        </p>
+                                </ul>
+                                <div class="col-sm-12 text-center">
+                                    <a href="{{ path('client_edit', { 'id': customer.id }) }}">
+                                        <button type="button" class="btn btn-warning">Modifier</button>
+                                    </a>
+                                    <a href="{{ path('client_index') }}">
+                                        <button type="button" class="btn btn-info">
+                                            Retour Listing
+                                        </button>
+                                    </a>
+                                </div>
+                                <div class="col-sm-12 text-center" style="padding-top: 5px;" >
+                                    {{ form_start(delete_form) }}
+                                    <input type="submit" class="btn btn-danger" value="Effacer cette fiche">
+                                    {{ form_end(delete_form) }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-         <div class="col-md-5">
-             <div class="profile-image">
-                 <img src="{{ asset('assets/backoffice/img/cutomers/img_magazine/5.jpg') }}" class=" m-b-md"
-                      alt="profile">
-             </div>
-         </div>
-
-         <div class="col-md-4">
-             <div class="ibox-content text-center">
-                 <div class="profile-info">
-
-                     <div>
-                         <h2 class="no-margins">
-                             {{ customer.gender }} {{ customer.firstname }} {{ customer.lastname }}
-                         </h2>
-                         <h2>{{ customer.phone }}</h2>
-                         <h4>{{ customer.email }}</h4>
-                         <h4>
-                             {{ customer.address }} {{ customer.postalCode }} {{ customer.city }}
-                         </h4>
-                     </div>
-                 </div>
-             </div>
-         </div>
-         <div class="col-md-3 m-b-xs">
-             <h2 class="no-margins">
-                 <center> product.type</center>
-             </h2>
-
-             faire un if avec pub, web ou print
-             <div class="widget style1 yellow-bg">
-                 <div class="row vertical-align">
-                     <div class="col-xs-3">
-                         <i class="fa fa-paperclip fa-2x"></i>
-                     </div>
-                     <div class="col-xs-4 text-right">
-                         <h3 class="font-bold">Format</h3>
-                     </div>
-                     <div class="col-xs-5 text-right">
-                         <h3 class="font-bold">5*6</h3>
-                     </div>
-                 </div>
-             </div>
-
-
-             <div class="widget style1 lazur-bg">
-                 <div class="row vertical-align">
-                     <div class="col-xs-3">
-                         <i class="fa fa-euro fa-3x"></i>
-                     </div>
-                     <div class="col-xs-9 text-right">
-                         <h2 class="font-bold">462</h2>
-                     </div>
-                 </div>
-             </div>
-         </div>
-
-     </div>
-     <div class="row m-b-lg m-t-lg">
-         <div class="col-sm-2">
-             {{ form_start(delete_form) }}
-             <input type="submit" class="btn btn-danger" value="Effacer cette fiche">
-             {{ form_end(delete_form) }}
-         </div>
-         <div class="col-sm-4">
-             <a href="{{ path('client_index') }}">
-                 <button type="button" class="btn btn-info" style="margin-right: 20px;">Retour fiche client</button>
-             </a>
-             <a href="{{ path('client_edit', { 'id': customer.id }) }}">
-                 <button type="button" class="btn btn-warning">Modifier</button>
-             </a>
-         </div>
-
-     </div>
- {% endblock %}
-
+    <div class="col-lg-4">
+        <div class="ibox ">
+            <div class="ibox-content">
+                <div class="tab-content">
+                    liste document
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

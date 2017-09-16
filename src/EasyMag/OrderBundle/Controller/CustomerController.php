@@ -6,6 +6,7 @@ use EasyMag\OrderBundle\Entity\Customer;
 use EasyMag\OrderBundle\Form\CreateCustomerType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Customer controller.
@@ -22,6 +23,7 @@ class CustomerController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $customers = $em->getRepository('EasyMagOrderBundle:Customer')->findAll();
+
 
         return $this->render('@EasyMagOrder/customer/index.html.twig', array(
             'customers' => $customers,
@@ -55,14 +57,20 @@ class CustomerController extends Controller
     /**
      * Finds and displays a customer entity.
      *
+     * @return Response A Response instance
      */
     public function showAction(Customer $customer)
     {
+        $em = $this->getDoctrine()->getManager();
         $deleteForm = $this->createDeleteForm($customer);
+        //Requete commande
+        $command = $customer->getCommands();
+        //$product = $customer->getCommands()
 
-        return $this->render('@EasyMagOrder/customer/show.html.twig', array(
+     return $this->render('@EasyMagOrder/customer/show.html.twig', array(
             'customer' => $customer,
-            'delete_form' => $deleteForm->createView(),
+            'command'=> $command,
+           'delete_form' => $deleteForm->createView(),
         ));
     }
 

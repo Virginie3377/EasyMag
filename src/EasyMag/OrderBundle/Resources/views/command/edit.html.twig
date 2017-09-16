@@ -1,21 +1,88 @@
-{% extends 'base.html.twig' %}
+{% extends '@EasyMagUser/BackOffice/Commercial/layout.html.twig' %}
 
-{% block body %}
-    <h1>Command edit</h1>
+{% block title %}Title{% endblock %}
 
-    {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
-    {{ form_end(edit_form) }}
-
-    <ul>
+{% block breadcrumb %}
+    <h2>Clients</h2>
+    <ol class="breadcrumb">
         <li>
-            <a href="{{ path('command_index') }}">Back to the list</a>
+            <a href="{{ path('commercial_index' ) }}">{{ "dashboard._"|trans }}</a>
         </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
+        <li class="active">
+            <a href="{{ path('command_index' ) }}"><strong>Mes Commandes</strong></a>
         </li>
-    </ul>
+    </ol>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>{{ "form.required" |trans }}</h5>
+                </div>
+                <div class="ibox-content">
+                    {{ form_start(form, {'attr': {'class': 'form-horizontal', 'action': path('command_new') }}) }}
+
+                    <div class="form-group">
+                        {{ form_label(form.customer, 'customer._', {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+                        {{ form_errors(form.customer) }}
+                        <div class="col-sm-10">
+                            {{ form_widget(form.customer, { 'attr': {'class': 'form-control'}}) }}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(form.commandnumber, 'command.commandnumber', {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+                        {{ form_errors(form.commandnumber) }}
+                        <div class="col-sm-10">
+                            {{ form_widget(form.commandnumber, { 'attr': {'class': 'form-control', 'placeholder':'ex: 2017STQ001'}}) }}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(form.date, null, {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+                        {{ form_errors(form.date) }}
+                        <div class="col-sm-10">
+                            {{ form_widget(form.date, { 'attr': {'class': 'form-control'}}) }}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(form.status, null, {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+                        {{ form_errors(form.status) }}
+                        <div class="col-sm-10">
+                            {{ form_widget(form.status, { 'attr': {'class': 'form-control'}}) }}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(form.product, null, {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+                        {{ form_errors(form.product) }}
+                        <div class="col-sm-12">
+                            {{ form_widget(form.product) }}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-3" style="float: right">
+                            <a href="{{ path('command_index') }}"><button type="button" class="btn btn-white">Annuler</button></a>
+                            {{ form_widget(form.submit, {'attr': {'class': 'btn btn-primary'}}) }}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    {{ form_rest(form) }}
+    {{ form_end(form) }}
+
+{% endblock %}
+
+
+{% block javascripts %}
+
 {% endblock %}

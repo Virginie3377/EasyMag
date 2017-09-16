@@ -15,91 +15,32 @@
 {% endblock %}
 
 {% block content %}
-<div class="row">
-    <div class="col-sm-12">
-        <div class="ibox float-e-margins">
-            <div class="ibox-title">
-                <h2>{{ "command._" |trans }}</h2>
-                <div class="ibox-tools">
-                    <div class="btn-group">
-                        <a href="{{ path('command_new') }}" class="btn btn-primary btn-xl">
-                        <span class="{{ 'command.create'|trans }}"></span>
-                        {{ 'command.create'|trans }}
-                        </a>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h2>{{ "command._" |trans }}</h2>
+                    <div class="ibox-tools">
+                        <div class="btn-group">
+                            <a href="{{ path('command_new') }}" class="btn btn-primary btn-xl">
+                                <span class="{{ 'command.create'|trans }}"></span>
+                                {{ 'command.create'|trans }}
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="ibox-content">
-                <div class="table-responsive">
-                    {{ sg_datatables_render_html(datatable) }}
+                <div class="ibox-content">
+                    <div class="table-responsive">
+                        {{ sg_datatables_render_html(datatable) }}
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    {#<div class="col-sm-4">
-        <div class="ibox ">
-            <div class="ibox-content">
-                <div class="tab-content">
-                    <div id="command-1" class="tab-pane active">
-                        <div class="row m-b-lg">
-                            <div class="col-lg-4 text-center">
-                                <h2>{{ customer.company }}</h2>
-
-                                <div class="m-b-sm">
-                                    <img alt="image" class="img-circle" src="img/a2.jpg"
-                                         style="width: 62px">
-                                </div>
-                            </div>
-                            <div class="col-lg-8">
-                                <strong>
-                                    About me
-                                </strong>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>#}
-</div>
-
-
-    visualiser les actions - faire un bon de commande détaillé à droite ou en modal - numéro de page ?
-   {# <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Date</th>
-                <th>Status</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for command in commands %}
-            <tr>
-                <td><a href="{{ path('command_show', { 'id': command.id }) }}">{{ command.id }}</a></td>
-                <td>{% if command.date %}{{ command.date|date('Y-m-d H:i:s') }}{% endif %}</td>
-                <td>{{ command.status }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('command_show', { 'id': command.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('command_edit', { 'id': command.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>#}
-
-
 {% endblock %}
 
 {% block javascript %}
-{{ parent() }}
+    {{ parent() }}
     {{ sg_datatables_render_js(datatable) }}
-{% endblock javascript %}
+{% endblock %}

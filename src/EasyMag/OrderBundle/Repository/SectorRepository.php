@@ -23,18 +23,21 @@ class SectorRepository extends \Doctrine\ORM\EntityRepository
         return $qb;
     }
 
-
     public function findSectorByCommercialByYear($commercial, $year) {
-        $beginDate = $year.'-01-01';
-        $endDate = $year . '-12-31';
+        $start = $year.'-01-01';
+        $end = $year.'-12-31';
         $qb = $this->createQueryBuilder('s')
             ->where('s.commercial = :commercial')
-            ->andWhere('s.datepublication > ' . $beginDate)
-            ->andWhere('s.datepublication < ' . $endDate)
-            ->setParameter('commercial', $commercial)
+            ->andWhere('s.datepublication BETWEEN :start AND :end')
+            ->setParameters(array(
+                'commercial' => $commercial,
+                'start' => $start,
+                'end' => $end,
+            ))
             ->orderBy('s.datepublication', 'desc')
             ->getQuery()
             ->getResult();
         return $qb;
     }
+
 }

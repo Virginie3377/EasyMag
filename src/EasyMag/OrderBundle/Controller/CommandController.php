@@ -19,8 +19,14 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 class CommandController extends Controller
 {
     /**
-     * Lists all Command entities.
+     * Lists all command entities.
      *
+     * @param Request $request
+     *
+     * @Route("/", name="command_index")
+     * @Method({"GET", "POST"})
+     *
+     * @return Response
      */
     public function indexAction(Request $request)
     {
@@ -37,8 +43,9 @@ class CommandController extends Controller
         if ($isAjax) {
             $responseService = $this->get('sg_datatables.response');
             $responseService->setDatatable($datatable);
-            $responseService->getDatatableQueryBuilder();
 
+            $datatableQueryBuilder = $responseService->getDatatableQueryBuilder();
+            $datatableQueryBuilder->buildQuery();
             return $responseService->getResponse();
         }
 
@@ -52,7 +59,7 @@ class CommandController extends Controller
      * Creates a new command entity.
      *
      * @Route("/new", name="command_new")
-     * @Method("GET")
+     * @Method({"GET", "POST"})
      */
     public function newAction(Request $request)
     {
@@ -87,16 +94,22 @@ class CommandController extends Controller
     public function showAction(Command $command)
     {
         $deleteForm = $this->createDeleteForm($command);
+        //Récupérer tous les clients
+       $em = $this->getDoctrine()->getManager();
+       $customers = $em->getRepository('EasyMagOrderBundle:Customer')->findAll();
+
         //Show customer
         $customer = $command->getCustomer();
         //Show Documents
-        $document = $command->getDocuments();
+        $documents = $command->getDocuments();
         //Show Sector
         $sector = $customer->getSector();
+
         return $this->render('@EasyMagOrder/command/show.html.twig', array(
+            'customers' => $customers,
             'command' => $command,
             'customer' => $customer,
-            'document' => $document,
+            'document' => $documents,
             'sector' => $sector,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -108,7 +121,7 @@ class CommandController extends Controller
      * @param Command $command
      *
      * @Route("/{id}/edit", name = "command_edit")
-     * @Method("GET", "POST")
+     * @Method({"GET", "POST"})
      */
     public function editAction(Request $request, Command $command)
     {
@@ -119,12 +132,12 @@ class CommandController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('command_edit', array('id' => $command->getId()));
+            return $this->redirectToRoute('command_s', array('id' => $command->getId()));
         }
 
         return $this->render('@EasyMagOrder/command/edit.html.twig', array(
             'command' => $command,
-            'edit_form' => $editForm->createView(),
+            'form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));
     }

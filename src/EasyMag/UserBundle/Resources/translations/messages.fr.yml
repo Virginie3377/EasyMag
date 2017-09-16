@@ -75,6 +75,8 @@ dashboard:
 
 command:
     _: Bons de commande
+    id: Ligne N°
+    number: N° commande
     create: Ajouter un bon de commande
     quantity: Quantité
     status: Etat
@@ -94,6 +96,7 @@ command:
 
 product:
     _: Produits
+    number : N° maquette
     price: Prix
 
 bill:
