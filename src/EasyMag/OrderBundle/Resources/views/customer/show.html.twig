@@ -18,7 +18,7 @@
             <a href="{{ path('client_index' ) }}">Client</a>
         </li>
         <li class="active">
-            <a href="{{ path('client_index' ) }}"><strong>{{ customer.company }}</strong></a>
+            <a href="{{ path('client_show', { 'id': customer.id }) }}"><strong>{{ customer.company }}</strong></a>
         </li>
     </ol>
 {% endblock %}

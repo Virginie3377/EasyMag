@@ -112,3 +112,14 @@ calendar:
 datatable:
     all: Tous
 
+document:
+    type: Type
+    bdc: Bon de commande
+    bdf: Bon de fabrication
+    devis: Devis
+    facture: Facture
+    autre: Autre
+    created: Importé le
+    file: Fichier
+    nom: Nom
+

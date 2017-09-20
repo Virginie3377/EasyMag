@@ -10,6 +10,8 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
  *
  * @ORM\Table(name="document")
  * @ORM\Entity(repositoryClass="EasyMag\OrderBundle\Repository\DocumentRepository")
+ * @Vich\Uploadable
+ *
  */
 class Document
 {
@@ -30,7 +32,7 @@ class Document
     private $type;
 
     /**
-     * @ORM\ManyToOne(targetEntity="EasyMag\OrderBundle\Entity\Command", inversedBy="documents")
+     * @ORM\ManyToOne(targetEntity="EasyMag\OrderBundle\Entity\Command", inversedBy="documents", cascade={"persist"})
      *
      */
     private $command;
@@ -38,21 +40,32 @@ class Document
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="date_ajout", type="datetime")
+     * @ORM\Column(name="date_ajout", type="datetime", nullable=true)
      */
     private $createdAt;
 
-    /**
-     * @Vich\UploadableField(mapping="documents_files", fileNameProperty="nom")
-     * @var File
-     */
-    private $fichier;
     /**
      * @var string
      *
      * @ORM\Column(name="nom", type="string", length=255)
      */
     private $nom;
+
+    /**
+     * @Vich\UploadableField(mapping="documents_files", fileNameProperty="nom")
+     * @var File
+     */
+    private $fichier;
+
+
+    /**
+     * Constructor
+     */
+   /* public function __construct()
+    {
+        $this->createdAt = new \Doctrine\Common\Collections\ArrayCollection();
+
+    }*/
 
     /**
      * Get id
@@ -112,9 +125,16 @@ class Document
         return $this->command;
     }
 
-    public function setcreatedAt()
+    /**
+     * Set createdAt
+     *
+     * @param \DateTime $createdAt
+     *
+     * @return Document
+     */
+    public function setCreatedAt($createdAt = null)
     {
-        $this->createdAt = new \DateTime();
+        $this->createdAt = $createdAt === null ? new \DateTime() : $createdAt;
         return $this;
     }
 
@@ -123,7 +143,7 @@ class Document
      *
      * @return \DateTime
      */
-    public function getcreatedAt()
+    public function getCreatedAt()
     {
         return $this->createdAt;
     }
@@ -132,11 +152,11 @@ class Document
     /**
      * @param File|null $fichier
      */
-    public function setFichier(File $fichier = null)
+    public function setFichier(File $nom = null)
     {
-        $this->fichier = $fichier;
+        $this->fichier = $nom;
 
-        if ($fichier) {
+        if ($nom) {
             $this->createdAt = new \DateTimeImmutable();
         }
 

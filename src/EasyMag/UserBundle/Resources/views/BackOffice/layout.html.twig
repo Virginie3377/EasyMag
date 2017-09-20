@@ -90,8 +90,8 @@
 
 
 <!-- Mainly scripts -->
-<script src="{{ asset('assets/backoffice/js/plugins/fullcalendar/moment.min.js') }}"></script>
 <script src="{{ asset('assets/vendor/jquery/jquery-3.1.1.min.js') }}"></script>
+<script src="{{ asset('assets/backoffice/js/plugins/fullcalendar/moment.min.js') }}"></script>
 
 
 <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
@@ -152,8 +152,37 @@
 <script src="{{ asset('bundles/sgdatatables/js/pipeline.js') }}"></script>
 
 
-{% block scripts %}{% endblock %}
 
-{% block javascript %}{% endblock %}
+    <script>
+
+        $( document ).ready(function() {
+
+            // Fonction pour afficher le nom du fichier sur les 'input file'
+            $('.inputfile').each(function () {
+                var $input = $(this),
+                    $label = $input.next('label');
+
+                $input.on('change', function (e) {
+                    var fileName = e.target.value.split('\\').pop();
+
+                    if (fileName) {
+                        $('#filename-box').val(fileName);
+                    } else {
+                        $label.html('');
+                    }
+                });
+            });
+        });
+
+        // Fonction pour supprimer un document
+        $('.btn-delete-doc').on('click', function () {
+            var documentId = $(this).data('document');
+            var url = "/syndic/delete/doc/" + documentId;
+            $('#delete-doc').attr('href',url);
+        });
+
+    </script>
+{% block javascript %}
+{% endblock %}
 </body>
 </html>

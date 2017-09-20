@@ -14,6 +14,10 @@ easy_mag_order_command:
     resource: "@EasyMagOrderBundle/Resources/config/routing_command.yml"
     prefix:   /commande
 
+easy_mag_order_document:
+    resource: "@EasyMagOrderBundle/Resources/config/routing_document.yml"
+    prefix:   /document
+
 easy_mag_order_calendar:
     path:     /calendar
     defaults: { _controller: EasyMagOrderBundle:Calendar:index }

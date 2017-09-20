@@ -109,7 +109,7 @@ class CommandController extends Controller
             'customers' => $customers,
             'command' => $command,
             'customer' => $customer,
-            'document' => $documents,
+            'documents' => $documents,
             'sector' => $sector,
             'delete_form' => $deleteForm->createView(),
         ));

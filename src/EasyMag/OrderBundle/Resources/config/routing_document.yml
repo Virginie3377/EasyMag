@@ -1,0 +1,13 @@
+document_index:
+    path:     /
+    defaults: { _controller: EasyMagOrderBundle:Document:index }
+    methods:  [GET, POST]
+
+document_new:
+    path:     /nouveau
+    defaults: { _controller: EasyMagOrderBundle:Document:new }
+
+document_show:
+    path:     /{id}/show
+    defaults: { _controller: "EasyMagOrderBundle:Document:show" }
+    methods:  GET
