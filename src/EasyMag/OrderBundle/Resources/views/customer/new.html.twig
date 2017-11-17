@@ -98,12 +98,14 @@
                 <div class="hr-line-dashed"></div>
 
                 <div class="form-group">
-                    {{ form_label(form.customer, 'customer.new', {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+                    {{ form_label(form.customer, 'customer.new') }}
                     {{ form_errors(form.customer) }}
-                    <div class="i-checks">
-                        {{ form_widget(form.customer, { 'attr': { 'class': 'iradio_square-green'}}) }}
-                    </div>
+                    {{ form_widget(form.customer) }}
+                    <input type="checkbox" class="js-switch" />
                 </div>
+
+
+
 
                 <div class="hr-line-dashed"></div>
 
@@ -121,27 +123,17 @@
                         {{ form_widget(form.submit, {'attr': {'class': 'btn btn-primary'}}) }}
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
+</div>
 
-
-                {{ form_rest(form) }}
-                {{ form_end(form) }}
+     {{ form_rest(form) }}
+     {{ form_end(form) }}
 
 {% endblock %}
 
-{% block scripts %}
-    <!-- iCheck -->
-    <script src="{{ asset('assets/backoffice/js/plugins/iCheck/icheck.min.js') }}"></script>
-    <script>
-        $(document).ready(function () {
-            $('.i-checks').iCheck({
-                checkboxClass: 'icheckbox_square-green',
-                radioClass: 'iradio_square-green'
-            });
-        });
-    </script>
-
+{% block javascript %}
 
 {% endblock %}

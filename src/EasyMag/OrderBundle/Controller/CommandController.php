@@ -101,7 +101,7 @@ class CommandController extends Controller
         //Show customer
         $customer = $command->getCustomer();
         //Show Documents
-        $documents = $command->getDocuments();
+        //$documents = $command->getDocuments();
         //Show Sector
         $sector = $customer->getSector();
 
@@ -109,7 +109,7 @@ class CommandController extends Controller
             'customers' => $customers,
             'command' => $command,
             'customer' => $customer,
-            'documents' => $documents,
+            //'documents' => $documents,
             'sector' => $sector,
             'delete_form' => $deleteForm->createView(),
         ));

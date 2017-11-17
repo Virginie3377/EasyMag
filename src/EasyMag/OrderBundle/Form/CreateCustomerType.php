@@ -34,9 +34,9 @@ class CreateCustomerType extends AbstractType
             ))
             ->add('lastname')
             ->add('firstname')
+
             ->add('customer', ChoiceType::class, array(
-                'label'=> '',
-                'choices'=> [''=> true],
+                'choices'=> ['' => false],
                 'multiple' => false,
                 'expanded' => true,
             ))
@@ -45,8 +45,7 @@ class CreateCustomerType extends AbstractType
                'property_path' => 'sector',
 
             ))
-    /*        ->add('commercial')
-            ->add('graphiste')*/
+
             ->add('submit',SubmitType::class, array(
                 'label' => 'Enregistrer'
             ));

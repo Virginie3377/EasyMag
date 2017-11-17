@@ -5,16 +5,24 @@ namespace EasyMag\UserBundle\Controller;
 use EasyMag\OrderBundle\Entity\Sector;
 use EasyMag\UserBundle\Entity\Commercial;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 
 class CommercialController extends Controller
 {
     public function indexAction()
     {
+        $today = new \DateTime('today');
         $em = $this->getDoctrine()->getManager();
         $commercial = $em->getRepository(Commercial::class)->findOneByUser($this->getUser());
+        $ventesbyDay = $em->getRepository(Commercial::class)->findVentesByDay($today);
+        $ventesbyYear = $em->getRepository(Commercial::class)->findVentesByCommercialByYear();
+        //$validations = 'todo';$em->getRepository(Commercial::class)->findValidationByMagazine('test');
 
         return $this->render('EasyMagUserBundle:BackOffice/Commercial:index.html.twig', array(
             'commercial' => $commercial,
+            'ventesbyDay' => $ventesbyDay,
+            'ventebyYear'=> $ventesbyYear,
+            //'validations' => $validations,
         ));
     }
 

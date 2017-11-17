@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700">
     <link rel="stylesheet" href="{{ asset('assets/backoffice/js/plugins/gritter/jquery.gritter.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/backoffice/js/plugins/jvectormap/jquery-jvectormap-2.0.2.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/backoffice/css/switchery/switchery.css') }}">
 
 
     {% block stylesheets %}{% endblock %}
@@ -92,8 +93,6 @@
 <!-- Mainly scripts -->
 <script src="{{ asset('assets/vendor/jquery/jquery-3.1.1.min.js') }}"></script>
 <script src="{{ asset('assets/backoffice/js/plugins/fullcalendar/moment.min.js') }}"></script>
-
-
 <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('assets/backoffice/js/plugins/metisMenu/jquery.metisMenu.js') }}"></script>
 <script src="{{ asset('assets/backoffice/js/plugins/slimscroll/jquery.slimscroll.min.js') }}"></script>
@@ -150,10 +149,19 @@
 <script src="https://cdn.datatables.net/1.10.6/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js"></script>
 <script src="{{ asset('bundles/sgdatatables/js/pipeline.js') }}"></script>
+<!-- Switchery -->
+<script src={{ asset('assets/backoffice/js/plugins/switchery/switchery.js') }}></script>
 
 
 
     <script>
+        // Affiche la classe active dans le menu menu
+        $('.menu a').on('click', function(){
+        $(this)
+            .parent('li')
+            .addClass('active');
+        });
+
 
         $( document ).ready(function() {
 
@@ -181,8 +189,20 @@
             $('#delete-doc').attr('href',url);
         });
 
+        $(document).ready(function () {
+            var elem = document.querySelector('.js-switch');
+            var switchery = new Switchery(elem, { color: '#1AB394' });
+
+        });
+
+
+
+
     </script>
+
 {% block javascript %}
 {% endblock %}
+
+
 </body>
 </html>

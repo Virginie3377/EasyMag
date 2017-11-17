@@ -25,7 +25,7 @@ class ProductType extends AbstractType
                 ),
                 'attr' => array(
                     'class'=> 'col-sm-3 form-control',
-                    'style' =>'margin-left:12px; width:80%'
+                    'style' =>'margin-left:5px; width:82%; border-radius: 4px;'
                 ),
                 'required' => true
             ))
@@ -36,8 +36,8 @@ class ProductType extends AbstractType
                     'style' =>'margin-top:10px;'
                 ),
                 'attr' => array(
-                    'class'=> 'col-sm-9 form-control',
-                    'style' =>'display:block; margin-top:10px; margin-left:12px; width:80%;',
+                    'class'=> 'col-sm-3 form-control',
+                    'style' =>'display:block; margin-top:10px; margin-left:5px; width:82%; border-radius: 4px;',
                     'placeholder' => 'command.number'),
 
             ))
@@ -49,7 +49,7 @@ class ProductType extends AbstractType
                 ),
                 'attr' => array(
                     'class'=> 'col-xs-3 form-control',
-                    'style' =>'display:block; margin-top:10px; margin-left:12px; width:80%;',
+                    'style' =>'display:block; margin-top:10px; margin-left:5px; width:82%; border-radius: 4px;',
                 )))
             ->add('pubLengthSize', IntegerType::class, array(
                 'label' => 'command.pubLengthSize',
@@ -59,7 +59,7 @@ class ProductType extends AbstractType
                 ),
                 'attr' => array(
                     'class'=> 'col-xs-3 form-control',
-                    'style' =>'display:block; margin-top:10px; margin-left:12px; width:80%;',
+                    'style' =>'display:block; margin-top:10px; margin-left:5px; width:82%; border-radius: 4px;',
                 )))
 
             ->add('printName', TextType::class, array(
@@ -67,7 +67,7 @@ class ProductType extends AbstractType
                 'label_attr' => array('class'=> 'col-xs-2 control-label', 'style' =>'margin-top:10px;'),
                 'attr' => array(
                     'class'=> 'col-xs-3 form-control',
-                    'style' =>'margin-top:10px; margin-left:12px; width:80%;',
+                    'style' =>'margin-top:10px; margin-left:5px; width:82%; border-radius: 4px;',
                     'placeholder' => 'command.size',
                 ),
                 'required' => false
@@ -78,7 +78,7 @@ class ProductType extends AbstractType
                 'label_attr' => array('class'=> 'col-xs-2 control-label', 'style' =>'margin-top:10px;'),
                 'attr' => array(
                     'class'=> 'col-xs-3 form-control',
-                    'style' =>'display:block; margin-top:10px; margin-left:12px; width:80%;',
+                    'style' =>'display:block; margin-top:10px; margin-left:5px; width:82%; border-radius: 4px;',
                 ),
                 'required' => false
             ))
@@ -88,7 +88,7 @@ class ProductType extends AbstractType
                 'label_attr' => array('class'=> 'col-xs-2 control-label', 'style' =>'margin-top:10px;'),
                 'attr' => array(
                     'class'=> 'col-xs-3 form-control',
-                    'style' =>'display:block; margin-top:10px; margin-left:12px; width:80%;',
+                    'style' =>'display:block; margin-top:10px; margin-left:5px; width:82%; border-radius: 4px;',
 
             )));
     }

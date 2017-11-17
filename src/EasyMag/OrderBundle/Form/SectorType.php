@@ -15,6 +15,10 @@ class SectorType extends AbstractType
 {
     private $container;
 
+    /**
+     * @param Container $container
+     *
+     */
 
     public function __construct(Container $container)
     {

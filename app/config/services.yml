@@ -12,3 +12,16 @@ services:
     app.datatable.post:
         class: EasyMag\OrderBundle\Datatables\CommandDatatable
         parent: sg_datatables.datatable.abstract
+
+    form.type.create_document:
+        class: EasyMag\OrderBundle\Form\DocumentType
+        arguments: ['@service_container', '@session']
+        tags:
+            - { name: form.type }
+
+    form.type.edit_document:
+        class: EasyMag\OrderBundle\Form\DocumentType
+        arguments: ['@service_container', '@session']
+        tags:
+            - { name: form.type }
+

@@ -4,4 +4,3 @@
 commercial_index:
     path:     /
     defaults: { _controller: EasyMagUserBundle:Commercial:index }
-

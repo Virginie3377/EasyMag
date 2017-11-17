@@ -4,8 +4,10 @@ document_index:
     methods:  [GET, POST]
 
 document_new:
-    path:     /nouveau
+    path:     /nouveau_document
     defaults: { _controller: EasyMagOrderBundle:Document:new }
+    methods:  [GET, POST]
+
 
 document_show:
     path:     /{id}/show

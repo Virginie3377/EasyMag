@@ -2,6 +2,7 @@
 
 namespace EasyMag\OrderBundle\Controller;
 
+use EasyMag\OrderBundle\Entity\Command;
 use EasyMag\OrderBundle\Entity\Document;
 use EasyMag\OrderBundle\Form\DocumentType;
 use EasyMag\UserBundle\Entity\Commercial;
@@ -10,13 +11,18 @@ use Symfony\Component\HttpFoundation\Request;
 
 class DocumentController extends Controller
 {
+    /**
+     * Table de correspondance Entite / Class
+     * @var array
+     */
+    private $entityList = [
+        "command" => "EasyMagOrderBundle:Command"
+    ];
+
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-
-        $commerciaux = $em->getRepository(Commercial::class)->findOneByUser($this->getUser());
-
-        $documents = $em->getRepository(Document::class)->findSyndicDocumentsSortedByDate($commerciaux);
+        $documents = $em->getRepository(Document::class)->findAll();
         return $this->render('EasyMagOrderBundle:Document:index.html.twig', array(
             'documents' => $documents,
         ));
@@ -25,26 +31,30 @@ class DocumentController extends Controller
 
     public function newAction(Request $request)
     {
-        $em = $this->getDoctrine()->getManager();
-        $commerciaux = $em->getRepository(Commercial::class)->findOneByUser($this->getUser());
 
         $document = new Document();
-        $form_document = $this->createForm(DocumentType::class, $document);
-        $form_document->handleRequest($request);
         $command = $document->getCommand();
+        $form_document = $this->createForm(DocumentType::class, $document, array(
+            'action' => $this->generateUrl('document_new', array('id' => $document->getId())),
+        ));
+        $form_document->handleRequest($request);
 
         if ($form_document->isSubmitted() && $form_document->isValid()) {
-            $document->setCommand($command);
-            $document->setExtension($document->getFichier()->guessExtension());
+            $em = $this->getDoctrine()->getManager();
+            $document->setCommand();
             $em->persist($document);
             $em->flush();
 
             $this->addFlash('info', 'Un nouveau document a été importé avec succès.');
-            return $this->redirectToRoute('command_show', array('id' => $document->getId()));
+
+            return $this->redirectToRoute('command_show', array(
+                'id' => $command->getId(),
+            ));
         }
 
         return $this->render('@EasyMagOrder/Document/new.html.twig', array(
             'form_document' => $form_document->createView(),
+            'document'=> $document,
         ));
     }
 

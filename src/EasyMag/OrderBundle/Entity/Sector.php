@@ -55,6 +55,12 @@ class Sector
     private $customers;
 
     /**
+     * @ORM\OneToMany(targetEntity="EasyMag\OrderBundle\Entity\Command", mappedBy="sector")
+     *
+     */
+    private $commands;
+
+    /**
      * @var string
      *
      * @ORM\Column(name="description", type="string", length=455, nullable=true)
@@ -238,4 +244,39 @@ class Sector
     {
         return $this->description;
     }
+
+    /**
+     * Add command
+     *
+     * @param \EasyMag\OrderBundle\Entity\Command $command
+     *
+     * @return Sector
+     */
+    public function addCommand(\EasyMag\OrderBundle\Entity\Command $command)
+    {
+        $this->commands[] = $command;
+
+        return $this;
+    }
+
+    /**
+     * Remove command
+     *
+     * @param \EasyMag\OrderBundle\Entity\Command $command
+     */
+    public function removeCommand(\EasyMag\OrderBundle\Entity\Command $command)
+    {
+        $this->commands->removeElement($command);
+    }
+
+    /**
+     * Get commands
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCommands()
+    {
+        return $this->commands;
+    }
+
 }

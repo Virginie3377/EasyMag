@@ -4,6 +4,8 @@ namespace EasyMag\OrderBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+
+
 /**
  * Command
  *
@@ -12,6 +14,15 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Command
 {
+    const CIVILITE_MR = "Mr.";
+    const CIVILITE_MME = "Mme.";
+
+    public static $civilites = [
+        'Mr.' => self::CIVILITE_MR,
+        'Mme.' => self::CIVILITE_MME
+    ];
+
+
     /**
      * @var int
      *
@@ -59,6 +70,12 @@ class Command
      *
      */
     private $product;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="EasyMag\OrderBundle\Entity\Sector", inversedBy="commands")
+     *
+     */
+    private $sector;
 
 
     /**
@@ -232,4 +249,29 @@ class Command
     {
         return $this->product;
     }
+
+    /**
+     * Set sector
+     *
+     * @param \EasyMag\OrderBundle\Entity\Sector $sector
+     *
+     * @return Command
+     */
+    public function setSector(\EasyMag\OrderBundle\Entity\Sector $sector = null)
+    {
+        $this->sector = $sector;
+
+        return $this;
+    }
+
+    /**
+     * Get sector
+     *
+     * @return \EasyMag\OrderBundle\Entity\Sector
+     */
+    public function getSector()
+    {
+        return $this->sector;
+    }
+
 }

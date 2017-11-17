@@ -1,6 +1,8 @@
 <?php
 
 namespace EasyMag\OrderBundle\Repository;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Validator\Constraints\DateTime;
 
 /**
  * CommandRepository
@@ -10,4 +12,18 @@ namespace EasyMag\OrderBundle\Repository;
  */
 class CommandRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function findCommandIdByCommercial($commercial)
+    {
+        $qb = $this->createQueryBuilder('c')
+            ->select('c.id')
+            ->join('c.customer', 'cc')
+            ->join('cc.commercial', 'ccc')
+            ->where('ccc = :commercial')
+            ->setParameter('commercial', $commercial)
+            ->getQuery()
+            ->getArrayResult()
+        ;
+
+        return $qb;
+    }
 }
