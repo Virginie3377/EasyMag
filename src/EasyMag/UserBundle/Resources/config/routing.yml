@@ -2,4 +2,14 @@ easy_mag_user_homepage:
     path:     /
     defaults: { _controller: EasyMagUserBundle:FrontOffice:index }
 
+frontoffice_contact:
+    path:     /contact
+    defaults: { _controller: EasyMagUserBundle:FrontOffice:contact }
+
+
+
+frontoffice_mag_en_ligne:
+    path:     /mag_en_ligne
+    defaults: { _controller: EasyMagUserBundle:FrontOffice:magEnLigne }
+
 

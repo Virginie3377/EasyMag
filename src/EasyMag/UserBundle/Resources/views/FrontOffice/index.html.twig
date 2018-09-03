@@ -133,42 +133,78 @@
                     <li>Pharmarcies</li>
                     <li>Mairies, Offices de tourisme</li>
                     <li>Cafés, restaurants, boulangeries, etc...</li>
-                    <li>et chez tous les annonceurs présents sur le magazine.</li>
+                    <li>Chez tous les annonceurs présents sur le magazine</li>
+                    <li>En vous abonnant, vous le recevez gratuitement chez vous.</li>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-12 section-bottom-button wow fadeInUp">
-                <a class="btn btn-link-1 scroll-link" href="#top-content">Abonnez-vous<i class="fa fa-angle-right"></i></a>
+
+
+                
+                <button type="button" class="btn btn-link-1 scroll-link" data-toggle="modal" data-target="#modal-abonnement">Abonnez-vous <i class="fa fa-angle-right"></i></button>
             </div>
         </div>
     </div>
 </div>
 
-<!-- How it works -->
-<div class="how-it-works-container section-container section-container-gray-bg">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-5 how-it-works-box wow fadeInLeft">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/115014610?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=e36da1"
-                            webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+
+<div class="modal fade" id="modal-abonnement" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        {{ form_start(form, {'attr': {'class': 'form-horizontal', 'action': path('easy_mag_user_homepage') }}) }}
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Vos coordonnées</h4>
+                </div>
+                <div class="modal-body"> 
+                    <div class="form-group">
+                        {{ form_label(form.name, 'souscriber._', {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+                        {{ form_errors(form.name) }}
+                        <!-- <label for="inputNomPrenom" class="col-sm-2 control-label">Nom Prénom</label> -->
+                        <div class="col-sm-10">
+                            {{ form_widget(form.name, { 'attr': {'class': 'form-control', 'placeholder':'souscriber._'}}) }}
+                            <!-- <input type="email" class="form-control" id="inputNomPrenom" placeholder="Email"> -->
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        {{ form_label(form.address, 'souscriber.address', {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+                        {{ form_errors(form.address) }}
+                        <!-- <label for="inputAdresse" class="col-sm-2 control-label">Adresse</label> -->
+                        <div class="col-sm-10">
+                            {{ form_widget(form.address, { 'attr': {'class': 'form-control', 'placeholder':'souscriber.address'}}) }}
+                            <!-- <input type="password" class="form-control" id="inputAdresse" placeholder="Adresse"> -->
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        {{ form_label(form.zipCode, 'souscriber.zip', {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+                        {{ form_errors(form.zipCode) }}
+                        <!-- <label for="inputCp" class="col-sm-2 control-label">Code Postal</label> -->
+                        <div class="col-sm-3">
+                            {{ form_widget(form.zipCode, { 'attr': {'class': 'form-control', 'placeholder':'souscriber.zip'}}) }}
+                            <!-- <input type="password" class="form-control" id="inputCp" placeholder=""> -->
+                        </div>
+                        {{ form_label(form.city, 'souscriber.city', {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+                        {{ form_errors(form.city) }}
+                        <!-- <label for="inputVille" class="col-sm-2 control-label">Ville</label> -->
+                        <div class="col-sm-5">
+                            <!-- <input type="password" class="form-control" id="inputVille" placeholder="Ville"> -->
+                            {{ form_widget(form.city, { 'attr': {'class': 'form-control', 'placeholder':'souscriber.city'}}) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                    {{ form_widget(form.submit, {'attr': {'class': 'btn btn-primary'}}) }}
+                    <!-- <button type="button" class="btn btn-primary">Valider</button> -->
                 </div>
             </div>
-            <div class="col-sm-6 col-sm-offset-1 how-it-works-box how-it-works-box-right wow fadeInUp">
-                <h3>Démonstration d'utilisation</h3>
-                <p>
-                    Une vidéo explicative vous montrera pas en pas les fonctionnalités et utilisation de notre solution logicielle.
-                </p>
-                <p>
-                    Un logiciel performant et spécialisé permettant de ne plus s'embarasser inutilemment dans la gestion de vos copropriétés .
-                </p>
-                <p>
-                    <a class="learn-more scroll-link" href="#top-content">Abonnez-vous</a>
-                </p>
-            </div>
-        </div>
+        {{ form_rest(form) }}
+        {{ form_end(form) }}
     </div>
 </div>
+
 
 <!-- Tarifs -->
 <div class="testimonials-container section-container section-container-image-bg">
@@ -192,8 +228,8 @@
                             <li>Coordonnées</li>
                             <li>Et plus encore ...</li>
                         </ul>
-                        <div class="btn btn-link-1 scroll-link">Voir le support !</div>
-                    </div>
+                        <a href="{{ path('frontoffice_mag_en_ligne') }}" class="btn btn-link-1 scroll-link" role="button">Voir le support !</a>
+                   </div>
                 </div>
 
                 <div class="col-sm-6 col-md-4 testimonial-list wow fadeInUp">
@@ -208,7 +244,7 @@
                             <li>Brochures</li>
                             <li>Et plus encore ...</li>
                         </ul>
-                        <div class="btn btn-link-1 scroll-link">Commandez maintenant !</div>
+                        <a class="btn btn-link-1 scroll-link" href="#contact" role="button">Commandez maintenant !</a>
                     </div>
                 </div>
 
@@ -224,7 +260,7 @@
                             <li>Application de gestion diverse</li>
                             <li>Et plus encore ...</li>
                         </ul>
-                        <div class="btn btn-link-1 scroll-link">Commandez maintenant !</div>
+                        <a class="btn btn-link-1 scroll-link" href="#contact" role="button">Commandez maintenant !</a>
                     </div>
                 </div>
             </div>
@@ -248,7 +284,7 @@
         <div class="row">
             <div class="col-md-8">
 {#
-                <form name="sentMessage" id="contactForm" novalidate="" action="{{ path('contact') }}" method="post">
+                <form name="sentMessage" id="contactForm" novalidate="" action="{{ path('frontoffice_contact') }}" method="post">
 #}
                     <div class="row">
                         <div class="col-md-6">

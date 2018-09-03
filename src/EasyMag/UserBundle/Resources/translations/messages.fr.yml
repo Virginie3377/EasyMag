@@ -63,6 +63,11 @@ sector:
     _: Secteurs
     publication: Date de publication
 
+souscriber:
+    _: Nom Prénom
+    address: Adresse
+    zip: Code postal
+    city: Ville
 
 customer:
     _: Client
