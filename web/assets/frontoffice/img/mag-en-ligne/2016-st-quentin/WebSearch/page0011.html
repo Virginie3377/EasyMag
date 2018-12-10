@@ -1,0 +1,166 @@
+<!-- saved from url=(0014)about:internet -->
+<html lang="en" itemscope itemtype="http://schema.org/Book">
+
+<!-- 
+Smart developers always View Source. 
+
+This application was built using Adobe Flex, an open source framework
+for building rich Internet applications that get delivered via the
+Flash Player or to desktops via Adobe AIR. 
+
+Learn more about Flex at http://flex.org 
+// -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta property="og:image" content="content/thumbs/thumb1.jpg" />
+<meta itemprop="image" content="content/thumbs/thumb1.jpg">
+<!--  BEGIN Browser History required section -->
+<link rel="stylesheet" type="text/css" href="../history/history.css" />
+<!--  END Browser History required section -->
+
+<title>L-ESSENTIEL_ST_QUENTIN</title>
+<script src="../AC_OETags.js" language="javascript"></script>
+
+<!--  BEGIN Browser History required section -->
+<script src="../history/history.js" language="javascript"></script>
+<!--  END Browser History required section -->
+
+<style type="text/css">
+  body { margin: 0px;
+         overflow:hidden;
+         background-color: ThisisBackgroundColor;
+	 background-image: url(ThisisBackgroundImage);
+         background-repeat:no-repeat;
+         background-position:center;
+       }
+        
+</style>
+
+<script type="text/javascript"> var errorName = null; function isBrowserSupportPlugin() {     var supported = null;     try {         new ActiveXObject("");     }     catch (e) {         errorName = e.name;     }     try {         supported = !!new ActiveXObject("htmlfile");     } catch (e) {         supported =  false;     }     if(errorName != 'ReferenceError' && supported==false){         supported = false;     }else{         supported =true;     }     return supported; } function isMetroIE() {     var matchIE = /MSIE\s([\d.]+)/;     if ((matchIE.test(navigator.userAgent)) && !isBrowserSupportPlugin())         return true;     else         return false; } var iRegex = /android|BlackBerry|Windows Phone|(iP(hone|ad))/i; if (iRegex.test(navigator.userAgent) || isMetroIE()){     var url= "../html5.html?page=10";     if( false &&  window.parent)         window.parent.location=url;         else             window.location =url;             } </script>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+// -----------------------------------------------------------------------------
+// Globals
+// Major version of Flash required
+var requiredMajorVersion = 10;
+// Minor version of Flash required
+var requiredMinorVersion = 0;
+// Minor version of Flash required
+var requiredRevision = 0;
+// -----------------------------------------------------------------------------
+// -->
+</script>
+</head>
+
+<body scroll="no" onload="setBrowserFocus()">
+<script language="JavaScript" type="text/javascript">
+<!--
+
+function closeMe(){return window.close();}
+
+var gotoPage = function(page){
+	if (navigator.appName.indexOf("Microsoft") != -1) {
+		return window['main'].gotoPage(page);
+	}
+	else {
+		return document['main'].gotoPage(page);
+	}
+}
+
+// Version check for the Flash Player that has the ability to start Player Product Install (6.0r65)
+var hasProductInstall = DetectFlashVer(6, 0, 65);
+
+// Version check based upon the values defined in globals
+var hasRequestedVersion = DetectFlashVer(requiredMajorVersion, requiredMinorVersion, requiredRevision);
+
+function getparafromurl() {
+    var url,pos,parastr,para;
+    url = window.location.href;
+    pos = url.indexOf("?")
+    parastr = url.substring(pos+1);
+    return parastr;
+}
+
+function setBrowserFocus(){ document.getElementById('main').focus();}
+
+if ( hasProductInstall && !hasRequestedVersion ) {
+	// DO NOT MODIFY THE FOLLOWING FOUR LINES
+	// Location visited after installation is complete if installation is required
+	var MMPlayerType = (isIE == true) ? "ActiveX" : "PlugIn";
+	var MMredirectURL = window.location;
+    document.title = document.title.slice(0, 47) + " - Flash Player Installation";
+    var MMdoctitle = document.title;
+
+	AC_FL_RunContent(
+		"src", "playerProductInstall",
+		"FlashVars", "MMredirectURL="+MMredirectURL+'&MMplayerType='+MMPlayerType+'&MMdoctitle='+MMdoctitle+"",
+		"width", "100%",
+		"height", "100%",
+		"align", "middle",
+		"id", "main",
+		"quality", "high",
+		"allowFullScreen","true",
+		"FlashVars", getparafromurl(),
+		"bgcolor", "#ffffff",
+		"name", "main",
+		"allowScriptAccess","sameDomain",
+		"type", "application/x-shockwave-flash",
+		"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+} else if (hasRequestedVersion) {
+	// if we've detected an acceptable version
+	// embed the Flash Content SWF when all tests are passed
+	AC_FL_RunContent(
+			"src", "../main?page=11",
+			"width", "100%",
+			"height", "100%",
+			"align", "middle",
+			"allowFullScreen","true",
+			"id", "main",
+			"FlashVars", getparafromurl(),
+			"quality", "high",
+			"bgcolor", "#ffffff",
+			"name", "main",
+			"allowScriptAccess","sameDomain",
+			"type", "application/x-shockwave-flash",
+			"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+  } else {  // flash is too old or we can't detect the plugin
+    var alternateContent = 'Adobe Flash Player not detected. '
+   	+ 'Redirecting to HTML5 version';
+    document.write(alternateContent);  // insert non-flash content
+
+    var url= "../html5.html?page=10";
+    if( false &&  window.parent)
+       window.parent.location=url;
+    else
+       window.location =url;
+  }
+// -->
+</script>
+<noscript>
+  	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+			id="main" width="100%" height="100%"
+			codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
+			<param name="movie" value="../main.swf?page=11" />
+			<param name="quality" value="high" />
+			<param name="allowFullScreen" value="true" />
+			<param name="bgcolor" value="#ffffff" />
+			<param name="allowScriptAccess" value="sameDomain" />
+			<embed src="main.swf" quality="high" bgcolor="#ffffff"
+				width="100%" height="100%" name="main" align="middle"
+				play="true"
+				loop="false"
+				allowFullScreen="true"
+				quality="high"
+				allowScriptAccess="sameDomain"
+				type="application/x-shockwave-flash"
+				pluginspage="http://www.adobe.com/go/getflashplayer">
+			</embed>
+	</object>
+</noscript>
+<noscript> téLéphoNe mobiLeLe téléphone mobile est devenu un véritable couteau suisse ! Auparavant réservé aux communications téléphoniques et à l’envoi de SMS, on peut désormais faire bien plus de choses avec. Les smartphones sont donc de plus en plus multi usages et répondent à un grand nombre de nos besoins. Toutefois, devant la multitude de smartphones, le choix s’avère bien plus complexe que l’on pouvait l’imaginer. Ainsi, pour pouvoir choisir le téléphone mobile idéal, il faut se poser les bonnes questions et savoir ce dont on a réellement besoin.N°1 : quelle utilisation pour votre téléphone mobile ?Le mobile idéal existe mais il s’agit ici d’une question de besoins. toutes les personnes n’ont pas les mêmes usages d’un téléphone mobile et n’ont donc pas les mêmes besoins. Il est donc nécessaire de définir les vôtres pour trouver le smartphone qui vous correspondra à 100 % ! vous devez absolument savoir si vous avez besoin d’un téléphone uniquement pour passer des appels et envoyer des sMs, ou si vous voulez aussi surfer sur Internet, consulter vos mails, des sites web ou télécharger des applications pour votre mobile.• si pour vous un téléphone ne sert qu’à téléphoner, alors un mobile classique sera amplement suffisant pour vous. Mais vous pouvez toujours opter pour un smartphone sans en utiliser les fonctions nécessitant une connexion Internet.• si pour vous, un téléphone est aussi là pour vous permettre de prendre des photos et vidéos, de jouer, d’interagir avec vos amis via les réseaux sociaux, de partager toutes sortes d’informations avec vos proches ou vos collègues de travail... alors ne vous posez plus de questions : les smartphones sont faits pour vous !Les smartphones sont donc les mobiles les plus appréciés des consommateurs. Une grande majorité d’entre vous les choisissent pour leurs fonctionnalités multiples. Cependant, il existe divers systèmes d’exploitation.N°2 : quel système d’application pour votre smartphone ?Choisir le smartphone idéal se fait aussi par le choix d’un système d’exploitation. Il en existe 4 principaux comme :iOS d’Apple • Android de Google • Windows Phone de Microsoft • BlackBerry OSLa différence réside dans l’ergonomie, l’expérience utilisateur, les fonctionnalités ou encore le nombre d’applications proposées au téléchargement.Android de GoogleLe système d’exploitation Android est le plus répandu puisqu’il est équipé sur 80 % de smartphones à l’heure actuelle (samsung ou encore HtC). L’interface proposée par google est très fluide et personnalisable facilement. De très nombreux services sont intégrés sur tous les smartphones comprenant cet Os avec notamment le google Playstore qui vous permettra d’accéder à plus de 1,5 millions d’applications.ios d’AppleL’iOS est propre à Apple et est proposé uniquement sur les iPhones contrairement à Android qui est présent chez de nombreux constructeurs. L’interface proposée par Apple est très simple d’utilisation et très fluide. Là aussi, plus de 1,3 millions d’applications sont disponibles sur l’AppStore.L’informatique en toute tranquilité particulier et professionnelOrdinateur en panne, écran noir, PC qui ne démarre plus, absence de connexion Internet, ordinateur anormalement lent... Autant de problèmes qui paralysent votre activité informatique à la maison ou au bureau. Pourtant la majorité de ces problèmes peuvent être résolus en une heure maximum.Interventions à domicile ou sur site professionnelPC ou portables, imprimantes, scanner ou tout autre périphérique, quelle que soit la marque.Quel que soit votre système d’exploitation - Windows, Linux ou OS Mac - nous restaurons ou réinstallons votre système, récupérons vos données devenues inaccessibles et optimisons le fonctionnement de votre ordinateur.• Eradication totale de tous les virus et logiciels malveillants qui infectent votre ordinateur.• Sauvegarde et récupération de vos données.• Assistance et formation à votre domicile et sur site.• Prestations d’assistance à distance et maintenance automatisée annuelle particulier et professionnel.• Diagnostique - Réparations téléphonie mobile - Tablette. • Achat / Vente occasion et neuf PC - Périphérique informatique - Smartphone - Tablette.un problème ?! une solution !! Appelez-nous!￼￼10￼￼Windows phone de MicrosoftCe nom vous est probablement plus familier puisqu’il s’agit du même système qui équipe la plupart des ordinateurs. Le système d’exploitation Windows Phone est cependant beaucoup moins répandu sur les mobiles même s’il propose une interface très intuitive. Les applications sur le Windows Phone store sont beaucoup moins nombreuses que sur les deux précédents Os avec environ 300 000 applications.Blackberry os de BlackberryLe système d’exploitation BlackBerry Os est propre aux mobiles de la marque BlackBerry. Cet Os est bien différent des autres avec notamment une interface bien plus basique sur des smartphones à claviers axés sur la messagerie BBM. Une plateforme portant le nom de BlackBerry App World est aussi disponible pour télécharger des applications (seulement une centaine de milliers).N°3 : quelle taille pour l’écran de votre smartphone ?Aujourd’hui, lorsque l’on souhaite acheter un nouveau téléphone, on réfléchit à la taille de l’écran que l’on aimerait avoir. La tendance est aux écrans assez grands mais cela dépend encore une fois de l’utilisation que vous souhaitez en faire. Certaines personnes préfèrent des écrans de taille standard pour pouvoir utiliser leur smartphone d’une seule main, et d’autres sont plutôt pour des écrans assez grand pour une meilleure visibilité et pour une utilisation plus intense de l’ensemble des fonctionnalités.N°4 : quel est le meilleur processeur pour votre smartphone ?Le processeur est l’élément le plus important dans un smartphone. La fluidité de navigation, la rapidité d’exécution, l’utilisation des fonctionnalités... tout cela est possible grâce au processeur de votre mobile. Généralement, on compare les processeurs par leur puissance qui est calculée en gHz, ce qui équivaut à la vitesse. Plus celle-ci sera importante, plus la navigation sera fluide.Ensuite, on distingue plusieurs types de processeurs grâce au nombre de cœurs qu’ils comportent. En clair, un processeur possède plusieurs cœurs afin de pouvoir gérer plusieurs tâches en même temps. Plus il y aura de cœurs, plus votre téléphone fonctionnera rapidement et la consommation en énergie sera alors plus faible grâce à la répartition entre les cœurs.De plus, il faut aussi prendre en compte ce qu’on appelle la RAM, ou encore la mémoire vive. Attention, il ne s’agit pas là de la capacité de stockage mais d’une mémoire qui stocke les données de façon temporaire pour que vous puissiez utiliser l’ensemble des applications et fonctionnalités de votre smartphone. Une mémoire RAM se calcule en giga-octets et plus celle-ci sera conséquente, plus vous aurez de facilité à utiliser plusieurs applications en même temps.voilà, maintenant il ne vous reste plus qu’à choisir !￼￼￼￼11￼ </noscript> 
+ </body>
+</html>

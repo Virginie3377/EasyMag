@@ -1,0 +1,166 @@
+<!-- saved from url=(0014)about:internet -->
+<html lang="en" itemscope itemtype="http://schema.org/Book">
+
+<!-- 
+Smart developers always View Source. 
+
+This application was built using Adobe Flex, an open source framework
+for building rich Internet applications that get delivered via the
+Flash Player or to desktops via Adobe AIR. 
+
+Learn more about Flex at http://flex.org 
+// -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta property="og:image" content="content/thumbs/thumb1.jpg" />
+<meta itemprop="image" content="content/thumbs/thumb1.jpg">
+<!--  BEGIN Browser History required section -->
+<link rel="stylesheet" type="text/css" href="../history/history.css" />
+<!--  END Browser History required section -->
+
+<title>L-ESSENTIEL_BOHAIN-2016_web</title>
+<script src="../AC_OETags.js" language="javascript"></script>
+
+<!--  BEGIN Browser History required section -->
+<script src="../history/history.js" language="javascript"></script>
+<!--  END Browser History required section -->
+
+<style type="text/css">
+  body { margin: 0px;
+         overflow:hidden;
+         background-color: ThisisBackgroundColor;
+	 background-image: url(ThisisBackgroundImage);
+         background-repeat:no-repeat;
+         background-position:center;
+       }
+        
+</style>
+
+<script type="text/javascript"> var errorName = null; function isBrowserSupportPlugin() {     var supported = null;     try {         new ActiveXObject("");     }     catch (e) {         errorName = e.name;     }     try {         supported = !!new ActiveXObject("htmlfile");     } catch (e) {         supported =  false;     }     if(errorName != 'ReferenceError' && supported==false){         supported = false;     }else{         supported =true;     }     return supported; } function isMetroIE() {     var matchIE = /MSIE\s([\d.]+)/;     if ((matchIE.test(navigator.userAgent)) && !isBrowserSupportPlugin())         return true;     else         return false; } var iRegex = /android|BlackBerry|Windows Phone|(iP(hone|ad))/i; if (iRegex.test(navigator.userAgent) || isMetroIE()){     var url= "../html5.html?page=8";     if( false &&  window.parent)         window.parent.location=url;         else             window.location =url;             } </script>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+// -----------------------------------------------------------------------------
+// Globals
+// Major version of Flash required
+var requiredMajorVersion = 10;
+// Minor version of Flash required
+var requiredMinorVersion = 0;
+// Minor version of Flash required
+var requiredRevision = 0;
+// -----------------------------------------------------------------------------
+// -->
+</script>
+</head>
+
+<body scroll="no" onload="setBrowserFocus()">
+<script language="JavaScript" type="text/javascript">
+<!--
+
+function closeMe(){return window.close();}
+
+var gotoPage = function(page){
+	if (navigator.appName.indexOf("Microsoft") != -1) {
+		return window['main'].gotoPage(page);
+	}
+	else {
+		return document['main'].gotoPage(page);
+	}
+}
+
+// Version check for the Flash Player that has the ability to start Player Product Install (6.0r65)
+var hasProductInstall = DetectFlashVer(6, 0, 65);
+
+// Version check based upon the values defined in globals
+var hasRequestedVersion = DetectFlashVer(requiredMajorVersion, requiredMinorVersion, requiredRevision);
+
+function getparafromurl() {
+    var url,pos,parastr,para;
+    url = window.location.href;
+    pos = url.indexOf("?")
+    parastr = url.substring(pos+1);
+    return parastr;
+}
+
+function setBrowserFocus(){ document.getElementById('main').focus();}
+
+if ( hasProductInstall && !hasRequestedVersion ) {
+	// DO NOT MODIFY THE FOLLOWING FOUR LINES
+	// Location visited after installation is complete if installation is required
+	var MMPlayerType = (isIE == true) ? "ActiveX" : "PlugIn";
+	var MMredirectURL = window.location;
+    document.title = document.title.slice(0, 47) + " - Flash Player Installation";
+    var MMdoctitle = document.title;
+
+	AC_FL_RunContent(
+		"src", "playerProductInstall",
+		"FlashVars", "MMredirectURL="+MMredirectURL+'&MMplayerType='+MMPlayerType+'&MMdoctitle='+MMdoctitle+"",
+		"width", "100%",
+		"height", "100%",
+		"align", "middle",
+		"id", "main",
+		"quality", "high",
+		"allowFullScreen","true",
+		"FlashVars", getparafromurl(),
+		"bgcolor", "#ffffff",
+		"name", "main",
+		"allowScriptAccess","sameDomain",
+		"type", "application/x-shockwave-flash",
+		"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+} else if (hasRequestedVersion) {
+	// if we've detected an acceptable version
+	// embed the Flash Content SWF when all tests are passed
+	AC_FL_RunContent(
+			"src", "../main?page=9",
+			"width", "100%",
+			"height", "100%",
+			"align", "middle",
+			"allowFullScreen","true",
+			"id", "main",
+			"FlashVars", getparafromurl(),
+			"quality", "high",
+			"bgcolor", "#ffffff",
+			"name", "main",
+			"allowScriptAccess","sameDomain",
+			"type", "application/x-shockwave-flash",
+			"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+  } else {  // flash is too old or we can't detect the plugin
+    var alternateContent = 'Adobe Flash Player not detected. '
+   	+ 'Redirecting to HTML5 version';
+    document.write(alternateContent);  // insert non-flash content
+
+    var url= "../html5.html?page=8";
+    if( false &&  window.parent)
+       window.parent.location=url;
+    else
+       window.location =url;
+  }
+// -->
+</script>
+<noscript>
+  	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+			id="main" width="100%" height="100%"
+			codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
+			<param name="movie" value="../main.swf?page=9" />
+			<param name="quality" value="high" />
+			<param name="allowFullScreen" value="true" />
+			<param name="bgcolor" value="#ffffff" />
+			<param name="allowScriptAccess" value="sameDomain" />
+			<embed src="main.swf" quality="high" bgcolor="#ffffff"
+				width="100%" height="100%" name="main" align="middle"
+				play="true"
+				loop="false"
+				allowFullScreen="true"
+				quality="high"
+				allowScriptAccess="sameDomain"
+				type="application/x-shockwave-flash"
+				pluginspage="http://www.adobe.com/go/getflashplayer">
+			</embed>
+	</object>
+</noscript>
+<noscript> ￼￼￼Vos professionnels de la santéLES ORTHOPÉDISTESBOHAIN EN VERMANDOISMSP Maison Médical du Vemandois : Pierre Alfred JOVENIAUX18 rue Elisée AlavoineLES OSTEOPATHESBOHAIN EN VERMANDOISDewi ALZIEU35 rue Fagard 06 63 10 09 88 Jean DENOYELLE20 rue Riez 07 82 83 03 34LES PODOLOGUESBOHAIN EN VERMANDOISMSP Maison Médical du Vemandois :￼￼￼￼￼￼￼Adrien RICHEZ18 rue Elisée AlavoineJean DENOYELLE20 rue RiezFRESNOY LE GRANDJulien TISON130 rue RépubliqueNAUROYDelphine BEFVE4 rue Bernard Palissy03 23 07 23 82 07 82 83 03 3403 23 09 54 79 03 23 09 54 35￼Windows Phone de MicrosoftCe nom vous est probablement plus familier puisqu’il s’agit du même système qui équipe la plupart des ordinateurs. Le système d’exploitation Windows Phone est cependant beaucoup moins répandu sur les mobiles même s’il propose une interface très intuitive. Les applications sur le Windows Phone Store sont beaucoup moins nombreuses que sur les deux précédents OS avec environ 300 000 applications.Blackberry OS de BlackberryLe système d’exploitation BlackBerry OS est propre aux mobiles de la marque BlackBerry. Cet OS est bien différent des autres avec notamment une interface bien plus basique sur des smartphones à claviers axés sur la messagerie BBM. Une plateforme portant le nom de BlackBerry App World est aussi disponible pour télécharger des applications (seulement une centaine de milliers).N°3 : Quelle taille pour l’écran de votre smartphone ?Aujourd’hui, lorsque l’on souhaite acheter un nouveau téléphone, on ré échit à la taille de l’écran que l’on aimerait avoir. La tendance est aux écrans assez grands mais cela dépend encore une fois de l’utilisation que vous souhaitez en faire. Certaines personnes préfèrent des écrans de taille standard pour pouvoir utiliser leur smartphone d’une seule main, et d’autres sont plutôt pour des écrans assez grand pour une meilleure visibilité et pour une utilisation plus intense de l’ensemble des fonctionnalités.N°4 : Quel est le meilleur processeur pour votre smartphone ?Le processeur est l’élément le plus important dans un smartphone. La  uidité de navigation, la rapidité d’exécution, l’utilisation des fonctionnalités... tout cela est possible grâce au processeur de votre mobile. Généralement, on compare les processeurs par leur puissance qui est calculée en GHz, ce qui équivaut à la vitesse. Plus celle-ci sera importante, plus la navigation sera  uide.Ensuite, on distingue plusieurs types de processeurs grâce au nombre decœurs qu’ils comportent. En clair, un processeur possède plusieurs cœursa n de pouvoir gérer plusieurs tâches en même temps. Plus il y aura decœurs, plus votre téléphone fonctionnera rapidement et la consommation en énergie sera alors plus faible grâce à la répartition entre les cœurs.De plus, il faut aussi prendre en compte ce qu’on appelle la RAM, ou encore la mémoire vive. Attention, il ne s’agit pas là de la capacité de stockage mais d’une mémoire qui stocke les données de façon temporaire pour que vous puissiez utiliser l’ensemble des applications et fonctionnalités de votre smartphone. Une mémoire RAM se calcule en Giga-octets et plus celle-ci sera conséquente, plus vous aurez defacilité à utiliser plusieurs applications en même temps. Voilà, maintenant il ne vous reste plus qu’à choisir !￼￼9￼ </noscript> 
+ </body>
+</html>

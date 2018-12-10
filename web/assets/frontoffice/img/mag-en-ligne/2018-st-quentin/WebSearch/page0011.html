@@ -1,0 +1,258 @@
+<!-- saved from url=(0014)about:internet -->
+<html lang="en" itemscope itemtype="http://schema.org/Book">
+
+<!-- 
+Smart developers always View Source. 
+
+This application was built using Adobe Flex, an open source framework
+for building rich Internet applications that get delivered via the
+Flash Player or to desktops via Adobe AIR. 
+
+Learn more about Flex at http://flex.org 
+// -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta property="og:image" content="content/thumbs/thumb1.jpg" />
+<meta itemprop="image" content="content/thumbs/thumb1.jpg">
+<!--  BEGIN Browser History required section -->
+<link rel="stylesheet" type="text/css" href="../history/history.css" />
+<!--  END Browser History required section -->
+
+<title>2018-st-quentin-02</title>
+<script src="../AC_OETags.js" language="javascript"></script>
+
+<!--  BEGIN Browser History required section -->
+<script src="../history/history.js" language="javascript"></script>
+<!--  END Browser History required section -->
+
+<style type="text/css">
+  body { margin: 0px;
+         overflow:hidden;
+         background-color: ThisisBackgroundColor;
+	 background-image: url(ThisisBackgroundImage);
+         background-repeat:no-repeat;
+         background-position:center;
+       }
+        
+</style>
+
+<script type="text/javascript"> var errorName = null; function isBrowserSupportPlugin() {     var supported = null;     try {         new ActiveXObject("");     }     catch (e) {         errorName = e.name;     }     try {         supported = !!new ActiveXObject("htmlfile");     } catch (e) {         supported =  false;     }     if(errorName != 'ReferenceError' && supported==false){         supported = false;     }else{         supported =true;     }     return supported; } function isMetroIE() {     var matchIE = /MSIE\s([\d.]+)/;     if ((matchIE.test(navigator.userAgent)) && !isBrowserSupportPlugin())         return true;     else         return false; } var iRegex = /android|BlackBerry|Windows Phone|(iP(hone|ad))/i; if (iRegex.test(navigator.userAgent) || isMetroIE()){     var url= "../html5.html?page=10";     if( false &&  window.parent)         window.parent.location=url;         else             window.location =url;             } </script>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+// -----------------------------------------------------------------------------
+// Globals
+// Major version of Flash required
+var requiredMajorVersion = 10;
+// Minor version of Flash required
+var requiredMinorVersion = 0;
+// Minor version of Flash required
+var requiredRevision = 0;
+// -----------------------------------------------------------------------------
+// -->
+</script>
+</head>
+
+<body scroll="no" onload="setBrowserFocus()">
+<script language="JavaScript" type="text/javascript">
+<!--
+
+function closeMe(){return window.close();}
+
+var gotoPage = function(page){
+	if (navigator.appName.indexOf("Microsoft") != -1) {
+		return window['main'].gotoPage(page);
+	}
+	else {
+		return document['main'].gotoPage(page);
+	}
+}
+
+// Version check for the Flash Player that has the ability to start Player Product Install (6.0r65)
+var hasProductInstall = DetectFlashVer(6, 0, 65);
+
+// Version check based upon the values defined in globals
+var hasRequestedVersion = DetectFlashVer(requiredMajorVersion, requiredMinorVersion, requiredRevision);
+
+function getparafromurl() {
+    var url,pos,parastr,para;
+    url = window.location.href;
+    pos = url.indexOf("?")
+    parastr = url.substring(pos+1);
+    return parastr;
+}
+
+function setBrowserFocus(){ document.getElementById('main').focus();}
+
+if ( hasProductInstall && !hasRequestedVersion ) {
+	// DO NOT MODIFY THE FOLLOWING FOUR LINES
+	// Location visited after installation is complete if installation is required
+	var MMPlayerType = (isIE == true) ? "ActiveX" : "PlugIn";
+	var MMredirectURL = window.location;
+    document.title = document.title.slice(0, 47) + " - Flash Player Installation";
+    var MMdoctitle = document.title;
+
+	AC_FL_RunContent(
+		"src", "playerProductInstall",
+		"FlashVars", "MMredirectURL="+MMredirectURL+'&MMplayerType='+MMPlayerType+'&MMdoctitle='+MMdoctitle+"",
+		"width", "100%",
+		"height", "100%",
+		"align", "middle",
+		"id", "main",
+		"quality", "high",
+		"allowFullScreen","true",
+		"FlashVars", getparafromurl(),
+		"bgcolor", "#ffffff",
+		"name", "main",
+		"allowScriptAccess","sameDomain",
+		"type", "application/x-shockwave-flash",
+		"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+} else if (hasRequestedVersion) {
+	// if we've detected an acceptable version
+	// embed the Flash Content SWF when all tests are passed
+	AC_FL_RunContent(
+			"src", "../main?page=11",
+			"width", "100%",
+			"height", "100%",
+			"align", "middle",
+			"allowFullScreen","true",
+			"id", "main",
+			"FlashVars", getparafromurl(),
+			"quality", "high",
+			"bgcolor", "#ffffff",
+			"name", "main",
+			"allowScriptAccess","sameDomain",
+			"type", "application/x-shockwave-flash",
+			"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+  } else {  // flash is too old or we can't detect the plugin
+    var alternateContent = 'Adobe Flash Player not detected. '
+   	+ 'Redirecting to HTML5 version';
+    document.write(alternateContent);  // insert non-flash content
+
+    var url= "../html5.html?page=10";
+    if( false &&  window.parent)
+       window.parent.location=url;
+    else
+       window.location =url;
+  }
+// -->
+</script>
+<noscript>
+  	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+			id="main" width="100%" height="100%"
+			codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
+			<param name="movie" value="../main.swf?page=11" />
+			<param name="quality" value="high" />
+			<param name="allowFullScreen" value="true" />
+			<param name="bgcolor" value="#ffffff" />
+			<param name="allowScriptAccess" value="sameDomain" />
+			<embed src="main.swf" quality="high" bgcolor="#ffffff"
+				width="100%" height="100%" name="main" align="middle"
+				play="true"
+				loop="false"
+				allowFullScreen="true"
+				quality="high"
+				allowScriptAccess="sameDomain"
+				type="application/x-shockwave-flash"
+				pluginspage="http://www.adobe.com/go/getflashplayer">
+			</embed>
+	</object>
+</noscript>
+<noscript>   recette
+Ingrédients :
+• 250 g de farine
+• 200 g de beurre demi-sel ramolli + 35 g • 250 g de sucre en poudre + 25 g
+• 10 g de levure fraîche de boulanger
+• 2 pincées de sel
+préparation :
+1 • Diluez la levure dans 3c. à s. d’eau tiède. Versez la farine dans un saladier, formez un puits, ajoutez le sel, la levure et 10cl d’eau. Pétrissez la pâte, ramassez-la et laissez-la reposer 3h.
+2 • Abaissez la pâte en rectangle de 1cm d’épaisseur environ. Etalez le beurre demi-sel ramolli au pinceau. Poudrez de sucre jusqu’à 3 cm du bord.
+3 • Pliez la pâte en 3 dans la longueur puis en 3 dans la largeur, pour enfermer le beurre et le sucre. Etalez au rouleau.
+4 • Repliez la pâte en 3 dans la longueur puis dans la largeur. Etalez-la en rectangle. Découpez des bandes de 4 cm de large et roulez-les en escargots. Placez-les dans des moules beurrés. Laissez reposer 30 min.
+5 • Préchauffez le four à 210°C (th. 7). Coupez les 35 g de beurre en cubes. Parsemez-en les pâtons quadrillés. 6 • Enfournez pour 30 min environ. Démoulez, poudrez de sucre. Dégustez tiède !
+Les medeciNs
+   KoUigN-amaNN bretoN pour 6 personnes
+                                         1 part                     2 pa
+ar
+r
+t
+ts
+s
+Classique 6,95€
+G
+   Gé
+éa
+a
+nt
+            2
+2
+2,
+,
+te
+,
+9
+9
+9
+5
+5
+5€
+€
+€
+9
+9
+9,
+,
+,
+9
+9
+9
+5
+5
+5
+€
+€
+€
+                                1
+Commandez au 2 03 23 67 34 20
+Faîtes vos courses
+3 Dégustez vos PIZZAS en 5 minutes
+        PIZZA
+sur place ou à emporter au choix
+             Pour les réceptions, pour l’apéritif entre amis, ou en plateau télé pour toute la famille !
+    CENTRE COMMERCIAL AUCHAN FAYET - 03 23 67 34 20
+  OUVERT 7J/7 DIMANCHE ET JOURS FERIES
+ POUR VOTRE SANTÉ, ÉVITEZ DE MANGER TROP GRAS, TROP SUCRÉ, TROP SALÉ. www.mangerbouger.fr
+    odile MoNDoT
+92 rue Jules Coupe
+Dominique RATTE
+230 rue d’Epargnemailles
+Benoit sAILLARD(homéopathie)
+7 rue du we
+Gilles sTEENKIsTE
+33 avenue Faidherbe
+patricia TARDIEuX
+34 rue du gouvernement
+Albert ToussE
+114 bld Richelieu
+Hubert VANpouLLE
+3 rue des Patriotes
+Denis VAssALLo
+70 rue de Vermand
+Régis VERMEERsCH
+128 rue de Guise
+Florence VERNoN LENoIR
+1 av Michel de l’Hospital
+03 23 62 58 18 03 23 06 19 19 0323648126 0323640506 0323647744 0323648498 0323647834 0323641533 0323685716 0323067491
+      11
+ PIZZAS
+PATISSERIES PANINI PÂTES GLACES
+FORMULE PETIT DEJEUNER
+48 pièces - 6 variétés de pizza
+PIZZA Cocktail
+13,95€
+ </noscript> 
+ </body>
+</html>

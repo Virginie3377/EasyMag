@@ -1,0 +1,228 @@
+<!-- saved from url=(0014)about:internet -->
+<html lang="en" itemscope itemtype="http://schema.org/Book">
+
+<!-- 
+Smart developers always View Source. 
+
+This application was built using Adobe Flex, an open source framework
+for building rich Internet applications that get delivered via the
+Flash Player or to desktops via Adobe AIR. 
+
+Learn more about Flex at http://flex.org 
+// -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta property="og:image" content="content/thumbs/thumb1.jpg" />
+<meta itemprop="image" content="content/thumbs/thumb1.jpg">
+<!--  BEGIN Browser History required section -->
+<link rel="stylesheet" type="text/css" href="../history/history.css" />
+<!--  END Browser History required section -->
+
+<title>2018-st-quentin-02</title>
+<script src="../AC_OETags.js" language="javascript"></script>
+
+<!--  BEGIN Browser History required section -->
+<script src="../history/history.js" language="javascript"></script>
+<!--  END Browser History required section -->
+
+<style type="text/css">
+  body { margin: 0px;
+         overflow:hidden;
+         background-color: ThisisBackgroundColor;
+	 background-image: url(ThisisBackgroundImage);
+         background-repeat:no-repeat;
+         background-position:center;
+       }
+        
+</style>
+
+<script type="text/javascript"> var errorName = null; function isBrowserSupportPlugin() {     var supported = null;     try {         new ActiveXObject("");     }     catch (e) {         errorName = e.name;     }     try {         supported = !!new ActiveXObject("htmlfile");     } catch (e) {         supported =  false;     }     if(errorName != 'ReferenceError' && supported==false){         supported = false;     }else{         supported =true;     }     return supported; } function isMetroIE() {     var matchIE = /MSIE\s([\d.]+)/;     if ((matchIE.test(navigator.userAgent)) && !isBrowserSupportPlugin())         return true;     else         return false; } var iRegex = /android|BlackBerry|Windows Phone|(iP(hone|ad))/i; if (iRegex.test(navigator.userAgent) || isMetroIE()){     var url= "../html5.html?page=8";     if( false &&  window.parent)         window.parent.location=url;         else             window.location =url;             } </script>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+// -----------------------------------------------------------------------------
+// Globals
+// Major version of Flash required
+var requiredMajorVersion = 10;
+// Minor version of Flash required
+var requiredMinorVersion = 0;
+// Minor version of Flash required
+var requiredRevision = 0;
+// -----------------------------------------------------------------------------
+// -->
+</script>
+</head>
+
+<body scroll="no" onload="setBrowserFocus()">
+<script language="JavaScript" type="text/javascript">
+<!--
+
+function closeMe(){return window.close();}
+
+var gotoPage = function(page){
+	if (navigator.appName.indexOf("Microsoft") != -1) {
+		return window['main'].gotoPage(page);
+	}
+	else {
+		return document['main'].gotoPage(page);
+	}
+}
+
+// Version check for the Flash Player that has the ability to start Player Product Install (6.0r65)
+var hasProductInstall = DetectFlashVer(6, 0, 65);
+
+// Version check based upon the values defined in globals
+var hasRequestedVersion = DetectFlashVer(requiredMajorVersion, requiredMinorVersion, requiredRevision);
+
+function getparafromurl() {
+    var url,pos,parastr,para;
+    url = window.location.href;
+    pos = url.indexOf("?")
+    parastr = url.substring(pos+1);
+    return parastr;
+}
+
+function setBrowserFocus(){ document.getElementById('main').focus();}
+
+if ( hasProductInstall && !hasRequestedVersion ) {
+	// DO NOT MODIFY THE FOLLOWING FOUR LINES
+	// Location visited after installation is complete if installation is required
+	var MMPlayerType = (isIE == true) ? "ActiveX" : "PlugIn";
+	var MMredirectURL = window.location;
+    document.title = document.title.slice(0, 47) + " - Flash Player Installation";
+    var MMdoctitle = document.title;
+
+	AC_FL_RunContent(
+		"src", "playerProductInstall",
+		"FlashVars", "MMredirectURL="+MMredirectURL+'&MMplayerType='+MMPlayerType+'&MMdoctitle='+MMdoctitle+"",
+		"width", "100%",
+		"height", "100%",
+		"align", "middle",
+		"id", "main",
+		"quality", "high",
+		"allowFullScreen","true",
+		"FlashVars", getparafromurl(),
+		"bgcolor", "#ffffff",
+		"name", "main",
+		"allowScriptAccess","sameDomain",
+		"type", "application/x-shockwave-flash",
+		"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+} else if (hasRequestedVersion) {
+	// if we've detected an acceptable version
+	// embed the Flash Content SWF when all tests are passed
+	AC_FL_RunContent(
+			"src", "../main?page=9",
+			"width", "100%",
+			"height", "100%",
+			"align", "middle",
+			"allowFullScreen","true",
+			"id", "main",
+			"FlashVars", getparafromurl(),
+			"quality", "high",
+			"bgcolor", "#ffffff",
+			"name", "main",
+			"allowScriptAccess","sameDomain",
+			"type", "application/x-shockwave-flash",
+			"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+  } else {  // flash is too old or we can't detect the plugin
+    var alternateContent = 'Adobe Flash Player not detected. '
+   	+ 'Redirecting to HTML5 version';
+    document.write(alternateContent);  // insert non-flash content
+
+    var url= "../html5.html?page=8";
+    if( false &&  window.parent)
+       window.parent.location=url;
+    else
+       window.location =url;
+  }
+// -->
+</script>
+<noscript>
+  	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+			id="main" width="100%" height="100%"
+			codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
+			<param name="movie" value="../main.swf?page=9" />
+			<param name="quality" value="high" />
+			<param name="allowFullScreen" value="true" />
+			<param name="bgcolor" value="#ffffff" />
+			<param name="allowScriptAccess" value="sameDomain" />
+			<embed src="main.swf" quality="high" bgcolor="#ffffff"
+				width="100%" height="100%" name="main" align="middle"
+				play="true"
+				loop="false"
+				allowFullScreen="true"
+				quality="high"
+				allowScriptAccess="sameDomain"
+				type="application/x-shockwave-flash"
+				pluginspage="http://www.adobe.com/go/getflashplayer">
+			</embed>
+	</object>
+</noscript>
+<noscript>  Les professionnels de la santé près de chez vous
+Les medeciNs     113b rue Chaussée Romaine 03 23 64 02 33
+Michèle DEMAREsT
+132 bld Richelieu
+Frédéric DEsCENDRE
+3t bld Richelieu
+    Anne ARNERA/ Mihail sTAN
+54 av Robert Schuman 03 23 08 83 13
+Laurent BACquET/ Gonzague LEFEBVRE
+Jean Michel CATRY
+92 rue du Général Leclerc 03 23 08 90 82
+Arnaud CHAMpENoIs
+3t rue Victor Basch 03 23 62 76 77
+Frédéric CLoNIER/ Christine sEYsEN
+03 23 67 75 94 03 23 64 37 33
+192 rue de Fayet
+Marc BAuDuIN
+8B rue Villebois Mareuil
+03 23 63 89 92 03 23 64 03 06
+5 bld Pierret
+paul CoupAIN
+35 bld Richelieu
+Thibaut CouRMoNT
+03 23 62 26 34
+03 23 65 21 17
+Marie Christine DEVENDEVILLE
+38 bld Henri Martin 03 23 05 32 03
+philippe DuBoIs
+14 place Gracchus Babeuf 03 23 60 22 22
+Christian DuRETETE
+32 rue d’Artois 03 23 64 00 75
+Mouez EL AKRICH/philippe JANDRAIN
+33 rue du Pdt JF Kennedy03 23 05 96 41
+Fabienne FoNTAINE
+18 rue des Canonniers 03 23 64 10 33
+philippe FRIsToT/ paul GoREZ
+3 rue Raoul Huguet 03 23 68 03 47
+Dorin Marius GABoR
+2 rue de la 3e Dim 03 23 05 17 60
+Bernard GRAND/ Marc sApHoREs
+28 rue du Dr C. Mairesse03 23 05 85 85
+Jean Etienne BELLENGuEZ/ Fabrice BRILLEMAN/ Joel DEVENDEVILLE
+36 rue Chantrelle 03 23 08 16 92 Hugues BoNNARD
+7 rue d’Estienne D’Orves 03 23 62 32 12 Danièle BussIERE/ Julien DEVAuX/ Benoit ENNuYER/ Didier GuERDouX/ pierre LAGER- sIE/ Frédéric sTAuB/ Willy VANDELANDE 1 bld Schweitzer 03 23 64 50 00 Guy BussIERE/ Luc FoIRET/
+Carole FoNDRAs/ Laurent VALENTIN
+13 rue Longueville 03 23 06 12 80 philippe CARDoT/ philippe DEsCENDRE/ Franck MIssoN/ François Xavier YVEs
+152 rue d’Epargnemailles03 23 50 50 50
+Romain DApsANCE
+11 rue Villebois Mareuil
+odile DAVIGNY
+144 rue de Vermand
+philippe DEFRETIN
+7 place Lafayette
+06 63 22 88 45
+03 23 64 73 10
+03 23 62 58 64
+Claudy DELFoRGE/ Jean quentin sTEINBAuER
+17 av Archimède
+Marie odile DELFoRGE
+17 av Archimède
+03 23 65 09 76 03 23 64 40 61
+    9
+  </noscript> 
+ </body>
+</html>

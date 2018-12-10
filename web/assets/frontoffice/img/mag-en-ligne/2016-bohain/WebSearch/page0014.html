@@ -1,0 +1,166 @@
+<!-- saved from url=(0014)about:internet -->
+<html lang="en" itemscope itemtype="http://schema.org/Book">
+
+<!-- 
+Smart developers always View Source. 
+
+This application was built using Adobe Flex, an open source framework
+for building rich Internet applications that get delivered via the
+Flash Player or to desktops via Adobe AIR. 
+
+Learn more about Flex at http://flex.org 
+// -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta property="og:image" content="content/thumbs/thumb1.jpg" />
+<meta itemprop="image" content="content/thumbs/thumb1.jpg">
+<!--  BEGIN Browser History required section -->
+<link rel="stylesheet" type="text/css" href="../history/history.css" />
+<!--  END Browser History required section -->
+
+<title>L-ESSENTIEL_BOHAIN-2016_web</title>
+<script src="../AC_OETags.js" language="javascript"></script>
+
+<!--  BEGIN Browser History required section -->
+<script src="../history/history.js" language="javascript"></script>
+<!--  END Browser History required section -->
+
+<style type="text/css">
+  body { margin: 0px;
+         overflow:hidden;
+         background-color: ThisisBackgroundColor;
+	 background-image: url(ThisisBackgroundImage);
+         background-repeat:no-repeat;
+         background-position:center;
+       }
+        
+</style>
+
+<script type="text/javascript"> var errorName = null; function isBrowserSupportPlugin() {     var supported = null;     try {         new ActiveXObject("");     }     catch (e) {         errorName = e.name;     }     try {         supported = !!new ActiveXObject("htmlfile");     } catch (e) {         supported =  false;     }     if(errorName != 'ReferenceError' && supported==false){         supported = false;     }else{         supported =true;     }     return supported; } function isMetroIE() {     var matchIE = /MSIE\s([\d.]+)/;     if ((matchIE.test(navigator.userAgent)) && !isBrowserSupportPlugin())         return true;     else         return false; } var iRegex = /android|BlackBerry|Windows Phone|(iP(hone|ad))/i; if (iRegex.test(navigator.userAgent) || isMetroIE()){     var url= "../html5.html?page=13";     if( false &&  window.parent)         window.parent.location=url;         else             window.location =url;             } </script>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+// -----------------------------------------------------------------------------
+// Globals
+// Major version of Flash required
+var requiredMajorVersion = 10;
+// Minor version of Flash required
+var requiredMinorVersion = 0;
+// Minor version of Flash required
+var requiredRevision = 0;
+// -----------------------------------------------------------------------------
+// -->
+</script>
+</head>
+
+<body scroll="no" onload="setBrowserFocus()">
+<script language="JavaScript" type="text/javascript">
+<!--
+
+function closeMe(){return window.close();}
+
+var gotoPage = function(page){
+	if (navigator.appName.indexOf("Microsoft") != -1) {
+		return window['main'].gotoPage(page);
+	}
+	else {
+		return document['main'].gotoPage(page);
+	}
+}
+
+// Version check for the Flash Player that has the ability to start Player Product Install (6.0r65)
+var hasProductInstall = DetectFlashVer(6, 0, 65);
+
+// Version check based upon the values defined in globals
+var hasRequestedVersion = DetectFlashVer(requiredMajorVersion, requiredMinorVersion, requiredRevision);
+
+function getparafromurl() {
+    var url,pos,parastr,para;
+    url = window.location.href;
+    pos = url.indexOf("?")
+    parastr = url.substring(pos+1);
+    return parastr;
+}
+
+function setBrowserFocus(){ document.getElementById('main').focus();}
+
+if ( hasProductInstall && !hasRequestedVersion ) {
+	// DO NOT MODIFY THE FOLLOWING FOUR LINES
+	// Location visited after installation is complete if installation is required
+	var MMPlayerType = (isIE == true) ? "ActiveX" : "PlugIn";
+	var MMredirectURL = window.location;
+    document.title = document.title.slice(0, 47) + " - Flash Player Installation";
+    var MMdoctitle = document.title;
+
+	AC_FL_RunContent(
+		"src", "playerProductInstall",
+		"FlashVars", "MMredirectURL="+MMredirectURL+'&MMplayerType='+MMPlayerType+'&MMdoctitle='+MMdoctitle+"",
+		"width", "100%",
+		"height", "100%",
+		"align", "middle",
+		"id", "main",
+		"quality", "high",
+		"allowFullScreen","true",
+		"FlashVars", getparafromurl(),
+		"bgcolor", "#ffffff",
+		"name", "main",
+		"allowScriptAccess","sameDomain",
+		"type", "application/x-shockwave-flash",
+		"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+} else if (hasRequestedVersion) {
+	// if we've detected an acceptable version
+	// embed the Flash Content SWF when all tests are passed
+	AC_FL_RunContent(
+			"src", "../main?page=14",
+			"width", "100%",
+			"height", "100%",
+			"align", "middle",
+			"allowFullScreen","true",
+			"id", "main",
+			"FlashVars", getparafromurl(),
+			"quality", "high",
+			"bgcolor", "#ffffff",
+			"name", "main",
+			"allowScriptAccess","sameDomain",
+			"type", "application/x-shockwave-flash",
+			"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+  } else {  // flash is too old or we can't detect the plugin
+    var alternateContent = 'Adobe Flash Player not detected. '
+   	+ 'Redirecting to HTML5 version';
+    document.write(alternateContent);  // insert non-flash content
+
+    var url= "../html5.html?page=13";
+    if( false &&  window.parent)
+       window.parent.location=url;
+    else
+       window.location =url;
+  }
+// -->
+</script>
+<noscript>
+  	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+			id="main" width="100%" height="100%"
+			codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
+			<param name="movie" value="../main.swf?page=14" />
+			<param name="quality" value="high" />
+			<param name="allowFullScreen" value="true" />
+			<param name="bgcolor" value="#ffffff" />
+			<param name="allowScriptAccess" value="sameDomain" />
+			<embed src="main.swf" quality="high" bgcolor="#ffffff"
+				width="100%" height="100%" name="main" align="middle"
+				play="true"
+				loop="false"
+				allowFullScreen="true"
+				quality="high"
+				allowScriptAccess="sameDomain"
+				type="application/x-shockwave-flash"
+				pluginspage="http://www.adobe.com/go/getflashplayer">
+			</embed>
+	</object>
+</noscript>
+<noscript> ￼￼COMBIEN DE TEMPS CONSERVER SES PAPIERS ?Le délai de conservation des papiers varie selon leur nature.En matière civile, le délai de prescription de droit commun est de 5 ans, les preuves doivent donc être conservées pendant cette durée au cours de laquelle l’action en justice est possible.Néanmoins, le délai de conservation de certains documents peut être plus ou moins important.Assurance• Quittances et primes (avis d’échéance, preuves du réglement, courriers de résiliation, accusé de réception) : 2 ans.• Contrat d’assurance habitation et automobile (factures d’achat et de réparation) : durée du contrat + 2 ans.• Dossier «dommages corporels» : 10 ans (factures, expertises et certi cats médicaux) • Assurance sur la vie et assurance décès : durée du contrat + 10 ans.Famille• Actes d’état civil : à vie• Remboursement des cotisations d’allocations familiales : 3 ans (sauf en cas de fraude)• Jugement de divorce ou d’adoption : à vie • Acte de reconnaissance d’un enfant : à vie • Mariage (contrat, documents relatifs aux biens apportés ou acquis lors du mariage par donation ou legs) : à vie• Livret de famille : à vie• Testament, succession : à vieBanque• Chèques à encaisser : 1 an et 8 jours• Prêts à la consommation : 2 ans à compter de la dernière échéance du crédit• Prêts immobilier : 2 ans à compter de la dernière échéance de l’emprunt.• Relevés de compte, virement, prélèvement, remises de chèque ou d’espèce, talons de chèques : 5 ans (délai de l’action civile)Impôts et taxes• Déclarations de revenus et avis d’imposition sur le revenu : 3 ans et 8 jours à compter de l’année qui suit l’année d’imposition• Avis d’impôsition (taxe foncière, taxe d’habitation) : 1 anVoiture• Contraventions : 3 ans à compter de la condamnation• Factures (achat, réparation, etc.) : durée de conservation du véhiculeLogement• Factures d’électricité et de gaz : 2 ans• Factures d’eau : 4 ans pour un fournisseur public ou 2 ans pour un fournisseur privé• Factures de téléphone : 1 an• Factures liées aux travaux : 10 ans ou 30 ans selon la nature des travaux￼￼￼￼La Vie scolaireCOLLÈGES & LYCÉESBEAUREVOIRCollège Josquin Des Prés16 rue rue Ponchaux 03 23 09 40 23BOHAIN EN VERMANDOIS￼￼￼￼￼Collège Alphonse PEINZI6 rue de la RépubliqueCollège Saint AnoineRue du Chêne BrûléLycée Sainte SophieRue des BleuetsFRESNOY LE GRAND03 23 68 96 11 03 23 07 11 25 03 23 07 15 62Collège Villart de Honnecourt130 rue Olivier Deguise 03 23 66 01 12￼￼￼￼￼￼￼￼ZONE A￼￼￼ZONE B￼￼￼ZONE C￼￼￼￼Noël￼￼du 17/12 au 3/01/2017￼Hiver￼￼du 18/02 au 06/03￼du 11/02 au 27/02￼￼￼du 04/02 au 20/02￼￼Printemps￼du 15/04 au 02/05￼￼￼du 08/04 au 24/04￼￼du 01/04 au 18/04￼￼￼￼Eté￼le 08/07/2017￼￼￼￼￼￼14￼VACANCES SCOLAIRES 2016/2017 </noscript> 
+ </body>
+</html>

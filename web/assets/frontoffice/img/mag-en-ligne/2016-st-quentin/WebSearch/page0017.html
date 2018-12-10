@@ -1,0 +1,166 @@
+<!-- saved from url=(0014)about:internet -->
+<html lang="en" itemscope itemtype="http://schema.org/Book">
+
+<!-- 
+Smart developers always View Source. 
+
+This application was built using Adobe Flex, an open source framework
+for building rich Internet applications that get delivered via the
+Flash Player or to desktops via Adobe AIR. 
+
+Learn more about Flex at http://flex.org 
+// -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta property="og:image" content="content/thumbs/thumb1.jpg" />
+<meta itemprop="image" content="content/thumbs/thumb1.jpg">
+<!--  BEGIN Browser History required section -->
+<link rel="stylesheet" type="text/css" href="../history/history.css" />
+<!--  END Browser History required section -->
+
+<title>L-ESSENTIEL_ST_QUENTIN</title>
+<script src="../AC_OETags.js" language="javascript"></script>
+
+<!--  BEGIN Browser History required section -->
+<script src="../history/history.js" language="javascript"></script>
+<!--  END Browser History required section -->
+
+<style type="text/css">
+  body { margin: 0px;
+         overflow:hidden;
+         background-color: ThisisBackgroundColor;
+	 background-image: url(ThisisBackgroundImage);
+         background-repeat:no-repeat;
+         background-position:center;
+       }
+        
+</style>
+
+<script type="text/javascript"> var errorName = null; function isBrowserSupportPlugin() {     var supported = null;     try {         new ActiveXObject("");     }     catch (e) {         errorName = e.name;     }     try {         supported = !!new ActiveXObject("htmlfile");     } catch (e) {         supported =  false;     }     if(errorName != 'ReferenceError' && supported==false){         supported = false;     }else{         supported =true;     }     return supported; } function isMetroIE() {     var matchIE = /MSIE\s([\d.]+)/;     if ((matchIE.test(navigator.userAgent)) && !isBrowserSupportPlugin())         return true;     else         return false; } var iRegex = /android|BlackBerry|Windows Phone|(iP(hone|ad))/i; if (iRegex.test(navigator.userAgent) || isMetroIE()){     var url= "../html5.html?page=16";     if( false &&  window.parent)         window.parent.location=url;         else             window.location =url;             } </script>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+// -----------------------------------------------------------------------------
+// Globals
+// Major version of Flash required
+var requiredMajorVersion = 10;
+// Minor version of Flash required
+var requiredMinorVersion = 0;
+// Minor version of Flash required
+var requiredRevision = 0;
+// -----------------------------------------------------------------------------
+// -->
+</script>
+</head>
+
+<body scroll="no" onload="setBrowserFocus()">
+<script language="JavaScript" type="text/javascript">
+<!--
+
+function closeMe(){return window.close();}
+
+var gotoPage = function(page){
+	if (navigator.appName.indexOf("Microsoft") != -1) {
+		return window['main'].gotoPage(page);
+	}
+	else {
+		return document['main'].gotoPage(page);
+	}
+}
+
+// Version check for the Flash Player that has the ability to start Player Product Install (6.0r65)
+var hasProductInstall = DetectFlashVer(6, 0, 65);
+
+// Version check based upon the values defined in globals
+var hasRequestedVersion = DetectFlashVer(requiredMajorVersion, requiredMinorVersion, requiredRevision);
+
+function getparafromurl() {
+    var url,pos,parastr,para;
+    url = window.location.href;
+    pos = url.indexOf("?")
+    parastr = url.substring(pos+1);
+    return parastr;
+}
+
+function setBrowserFocus(){ document.getElementById('main').focus();}
+
+if ( hasProductInstall && !hasRequestedVersion ) {
+	// DO NOT MODIFY THE FOLLOWING FOUR LINES
+	// Location visited after installation is complete if installation is required
+	var MMPlayerType = (isIE == true) ? "ActiveX" : "PlugIn";
+	var MMredirectURL = window.location;
+    document.title = document.title.slice(0, 47) + " - Flash Player Installation";
+    var MMdoctitle = document.title;
+
+	AC_FL_RunContent(
+		"src", "playerProductInstall",
+		"FlashVars", "MMredirectURL="+MMredirectURL+'&MMplayerType='+MMPlayerType+'&MMdoctitle='+MMdoctitle+"",
+		"width", "100%",
+		"height", "100%",
+		"align", "middle",
+		"id", "main",
+		"quality", "high",
+		"allowFullScreen","true",
+		"FlashVars", getparafromurl(),
+		"bgcolor", "#ffffff",
+		"name", "main",
+		"allowScriptAccess","sameDomain",
+		"type", "application/x-shockwave-flash",
+		"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+} else if (hasRequestedVersion) {
+	// if we've detected an acceptable version
+	// embed the Flash Content SWF when all tests are passed
+	AC_FL_RunContent(
+			"src", "../main?page=17",
+			"width", "100%",
+			"height", "100%",
+			"align", "middle",
+			"allowFullScreen","true",
+			"id", "main",
+			"FlashVars", getparafromurl(),
+			"quality", "high",
+			"bgcolor", "#ffffff",
+			"name", "main",
+			"allowScriptAccess","sameDomain",
+			"type", "application/x-shockwave-flash",
+			"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+  } else {  // flash is too old or we can't detect the plugin
+    var alternateContent = 'Adobe Flash Player not detected. '
+   	+ 'Redirecting to HTML5 version';
+    document.write(alternateContent);  // insert non-flash content
+
+    var url= "../html5.html?page=16";
+    if( false &&  window.parent)
+       window.parent.location=url;
+    else
+       window.location =url;
+  }
+// -->
+</script>
+<noscript>
+  	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+			id="main" width="100%" height="100%"
+			codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
+			<param name="movie" value="../main.swf?page=17" />
+			<param name="quality" value="high" />
+			<param name="allowFullScreen" value="true" />
+			<param name="bgcolor" value="#ffffff" />
+			<param name="allowScriptAccess" value="sameDomain" />
+			<embed src="main.swf" quality="high" bgcolor="#ffffff"
+				width="100%" height="100%" name="main" align="middle"
+				play="true"
+				loop="false"
+				allowFullScreen="true"
+				quality="high"
+				allowScriptAccess="sameDomain"
+				type="application/x-shockwave-flash"
+				pluginspage="http://www.adobe.com/go/getflashplayer">
+			</embed>
+	</object>
+</noscript>
+<noscript> combieN de temps coNserver ses papiers ?Le délai de conservation des papiers varie selon leur nature.En matière civile, le délai de prescription de droit commun est de 5 ans, les preuves doivent donc être conservées pendant cette durée au cours de laquelle l’action en justice est possible.Néanmoins, le délai de conservation de certains documents peut être plus ou moins important.Assurance• Quittances et primes (avis d’échéance, preuves du réglement, courriers de résiliation, accusé de réception) : 2 ans.• Contrat d’assurance habitation et automobile (factures d’achat et de réparation) : durée du contrat + 2 ans.• Dossier «dommages corporels» : 10 ans (factures, expertises et certificats médicaux) • Assurance sur la vie et assurance décès : durée du contrat + 10 ans.voiture• Contraventions : 3 ans à compter de la condamnation• Factures (achat, réparation, etc.) : durée de conservation du véhiculeBanque• Chèques à encaisser : 1 an et 8 jours• Prêts à la consommation : 2 ans à compter de la dernière échéance du crédit• Prêts immobilier : 2 ans à compter de la dernière échéance de l’emprunt.• Relevés de compte, virement, prélèvement, remises de chèque ou d’espèce, talons de chèques : 5 ans (délai de l’action civile)Impôts et taxes• Déclarations de revenus et avis d’imposition sur le revenu : 3 ans et 8 jours à compter de l’année qui suit l’année d’imposition• Avis d’impôsition (taxe foncière, taxe d’habitation) : 1 anFamille• Actes d’état civil : à vie• Remboursement des cotisations d’allocations familiales : 3 ans (sauf en cas de fraude)• Jugement de divorce ou d’adoption : à vie • Acte de reconnaissance d’un enfant : à vie • Mariage (contrat, documents relatifs aux biens apportés ou acquis lors du mariage par donation ou legs) : à vie• Livret de famille : à vie• Testament, succession : à vie• Les délais de conservation des papiers du défunt sont identiques. En effet, certains de ces documents peuvent prouver des dettes ou des créances transmises aux ayants-droit lors de la succession.￼￼￼￼￼￼￼￼￼ZONE A￼￼￼ZONE B￼￼￼ZONE C￼￼￼￼Eté￼￼le 05/07/2016￼￼Rentrée￼￼￼￼le 01/09/2016￼￼Toussaint￼￼￼￼du 19/10 au 3/11￼￼Noël￼￼￼￼￼du 17/12 au 3/01/2017￼Hiver￼￼du 18/02 au 06/03￼du 11/02 au 27/02￼￼￼du 04/02 au 20/02￼￼Printemps￼du 15/04 au 02/05￼￼￼du 08/04 au 24/04￼￼du 01/04 au 18/04￼￼￼Eté￼￼le 08/07/2017￼￼￼￼￼16Papiers d’une personne décédée￼￼￼Logement• Factures d’électricité et de gaz : 2 ans• Factures d’eau : 4 ans pour un fournisseur public ou 2 ans pour un fournisseur privé• Factures de téléphone : 1 an• Factures liées aux travaux : 10 ans ou 30 ans selon la nature des travaux• Certificat de ramonage : 1 an• Attestation d’entretien annuel des chaudières : 2 ans• Titre de propriété : à vie• Charges de copropriété et correspondances avec le syndic : 10 ans• Contrat de location : durée de location + 5 ans (état des lieux et quittance de versement du dépôt de garantie à conserver jusqu’au remboursement• Inventaire du mobilier pour les locations meublées : à vie• Quittances de loyer : 5 anstravail• Bulletins de salaire, contrats et certificats de travail, attestations de Pôle Emploi : à vie• Pièces utiles pour réclamer le paiement (salaire, indemnité de licenciement) : 5 ans• Allocation chômage : 2 ans pour le paiement ou 3 ans pour le versement.• Titre de paiement de la pension de retraite : à viesolutions des jeuxsudoku page 5santé• Remboursements d’assurance maladie et maternité : 2 ans (sauf en cas de fraude)• Mutuelle (carte, remboursement,etc.) : variable • Ordonnances : 1 an (la délivrance des médicaments peut se faire dans l’année qui suit leur prescription. Pour les lunettes, la validitédesordonnancesestde3anspourles plus de 16 ans).Mots fléchés p 14santé• Versement d’indemnités journalières : variable • Accident du travail : (remboursements, indemnités journalières, certificats et examens médicaux) : à vie*• Capital décès : 2 ans à compter du jour du décès. • Certificats, examens, radiographies: à vie** Documents utiles en cas de rechute ou d’agravation de l’état de santé.Mots fléchés p 14￼￼LoisirssaLLes de sportsGymnase pierre LARoCHE2 rue André Godin 03 23 65 17 31Gymnase Jean MouLINChem. Entrepôts du Nord Est￼￼￼￼￼￼sAINT quENTINCentre MultisportsChemin NeuvilleGymnase HANoTAuX78 rue H. CabotGymnase Gilbert RouXrue H. Barbusse03 23 04 22 3703 23 65 39 7103 23 65 17 16Gymnase pHILLIpIDésrue T. Gautier03 23 62 10 4103 23 65 27 58Gymnase François CoLLERYGymnase Robert sCHuMANNav F. & I. Joliot Curie 03 23 08 13 49Gymnase Mulhouse-pierre TAssART118 r Mulhouse 03 23 62 61 90Inscription Centre de Loisirs27 rue V. Basch 03 23 06 30 32palais des sports pierre RATTErue Ambroise ParéGymnase CoNDoRCETRd-pt F. Joliot Curie03 23 62 49 3703 23 08 88 90Gymnase Eugène CoRRETTErue BriatteGymnase Gaston JoLY5 r La FèreGymnase LA RAMEE4 rue Comdt G. Biéler03 23 68 42 43 03 23 04 00 79 03 23 67 19 51av Remincourtpiscine Jean BouIN87 bd Jean Bouinstade paul DEBRésIErue Anciens Combattants03 23 62 66 05 03 23 67 56 42 03 23 08 30 29￼￼￼￼￼￼￼￼17￼vacaNces scoLaires 2016/2017 </noscript> 
+ </body>
+</html>

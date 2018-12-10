@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<bookinfo autoFlipSeconds="5" bgColor="#565656" windowColor="#545454" shadow="true" pageWidth="1240" pageHeight="1240" flipSpeedBoost="80" title="L-ESSENTIEL_ST_QUENTIN" author="" zipIcon="content/images/iconZip.gif" exeIcon="content/images/iconExe.gif" companyUrl="http://www.epagecreator.net" companyAddress="" tel="" fitScreenAfterZoom="false" defaultZoomScale="2" autoMoveAfterZoom="false" zoomAfterLoaded="false" hardCover="false" clickToZoom="singleclick" gateway="http://www.flipmall.net/sendmail/email.php" shareUrl="index.html" id="L_ESSENTIEL_ST_QUENTIN" bookmarkWidth="18" bookmarkHeight="150" bookmarkFontSize="10" rightToLeft="false" autoFlip="false" companyName="" zipUrl="" exeUrl="" fullScreen="false" password="gbmVZXaloax5" lic="pbSamWw=" analyticsUA="" pdfUrl="" thickness="0" mouseWheelZoom="false" showZoomBox="true" bookSize="10" email="" flipArrow="false">
+    <leftmenu showTabBackground="true" visible="true" hideAfterZoom="false">
+        <issues visible="false"></issues>
+        <toc visible="true"></toc>
+        <thumbs visible="true"></thumbs>
+        <email visible="true"></email>
+        <sns visible="true"></sns>
+        <print visible="true"></print>
+        <close visible="false"></close>
+        <download visible="false"></download>
+        <pdf visible="true" singlePage="true" doublePage="true"></pdf>
+        <setting visible="true"></setting>
+        <about visible="true"></about>
+    </leftmenu>
+    <bottommenu iconSameSize="false" showBackground="false" background="content/images/menuBackground.png" visible="true" position="top" autoHideOnFullScreen="true" limitTo100="false" hideAfterZoom="false">
+        <help visible="true" url="http://www.epagecreator.net/readerhelp/index.html"></help>
+        <info visible="true" url="http://www.epagecreator.net"></info>
+        <zoom visible="true" mode="normal"></zoom>
+        <autoflip visible="true"></autoflip>
+        <search visible="true"></search>
+        <bookmark visible="true"></bookmark>
+        <notes visible="true"></notes>
+        <fullscreen visible="true"></fullscreen>
+        <highlight visible="true"></highlight>
+        <back visible="false"></back>
+        <forward visible="false"></forward>
+        <firstpage visible="true"></firstpage>
+        <prevpage visible="true"></prevpage>
+        <nextpage visible="true"></nextpage>
+        <lastpage visible="true"></lastpage>
+        <sound visible="false"></sound>
+    </bottommenu>
+    <contextmenu></contextmenu>
+    <bookLogo url="content/images/logo-poweredby.png" href="http://www.epagecreator.net"></bookLogo>
+    <tooltip showZoomTip="true" showFlipTip="true" bgColor="#000000" fgColor="#ffffff" visible="true"></tooltip>
+    <bottomthumb bgAlpha="0" bgColor="#000000" visible="true"></bottomthumb>
+    <tks>
+        <tk begin="1" end="2" value="1"></tk>
+        <tk begin="3" end="5" value="2"></tk>
+        <tk begin="6" end="10" value="3"></tk>
+        <tk begin="11" end="20" value="4"></tk>
+        <tk begin="21" end="30" value="5"></tk>
+        <tk begin="31" end="40" value="6"></tk>
+        <tk begin="41" end="60" value="7"></tk>
+        <tk begin="61" end="120" value="8"></tk>
+        <tk begin="121" end="0" value="9"></tk>
+    </tks>
+</bookinfo>

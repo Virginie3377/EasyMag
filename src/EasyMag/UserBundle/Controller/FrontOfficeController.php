@@ -45,7 +45,7 @@ class FrontOfficeController extends Controller
         }
 
 
-            return $this->render('EasyMagUserBundle:FrontOffice:index.html.twig', array(
+        return $this->render('EasyMagUserBundle:FrontOffice:index.html.twig', array(
             'souscriber' => $souscriber,
             'form' => $form->createView(),
         ));
