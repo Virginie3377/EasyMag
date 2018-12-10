@@ -102,11 +102,11 @@ class Bill
     /**
      * Set command
      *
-     * @param \EasyMag\UserBundle\Entity\Command $command
+     * @param Command $command
      *
      * @return Bill
      */
-    public function setCommand(\EasyMag\UserBundle\Entity\Command $command = null)
+    public function setCommand(Command $command = null)
     {
         $this->command = $command;
 
@@ -116,7 +116,7 @@ class Bill
     /**
      * Get command
      *
-     * @return \EasyMag\UserBundle\Entity\Command
+     * @return Command
      */
     public function getCommand()
     {

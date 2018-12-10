@@ -171,11 +171,11 @@ class Graphiste
     /**
      * Set user
      *
-     * @param \EasyMag\UserBundle\User $user
+     * @param User $user
      *
      * @return Graphiste
      */
-    public function setUser(\EasyMag\UserBundle\User $user = null)
+    public function setUser(User $user = null)
     {
         $this->user = $user;
 
@@ -185,7 +185,7 @@ class Graphiste
     /**
      * Get user
      *
-     * @return \EasyMag\UserBundle\User
+     * @return User
      */
     public function getUser()
     {

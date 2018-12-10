@@ -203,11 +203,11 @@ class Commercial
     /**
      * Set user
      *
-     * @param \EasyMag\UserBundle\User $user
+     * @param User $user
      *
      * @return Commercial
      */
-    public function setUser(\EasyMag\UserBundle\User $user = null)
+    public function setUser(User $user = null)
     {
         $this->user = $user;
 
@@ -217,7 +217,7 @@ class Commercial
     /**
      * Get user
      *
-     * @return \EasyMag\UserBundle\User
+     * @return User
      */
     public function getUser()
     {

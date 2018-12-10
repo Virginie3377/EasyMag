@@ -264,27 +264,27 @@ class Customer
     }
 
     /**
-     * Set genre
+     * Set gender
      *
-     * @param string $genre
+     * @param string $gender
      *
      * @return Customer
      */
-    public function setGenre($genre)
+    public function setGender($gender)
     {
-        $this->genre = $genre;
+        $this->gender = $gender;
 
         return $this;
     }
 
     /**
-     * Get genre
+     * Get gender
      *
      * @return string
      */
-    public function getGenre()
+    public function getGender()
     {
-        return $this->genre;
+        return $this->gender;
     }
 
     /**
@@ -446,29 +446,5 @@ class Customer
     public function getGraphiste()
     {
         return $this->graphiste;
-    }
-
-    /**
-     * Set gender
-     *
-     * @param string $gender
-     *
-     * @return Customer
-     */
-    public function setGender($gender)
-    {
-        $this->gender = $gender;
-
-        return $this;
-    }
-
-    /**
-     * Get gender
-     *
-     * @return string
-     */
-    public function getGender()
-    {
-        return $this->gender;
     }
 }
