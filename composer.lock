@@ -313,16 +313,16 @@
         },
         {
             "name": "doctrine/common",
-            "version": "v2.8.1",
+            "version": "v2.7.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/common.git",
-                "reference": "f68c297ce6455e8fd794aa8ffaf9fa458f6ade66"
+                "reference": "4acb8f89626baafede6ee5475bc5844096eba8a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/common/zipball/f68c297ce6455e8fd794aa8ffaf9fa458f6ade66",
-                "reference": "f68c297ce6455e8fd794aa8ffaf9fa458f6ade66",
+                "url": "https://api.github.com/repos/doctrine/common/zipball/4acb8f89626baafede6ee5475bc5844096eba8a9",
+                "reference": "4acb8f89626baafede6ee5475bc5844096eba8a9",
                 "shasum": ""
             },
             "require": {
@@ -331,15 +331,15 @@
                 "doctrine/collections": "1.*",
                 "doctrine/inflector": "1.*",
                 "doctrine/lexer": "1.*",
-                "php": "~7.1"
+                "php": "~5.6|~7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^5.7"
+                "phpunit/phpunit": "^5.4.6"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.8.x-dev"
+                    "dev-master": "2.7.x-dev"
                 }
             },
             "autoload": {
@@ -382,30 +382,28 @@
                 "persistence",
                 "spl"
             ],
-            "time": "2017-08-31T08:43:38+00:00"
+            "time": "2017-07-22T08:35:12+00:00"
         },
         {
             "name": "doctrine/dbal",
-            "version": "v2.6.2",
+            "version": "v2.5.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "1a4ee83a5a709555f2c6f9057a3aacf892451c7e"
+                "reference": "729340d8d1eec8f01bff708e12e449a3415af873"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/1a4ee83a5a709555f2c6f9057a3aacf892451c7e",
-                "reference": "1a4ee83a5a709555f2c6f9057a3aacf892451c7e",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/729340d8d1eec8f01bff708e12e449a3415af873",
+                "reference": "729340d8d1eec8f01bff708e12e449a3415af873",
                 "shasum": ""
             },
             "require": {
-                "doctrine/common": "^2.7.1",
-                "ext-pdo": "*",
-                "php": "^7.1"
+                "doctrine/common": ">=2.4,<2.8-dev",
+                "php": ">=5.3.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "^5.4.6",
-                "phpunit/phpunit-mock-objects": "!=3.2.4,!=3.2.5",
+                "phpunit/phpunit": "4.*",
                 "symfony/console": "2.*||^3.0"
             },
             "suggest": {
@@ -417,7 +415,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.6.x-dev"
+                    "dev-master": "2.5.x-dev"
                 }
             },
             "autoload": {
@@ -455,7 +453,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2017-08-28T11:02:56+00:00"
+            "time": "2017-07-22T20:44:48+00:00"
         },
         {
             "name": "doctrine/doctrine-bundle",
@@ -2394,6 +2392,131 @@
                 "templating"
             ],
             "time": "2018-07-13T07:18:09+00:00"
+        },
+        {
+            "name": "vich/uploader-bundle",
+            "version": "1.6.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dustin10/VichUploaderBundle.git",
+                "reference": "5a5f27598ba3885104bce447539b5227704f0aa5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dustin10/VichUploaderBundle/zipball/5a5f27598ba3885104bce447539b5227704f0aa5",
+                "reference": "5a5f27598ba3885104bce447539b5227704f0aa5",
+                "shasum": ""
+            },
+            "require": {
+                "behat/transliterator": "^1.2",
+                "doctrine/annotations": "^1.3",
+                "jms/metadata": "^1.6",
+                "php": "^7.0",
+                "symfony/asset": "^2.8|^3.1",
+                "symfony/dependency-injection": "^2.8|^3.1",
+                "symfony/finder": "^2.8|^3.1",
+                "symfony/framework-bundle": "^2.8|^3.1",
+                "symfony/property-access": "^2.8|^3.1",
+                "symfony/security": "^2.8|^3.1",
+                "symfony/templating": "^2.8|^3.1"
+            },
+            "require-dev": {
+                "doctrine/doctrine-bundle": "^1.6",
+                "doctrine/mongodb-odm": "^1.1",
+                "doctrine/orm": "^2.5",
+                "ext-sqlite3": "*",
+                "knplabs/knp-gaufrette-bundle": "^0.4",
+                "matthiasnoback/symfony-dependency-injection-test": "^2.0",
+                "mikey179/vfsstream": "^1.6",
+                "oneup/flysystem-bundle": "^1.7",
+                "phpunit/phpunit": "^6.0",
+                "symfony/browser-kit": "^2.8|^3.1",
+                "symfony/css-selector": "^2.8|^3.1",
+                "symfony/dom-crawler": "^2.8|^3.1",
+                "symfony/form": "^2.8|^3.1",
+                "symfony/twig-bridge": "^2.8.10|^3.1",
+                "symfony/twig-bundle": "^2.8|^3.1",
+                "symfony/validator": "^2.8|^3.1",
+                "symfony/yaml": "^2.8|^3.1"
+            },
+            "suggest": {
+                "doctrine/doctrine-bundle": "^1.6",
+                "doctrine/mongodb-odm-bundle": "*",
+                "doctrine/orm": "^2.5",
+                "doctrine/phpcr-odm": "^1.0",
+                "knplabs/knp-gaufrette-bundle": "^0.4",
+                "liip/imagine-bundle": "^1.7",
+                "symfony/yaml": "^2.8|^3.1",
+                "willdurand/propel-eventdispatcher-bundle": "^1.2"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.7.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Vich\\UploaderBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dustin Dobervich",
+                    "email": "ddobervich@gmail.com"
+                }
+            ],
+            "description": "Ease file uploads attached to entities",
+            "homepage": "https://github.com/dustin10/VichUploaderBundle",
+            "keywords": [
+                "file uploads",
+                "upload"
+            ],
+            "time": "2017-07-08T08:10:50+00:00"
+        },
+        {
+            "name": "willdurand/jsonp-callback-validator",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/willdurand/JsonpCallbackValidator.git",
+                "reference": "1a7d388bb521959e612ef50c5c7b1691b097e909"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/willdurand/JsonpCallbackValidator/zipball/1a7d388bb521959e612ef50c5c7b1691b097e909",
+                "reference": "1a7d388bb521959e612ef50c5c7b1691b097e909",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "JsonpCallbackValidator": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "William Durand",
+                    "email": "william.durand1@gmail.com",
+                    "homepage": "http://www.willdurand.fr"
+                }
+            ],
+            "description": "JSONP callback validator.",
+            "time": "2014-01-20T22:35:06+00:00"
         }
     ],
     "packages-dev": [
