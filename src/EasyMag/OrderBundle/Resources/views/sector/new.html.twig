@@ -1,0 +1,35 @@
+{% extends '@EasyMagUser/BackOffice/Commercial/layout.html.twig' %}
+
+{% block stylesheets %}
+
+{% endblock %}
+
+
+{% block title %}Title{% endblock %}
+
+{% block breadcrumb %}
+    <h2>Clients</h2>
+    <ol class="breadcrumb">
+        <li>
+            <a href="{{ path('commercial_index' ) }}">{{ "dashboard._"|trans }}</a>
+        </li>
+        <li class="active">
+            <a href="{{ path('client_index' ) }}"><strong>Tous mes Clients</strong></a>
+        </li>
+    </ol>
+{% endblock %}
+
+ {% block content %}
+    <h1>Sector creation</h1>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input type="submit" value="Create" />
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('secteur_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -10,4 +10,48 @@ namespace EasyMag\UserBundle\Repository;
  */
 class CommercialRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function findVentesByDay($today)
+    {
+        $qb = $this->createQueryBuilder('c')
+            ->select('SUM(p.price)')
+            ->join('c.customers', 'cc')
+            ->join('cc.commands', 'co')
+            ->where('co.date = :date')
+            ->join('co.product', 'p')
+            ->setParameter('date', $today->format('d'))
+            ->getQuery()
+            ->getResult()
+        ;
+
+        return $qb;
+    }
+
+    public function findVentesByCommercialByYear() {
+
+        $qb = $this->createQueryBuilder('c')
+            ->select('SUM(p.price)')
+            ->join('c.customers', 'cc')
+            ->join('cc.commands', 'co')
+            ->join('co.product', 'p')
+            ->where('co.date = :year')
+            ->setParameter('year', new \DateTime('Y'))
+            ->getQuery()
+            ->getResult();
+        return $qb;
+    }
+
+    public function findValidationByMagazine($status) {
+
+        $qb = $this->createQueryBuilder('c')
+            ->select('COUNT()')
+            ->join('c.sectors', 'cs')
+            ->where('cs.name = :name')
+            ->join('cs.customers', 'cc')
+            ->join('cc.commands', 'co')
+            ->where('co.status = :test')
+            ->setParameter('test', $status)
+
+        ;
+        return $qb->getQuery()->getResult();
+    }
 }

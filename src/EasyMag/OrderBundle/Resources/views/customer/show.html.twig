@@ -1,0 +1,108 @@
+{% extends '@EasyMagUser/BackOffice/Commercial/layout.html.twig' %}
+
+
+{% block stylesheets %}
+
+{% endblock %}
+
+
+{% block title %}Title{% endblock %}
+
+{% block breadcrumb %}
+    <h2>Clients</h2>
+    <ol class="breadcrumb">
+        <li>
+            <a href="{{ path('commercial_index' ) }}">{{ "dashboard._"|trans }}</a>
+        </li>
+        <li class="active">
+            <a href="{{ path('client_index' ) }}">Client</a>
+        </li>
+        <li class="active">
+            <a href="{{ path('client_show', { 'id': customer.id }) }}"><strong>{{ customer.company }}</strong></a>
+        </li>
+    </ol>
+{% endblock %}
+
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-4">
+        <div class="ibox ">
+            <div class="ibox-content">
+                <div class="tab-content">
+                    <div id="{{ customer.company }}" class="tab-pane active">
+                        <div class="row">
+                            <div class="col-lg-12 text-center">
+                                <h2>{{ customer.company }}</h2>
+                                <h4 class="text-center">{{ customer.gender }} {{ customer.firstname }} {{ customer.lastname }}</h4>
+                                <a href="mailto:{{ customer.email }}">
+                                    <button type="button" class="btn btn-primary btn-sm btn-block"
+                                            style="margin: 10px 0;"><i class="fa fa-envelope"></i>
+                                        Envoyez un Email
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="col-lg-12 text-center">
+                                <strong>
+                                    Commandes réalisées : {{ command.count }} commandes
+                                </strong>
+                                <div class="ibox no-padding">
+                                    <img alt="image" style="margin: 10px 0;" class="img-responsive"
+                                         src="{{ asset('assets/backoffice/img/cutomers/img_magazine/p8.jpg') }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="client-detail">
+                            <div class="full-height-scroll text-center">
+                                <ul class="list-group clear-list">
+                                    <li class="list-group-item first-item">
+                                        <strong>Adresse </strong><br>
+                                        <span class="text-center">{{ customer.address }}
+                                            <br>{{ customer.postalCode }} {{ customer.city }}</span><br>
+                                        <h4 class="text-center">{{ customer.phone }}</h4>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Secteur </strong><br>
+                                        <span class="text-center">{{ customer.sector }}</span><br>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Notes</strong>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua.
+                                        </p>
+                                </ul>
+                                <div class="col-sm-12 text-center">
+                                    <a href="{{ path('client_edit', { 'id': customer.id }) }}">
+                                        <button type="button" class="btn btn-warning">Modifier</button>
+                                    </a>
+                                    <a href="{{ path('client_index') }}">
+                                        <button type="button" class="btn btn-info">
+                                            Retour Listing
+                                        </button>
+                                    </a>
+                                </div>
+                                <div class="col-sm-12 text-center" style="padding-top: 5px;" >
+                                    {{ form_start(delete_form) }}
+                                    <input type="submit" class="btn btn-danger" value="Effacer cette fiche">
+                                    {{ form_end(delete_form) }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="ibox ">
+            <div class="ibox-content">
+                <div class="tab-content">
+                    liste document
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,166 @@
+<!-- saved from url=(0014)about:internet -->
+<html lang="en" itemscope itemtype="http://schema.org/Book">
+
+<!-- 
+Smart developers always View Source. 
+
+This application was built using Adobe Flex, an open source framework
+for building rich Internet applications that get delivered via the
+Flash Player or to desktops via Adobe AIR. 
+
+Learn more about Flex at http://flex.org 
+// -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta property="og:image" content="content/thumbs/thumb1.jpg" />
+<meta itemprop="image" content="content/thumbs/thumb1.jpg">
+<!--  BEGIN Browser History required section -->
+<link rel="stylesheet" type="text/css" href="../history/history.css" />
+<!--  END Browser History required section -->
+
+<title>L-ESSENTIEL_ST_QUENTIN</title>
+<script src="../AC_OETags.js" language="javascript"></script>
+
+<!--  BEGIN Browser History required section -->
+<script src="../history/history.js" language="javascript"></script>
+<!--  END Browser History required section -->
+
+<style type="text/css">
+  body { margin: 0px;
+         overflow:hidden;
+         background-color: ThisisBackgroundColor;
+	 background-image: url(ThisisBackgroundImage);
+         background-repeat:no-repeat;
+         background-position:center;
+       }
+        
+</style>
+
+<script type="text/javascript"> var errorName = null; function isBrowserSupportPlugin() {     var supported = null;     try {         new ActiveXObject("");     }     catch (e) {         errorName = e.name;     }     try {         supported = !!new ActiveXObject("htmlfile");     } catch (e) {         supported =  false;     }     if(errorName != 'ReferenceError' && supported==false){         supported = false;     }else{         supported =true;     }     return supported; } function isMetroIE() {     var matchIE = /MSIE\s([\d.]+)/;     if ((matchIE.test(navigator.userAgent)) && !isBrowserSupportPlugin())         return true;     else         return false; } var iRegex = /android|BlackBerry|Windows Phone|(iP(hone|ad))/i; if (iRegex.test(navigator.userAgent) || isMetroIE()){     var url= "../html5.html?page=7";     if( false &&  window.parent)         window.parent.location=url;         else             window.location =url;             } </script>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+// -----------------------------------------------------------------------------
+// Globals
+// Major version of Flash required
+var requiredMajorVersion = 10;
+// Minor version of Flash required
+var requiredMinorVersion = 0;
+// Minor version of Flash required
+var requiredRevision = 0;
+// -----------------------------------------------------------------------------
+// -->
+</script>
+</head>
+
+<body scroll="no" onload="setBrowserFocus()">
+<script language="JavaScript" type="text/javascript">
+<!--
+
+function closeMe(){return window.close();}
+
+var gotoPage = function(page){
+	if (navigator.appName.indexOf("Microsoft") != -1) {
+		return window['main'].gotoPage(page);
+	}
+	else {
+		return document['main'].gotoPage(page);
+	}
+}
+
+// Version check for the Flash Player that has the ability to start Player Product Install (6.0r65)
+var hasProductInstall = DetectFlashVer(6, 0, 65);
+
+// Version check based upon the values defined in globals
+var hasRequestedVersion = DetectFlashVer(requiredMajorVersion, requiredMinorVersion, requiredRevision);
+
+function getparafromurl() {
+    var url,pos,parastr,para;
+    url = window.location.href;
+    pos = url.indexOf("?")
+    parastr = url.substring(pos+1);
+    return parastr;
+}
+
+function setBrowserFocus(){ document.getElementById('main').focus();}
+
+if ( hasProductInstall && !hasRequestedVersion ) {
+	// DO NOT MODIFY THE FOLLOWING FOUR LINES
+	// Location visited after installation is complete if installation is required
+	var MMPlayerType = (isIE == true) ? "ActiveX" : "PlugIn";
+	var MMredirectURL = window.location;
+    document.title = document.title.slice(0, 47) + " - Flash Player Installation";
+    var MMdoctitle = document.title;
+
+	AC_FL_RunContent(
+		"src", "playerProductInstall",
+		"FlashVars", "MMredirectURL="+MMredirectURL+'&MMplayerType='+MMPlayerType+'&MMdoctitle='+MMdoctitle+"",
+		"width", "100%",
+		"height", "100%",
+		"align", "middle",
+		"id", "main",
+		"quality", "high",
+		"allowFullScreen","true",
+		"FlashVars", getparafromurl(),
+		"bgcolor", "#ffffff",
+		"name", "main",
+		"allowScriptAccess","sameDomain",
+		"type", "application/x-shockwave-flash",
+		"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+} else if (hasRequestedVersion) {
+	// if we've detected an acceptable version
+	// embed the Flash Content SWF when all tests are passed
+	AC_FL_RunContent(
+			"src", "../main?page=8",
+			"width", "100%",
+			"height", "100%",
+			"align", "middle",
+			"allowFullScreen","true",
+			"id", "main",
+			"FlashVars", getparafromurl(),
+			"quality", "high",
+			"bgcolor", "#ffffff",
+			"name", "main",
+			"allowScriptAccess","sameDomain",
+			"type", "application/x-shockwave-flash",
+			"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+  } else {  // flash is too old or we can't detect the plugin
+    var alternateContent = 'Adobe Flash Player not detected. '
+   	+ 'Redirecting to HTML5 version';
+    document.write(alternateContent);  // insert non-flash content
+
+    var url= "../html5.html?page=7";
+    if( false &&  window.parent)
+       window.parent.location=url;
+    else
+       window.location =url;
+  }
+// -->
+</script>
+<noscript>
+  	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+			id="main" width="100%" height="100%"
+			codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
+			<param name="movie" value="../main.swf?page=8" />
+			<param name="quality" value="high" />
+			<param name="allowFullScreen" value="true" />
+			<param name="bgcolor" value="#ffffff" />
+			<param name="allowScriptAccess" value="sameDomain" />
+			<embed src="main.swf" quality="high" bgcolor="#ffffff"
+				width="100%" height="100%" name="main" align="middle"
+				play="true"
+				loop="false"
+				allowFullScreen="true"
+				quality="high"
+				allowScriptAccess="sameDomain"
+				type="application/x-shockwave-flash"
+				pluginspage="http://www.adobe.com/go/getflashplayer">
+			</embed>
+	</object>
+</noscript>
+<noscript> ￼￼détecteUrs de fUmée daNs Les LogemeNtsDepuis le 8 mars 2015, un détecteur de fumée doit être installé dans tous les logements. Un geste simple, pas cher, qui sauve des vies.quel détecteur choisir?Le détecteur doit être conforme à la réglementation : sur son emballage, doit être inscrit qu’il correspond bien à la norme européenne EN 14604. En plus de ce marquage CE, préférez les détecteurs de fumée comportant le marquage NF. C’est une marque de certification de qualité supplémentaire.Comment l’installer?Il doit être installé de préférence au plafond, dans la circulation ou le couloir menant aux chambres,puisque les fumées dégageés montent au plafond. Si la pose est murale, il faut impérativement l’installer en hauteur. En cas de logement sur￼plusieurs niveaux, préférez au minimum un détecteur par étage.dUrée de vaLidité des diagNostics immobiLiersLes artisans près de chez vous￼￼￼￼Lors de la mise en vente ou location d’un bien, des diagnostics sont obligatoires. Il est important de tenir compte de la validité de ces derniers. En effet si vous joignez des rapports dont la date de validité est dépassée, ils seront refusés par le notaire.La loi Carrez et la loi Boutin : Ces diagnostics sont sans limite. Cependant si desmodifications de la surface ont lieu (travaux d’agrandissement ou abattement d’unecloison), une nouvelle expertise est nécessaire.Diagnostic de Performance Energétique (DPE) : Doit être daté de moins de 10 ans.L’Etat de l’installation gaz / Diagnostic électricité : Durée de validité de 3 ans.Etat des risques Naturels, Miniers et Technologiques (ERNMT) : Validité de 6 mois.Diagnostic plomb (CREP) : La durée de validité du constat de risque d’exposition au plombest d’un an, s’il y a détection. Si aucune trace de plomb n’est décelée, la durée reste illimitée.Diagnostic Termites : Durée de validité de 6 mois. Il est obligatoire lorsqu’un bien sesitue dans une zone délimitée comme infestée par arrêtés préfectoraux. Si la présence determites s’avère positive elle doit être signalée par une déclaration en mairie.Diagnostic amiante : La durée de validité dépend du rapport. En effet, si aucune traced’amiante n’est détectée, la durée du diagnostic est illimitée. Cependant si la présence d’amiante est détectée, le propriétaire se doit de faire surveiller ces états de conservations tous les 3 ans. Il est à noter qu’en cas de non présentation des diagnostics obligatoires, le propriétaire/ bailleur fautif ne pourra pas prétendre à une exonération de la garantie des vices cachés.8￼￼￼￼￼￼￼￼￼￼￼￼￼￼chaUffage, oui mais lequel ?Il existe aujourd’hui beaucoup d’offres de chauffage. Une installation, c’est le choix d’énergie : électricité, bois, granulés, gaz naturel, fioul, géothermie, aérothermie, solaire...Les possibilités sont nombreuses et les installations très diverses !￼￼￼￼￼￼Le boisLEs AvAntAgEs :• Confort thermique• Economique à l’usage • Energie renouvelableLEs InCOnvénIEnts :• nécessité de stockage• Pollution intérieure par les fumées• Alimentation manuelle du feuLe gaZLEs AvAntAgEs :• Confort idéal• Economique à l’usageLEs InCOnvénIEnts :• Coût d’installation• Proximité du réseau obligatoire ou nécessité d’une cuve de stockageLes graNULésLEs AvAntAgEs :• Confort thermique• Economique à l’usage • Energie renouvelableLEs InCOnvénIEnts : • nécessité de stockage • Dépendance du réseau électrique￼￼￼￼￼￼L’eLectriqUeLEs AvAntAgEs :• Coût d’installation faible • Peu ou pas d’entretienLEs InCOnvénIEnts : • Coûteux à l’usage• Dépendance du réseau électrique• nécessite un renforcement d’isolationLa pompe a chaLeUr air/eaULEs AvAntAgEs :• Inertie• Confort thermique• Economique à l’usageLEs InCOnvénIEnts : • Dépendance du réseau électrique• Coût d’installationLa pompe a chaLeUr air/airLEs AvAntAgEs :• Coût d’installation faible • Economique à l’usage• RéactivitéLEs InCOnvénIEnts : • Peu d’inertie• Dépendance du réseau électrique￼9￼ </noscript> 
+ </body>
+</html>

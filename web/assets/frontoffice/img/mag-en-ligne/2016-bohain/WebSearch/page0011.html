@@ -1,0 +1,166 @@
+<!-- saved from url=(0014)about:internet -->
+<html lang="en" itemscope itemtype="http://schema.org/Book">
+
+<!-- 
+Smart developers always View Source. 
+
+This application was built using Adobe Flex, an open source framework
+for building rich Internet applications that get delivered via the
+Flash Player or to desktops via Adobe AIR. 
+
+Learn more about Flex at http://flex.org 
+// -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta property="og:image" content="content/thumbs/thumb1.jpg" />
+<meta itemprop="image" content="content/thumbs/thumb1.jpg">
+<!--  BEGIN Browser History required section -->
+<link rel="stylesheet" type="text/css" href="../history/history.css" />
+<!--  END Browser History required section -->
+
+<title>L-ESSENTIEL_BOHAIN-2016_web</title>
+<script src="../AC_OETags.js" language="javascript"></script>
+
+<!--  BEGIN Browser History required section -->
+<script src="../history/history.js" language="javascript"></script>
+<!--  END Browser History required section -->
+
+<style type="text/css">
+  body { margin: 0px;
+         overflow:hidden;
+         background-color: ThisisBackgroundColor;
+	 background-image: url(ThisisBackgroundImage);
+         background-repeat:no-repeat;
+         background-position:center;
+       }
+        
+</style>
+
+<script type="text/javascript"> var errorName = null; function isBrowserSupportPlugin() {     var supported = null;     try {         new ActiveXObject("");     }     catch (e) {         errorName = e.name;     }     try {         supported = !!new ActiveXObject("htmlfile");     } catch (e) {         supported =  false;     }     if(errorName != 'ReferenceError' && supported==false){         supported = false;     }else{         supported =true;     }     return supported; } function isMetroIE() {     var matchIE = /MSIE\s([\d.]+)/;     if ((matchIE.test(navigator.userAgent)) && !isBrowserSupportPlugin())         return true;     else         return false; } var iRegex = /android|BlackBerry|Windows Phone|(iP(hone|ad))/i; if (iRegex.test(navigator.userAgent) || isMetroIE()){     var url= "../html5.html?page=10";     if( false &&  window.parent)         window.parent.location=url;         else             window.location =url;             } </script>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+// -----------------------------------------------------------------------------
+// Globals
+// Major version of Flash required
+var requiredMajorVersion = 10;
+// Minor version of Flash required
+var requiredMinorVersion = 0;
+// Minor version of Flash required
+var requiredRevision = 0;
+// -----------------------------------------------------------------------------
+// -->
+</script>
+</head>
+
+<body scroll="no" onload="setBrowserFocus()">
+<script language="JavaScript" type="text/javascript">
+<!--
+
+function closeMe(){return window.close();}
+
+var gotoPage = function(page){
+	if (navigator.appName.indexOf("Microsoft") != -1) {
+		return window['main'].gotoPage(page);
+	}
+	else {
+		return document['main'].gotoPage(page);
+	}
+}
+
+// Version check for the Flash Player that has the ability to start Player Product Install (6.0r65)
+var hasProductInstall = DetectFlashVer(6, 0, 65);
+
+// Version check based upon the values defined in globals
+var hasRequestedVersion = DetectFlashVer(requiredMajorVersion, requiredMinorVersion, requiredRevision);
+
+function getparafromurl() {
+    var url,pos,parastr,para;
+    url = window.location.href;
+    pos = url.indexOf("?")
+    parastr = url.substring(pos+1);
+    return parastr;
+}
+
+function setBrowserFocus(){ document.getElementById('main').focus();}
+
+if ( hasProductInstall && !hasRequestedVersion ) {
+	// DO NOT MODIFY THE FOLLOWING FOUR LINES
+	// Location visited after installation is complete if installation is required
+	var MMPlayerType = (isIE == true) ? "ActiveX" : "PlugIn";
+	var MMredirectURL = window.location;
+    document.title = document.title.slice(0, 47) + " - Flash Player Installation";
+    var MMdoctitle = document.title;
+
+	AC_FL_RunContent(
+		"src", "playerProductInstall",
+		"FlashVars", "MMredirectURL="+MMredirectURL+'&MMplayerType='+MMPlayerType+'&MMdoctitle='+MMdoctitle+"",
+		"width", "100%",
+		"height", "100%",
+		"align", "middle",
+		"id", "main",
+		"quality", "high",
+		"allowFullScreen","true",
+		"FlashVars", getparafromurl(),
+		"bgcolor", "#ffffff",
+		"name", "main",
+		"allowScriptAccess","sameDomain",
+		"type", "application/x-shockwave-flash",
+		"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+} else if (hasRequestedVersion) {
+	// if we've detected an acceptable version
+	// embed the Flash Content SWF when all tests are passed
+	AC_FL_RunContent(
+			"src", "../main?page=11",
+			"width", "100%",
+			"height", "100%",
+			"align", "middle",
+			"allowFullScreen","true",
+			"id", "main",
+			"FlashVars", getparafromurl(),
+			"quality", "high",
+			"bgcolor", "#ffffff",
+			"name", "main",
+			"allowScriptAccess","sameDomain",
+			"type", "application/x-shockwave-flash",
+			"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+  } else {  // flash is too old or we can't detect the plugin
+    var alternateContent = 'Adobe Flash Player not detected. '
+   	+ 'Redirecting to HTML5 version';
+    document.write(alternateContent);  // insert non-flash content
+
+    var url= "../html5.html?page=10";
+    if( false &&  window.parent)
+       window.parent.location=url;
+    else
+       window.location =url;
+  }
+// -->
+</script>
+<noscript>
+  	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+			id="main" width="100%" height="100%"
+			codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
+			<param name="movie" value="../main.swf?page=11" />
+			<param name="quality" value="high" />
+			<param name="allowFullScreen" value="true" />
+			<param name="bgcolor" value="#ffffff" />
+			<param name="allowScriptAccess" value="sameDomain" />
+			<embed src="main.swf" quality="high" bgcolor="#ffffff"
+				width="100%" height="100%" name="main" align="middle"
+				play="true"
+				loop="false"
+				allowFullScreen="true"
+				quality="high"
+				allowScriptAccess="sameDomain"
+				type="application/x-shockwave-flash"
+				pluginspage="http://www.adobe.com/go/getflashplayer">
+			</embed>
+	</object>
+</noscript>
+<noscript> ￼Cocktail Piña ColadaComposition :4 cl de rhum blanc - 2 cl de rhum ambré - 12 cl de jus d’ananas - 4 cl de lait de cocoPréparation : Dans un blender, versez les ingrédients avec 5 ou 6 glaçons et mixez le tout. C’est prêt ! Versez dans le verre. Décorer avec un morceau d’ananas et unecerise con te. Dégustez ! Peut aussi se réaliser au shaker si c’est juste pour une personne. Vous pouvez ajouter une touche d’onctuosité en ajoutant une cuillère à soupe de crème fraîche dans le mixer.￼￼￼￼￼￼￼￼￼￼Vos professionnels de la santéLES PHARMACIESBEAUREVOIRPharmacie Danièle FRANÇOIS2 place du Gal de Gaulle 03 23 09 41 67BOHAIN EN VERMANDOISPharmacie CAMBRELIN GUYOT￼￼￼￼￼28 rue F De PressenséPharmacie CENTRALE3 place Gal de GaullePharmacie Philippe IDEE33 rue Jean JaurèsFRESNOY LE GRANDPharmacie de L’AISNE98 rue RépubliqueLE CATELET03 23 07 23 80 03 23 07 11 21 03 23 07 12 8003 23 09 15 21Pharmacie VAN INGHELANDT28 rue Gal AugereauMONTBREHAINPharmacie PACOU2 rue du 8 Mai 1945SEBONCOURTPharmacie SEVIN21 rue Fernand Clément03 23 66 21 7703 23 63 41 1403 23 09 30 80LES SAGES FEMMESBOHAIN EN VERMANDOISMSP Maison Médical du Vemandois :Alice QUIQUEREZ18 rue Elisée Alavoine 06 73 16 06 61￼￼￼￼LES MAIRIESAUBENCHEUL-AUX-BOIS8 rue EgliseBEAUREVOIRplace du Gal de GaulleBECQUIGNY1 place du Gal de GaulleBELLENGLISErue du ChâteauBELLICOURTplace Charles de Gaulle03 23 66 20 0803 23 09 41 0803 23 07 20 9903 23 64 31 2503 23 09 51 79LEHAUCOURTrue Jean JaurèsJONCOURTrue rognonLEMPIRE25 Grande RueLEVERGIES23 rue Marie TrocmeMAGNY LA FOSSE1 rue ViolettesMONTBREHAINRue Charles de Gaulle03 23 64 31 55 03 23 63 91 09 09 60 40 33 32 03 23 63 41 65 03 23 64 19 1003 23 63 41 09￼￼￼￼BOHAIN EN VERMANDOIS40 rue BerthelotBONYrue AbbayeBRANCOURT LE GRANDrue du 11 NovembreLE CATELETrue du Gal AugereauCROIX-FONSOMME18 rue PrincipaleESTREES46 chauss BrunehautETAVES ET BOCQUIAUX5 rue Eugène LemaireFONTAINE-UTERTErue MairieFRESNOY LE GRAND1 place du Gal de GaulleGOUY4 rue MairieHARGICOURT10 bis rue Caron03 23 05 20 23 03 23 66 26 63 03 23 63 45 13 03 23 66 21 94 03 23 07 98 18 03 23 63 47 21 03 23 66 00 82 03 23 07 90 33 03 23 66 04 43 03 23 66 22 06 03 23 05 26 74MONTIGNY-EN-ARROUAISE8 Grande RueNAUROY1 place du 8 MaiPREMONTrue Gal TysonRAMICOURTrue PlaceSEBONCOURTrue Robertine DuboisSEQUEHART145 rue MairieSERAIN14 rue LibertéVENDHUILE03 23 07 93 74 03 23 09 52 11 03 23 09 41 30 03 23 05 49 15 03 23 66 02 31 03 23 63 93 90 03 23 09 42 213 place Charles de Gaulle03 23 66 20 68VILLERET4 rue Priel 03 23 09 58 07￼￼11￼ </noscript> 
+ </body>
+</html>

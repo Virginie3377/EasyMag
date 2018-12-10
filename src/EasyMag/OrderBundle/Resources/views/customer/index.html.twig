@@ -1,0 +1,110 @@
+{% extends '@EasyMagUser/BackOffice/Commercial/layout.html.twig' %}
+
+{% block stylesheets %}
+
+{% endblock %}
+
+
+{% block title %}Title{% endblock %}
+
+{% block breadcrumb %}
+    <h2>Clients</h2>
+    <ol class="breadcrumb">
+        <li>
+            <a href="{{ path('commercial_index' ) }}">{{ "dashboard._"|trans }}</a>
+        </li>
+        <li class="active">
+            <a href="{{ path('client_index' ) }}"><strong>Tous mes Clients</strong></a>
+        </li>
+    </ol>
+{% endblock %}
+
+ {% block content %}
+{#
+<div class="row">
+    {% for customer in customers %}
+        <div class="col-lg-4">
+            <div class="ibox-content no-padding border-left-right">
+                <img alt="image" class="img-responsive" src="{{ asset('assets/backoffice/img/cutomers/img_magazine/p8.jpg') }}">
+            </div>
+            <div class="contact-box center-version">
+                #}{# TODO
+                A mettre dans le show
+                            <div class="m-t-xs font-bold">{% if customer.customer %}Client {% else %}Prospect{% endif %}</div>
+                           la date depuis quand
+                           afficher de quel secteur il est aussi !!!
+                                                      #}{#
+                <h3 class="m-b-xs"><strong>{{ customer.company }}</strong></h3>
+
+                    <div class="font-bold">{{ customer.gender }} {{ customer.lastname }} {{ customer.firstname }}</div>
+                    <address class="m-t-md">
+                        <strong>  {{ customer.phone }}</strong><br>
+                        {{ customer.address }}<br>{{ customer.postalCode }} {{ customer.city }}<br>
+                        {{ customer.email }}
+                    </address>
+<br>
+                <div class="contact-box-footer">
+                    <div class="m-t-xs btn-group">
+                        <a class="btn btn-xs btn-white"><i class="fa fa-envelope"></i>Envoyer un Email</a>
+
+                    </div>
+                </div>
+                <a href="{{ path('client_show', { 'id': customer.id }) }}"><button type="button" class="btn btn-primary center-block">Voir sa fiche</button></a>
+
+            </div>
+        </div>#}
+
+
+        <div class="row">
+
+            <div class="col-sm-12">
+                <div class="ibox">
+                    <div class="ibox-content">
+                        <h2>Listing Clients</h2>
+                        <div class="input-group">
+                            <input type="text" placeholder="Search client " class="input form-control">
+                            <span class="input-group-btn">
+                        <button type="button" class="btn btn btn-primary"> <i class="fa fa-search"></i>Recherche</button>
+                    </span>
+                        </div>
+                        <div class="clients-list">
+                            <ul class="nav nav-tabs">
+                                <span class="pull-right small text-muted">Nombre de clients : X</span>
+                                <li class="active"><a data-toggle="tab" href="#tab-1"><i class="fa fa-user"></i> Clients</a></li>
+                                <li class=""><a data-toggle="tab" href="#tab-2"><i class="fa fa-briefcase"></i> Entreprises</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="tab-1" class="tab-pane active">
+                                    <div class="full-height-scroll">
+                                        <td class="table-responsive">
+                                            <table class="table table-striped table-hover">
+                                                {% for customer in customers %}
+                                                <tbody>
+                                                <tr>
+                                                    <td><a data-toggle="tab" href="#{{ customer.company|upper }}" class="client-link">{{ customer.company }}</a></td>
+                                                    <td>{{ customer.gender }} {{ customer.lastname }} {{ customer.firstname }}</td>
+                                                    <td>{{ customer.email }}</td>
+                                                    <td>{{ customer.phone }}</td>
+                                                    <td> {{ customer.address }} <br>{{ customer.postalCode }} {{ customer.city|upper }}</td>
+                                                    <td>
+                                                        <a href="{{ path('client_show', { 'id': customer.id }) }}"><button type="button" class="btn btn-primary center-block">Voir sa fiche</button></a>
+                                                    </td>
+                                                </tr>
+                                                <tbody>
+                                                {% endfor %}
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+{% endblock %}

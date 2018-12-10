@@ -1,0 +1,162 @@
+{% extends '@EasyMagUser/BackOffice/Commercial/layout.html.twig' %}
+
+{% block title %}Title{% endblock %}
+
+{% block breadcrumb %}
+    <h2>Clients</h2>
+    <ol class="breadcrumb">
+        <li>
+            <a href="{{ path('commercial_index' ) }}">{{ "dashboard._"|trans }}</a>
+        </li>
+        <li class="active">
+            <a href="{{ path('command_index' ) }}"><strong>Mes Commandes</strong></a>
+        </li>
+    </ol>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>{{ "form.required" |trans }}</h5>
+            </div>
+            <div class="ibox-content">
+                {{ form_start(form, {'attr': {'class': 'form-horizontal', 'action': path('command_new') }}) }}
+
+                <div class="form-group">
+                    {{ form_label(form.customer, 'customer._', {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+                    {{ form_errors(form.customer) }}
+                    <div class="col-sm-10">
+                        {{ form_widget(form.customer, { 'attr': {'class': 'form-control'}}) }}
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    {{ form_label(form.commandnumber, 'command.commandnumber', {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+                    {{ form_errors(form.commandnumber) }}
+                    <div class="col-sm-10">
+                        {{ form_widget(form.commandnumber, { 'attr': {'class': 'form-control', 'placeholder':'ex: 2017STQ001'}}) }}
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    {{ form_label(form.date, null, {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+                    {{ form_errors(form.date) }}
+                    <div class="col-sm-10">
+                        {{ form_widget(form.date, { 'attr': {'class': 'form-control'}}) }}
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    {{ form_label(form.status, null, {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+                    {{ form_errors(form.status) }}
+                    <div class="col-sm-10">
+                        {{ form_widget(form.status, { 'attr': {'class': 'form-control'}}) }}
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    {{ form_label(form.product, null, {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+                    {{ form_errors(form.product) }}
+                    <div class="col-sm-12">
+                    {{ form_widget(form.product) }}
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    {{ form_label(form.sector, null, {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+                    {{ form_errors(form.sector) }}
+                    <div class="col-sm-10">
+                        {{ form_widget(form.sector, { 'attr': {'class': 'form-control'}}) }}
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-3" style="float: right">
+                        <a href="{{ path('command_index') }}"><button type="button" class="btn btn-white">Annuler</button></a>
+                        {{ form_widget(form.submit, {'attr': {'class': 'btn btn-primary'}}) }}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    {{ form_rest(form) }}
+    {{ form_end(form) }}
+
+{% endblock %}
+
+
+{% block javascripts %}
+
+        {#<script type="text/javascript">
+            $(document).ready(function() {
+                // On récupère la balise <div> en question qui contient l'attribut « data-prototype » qui nous intéresse.
+                var $container = $('div#easymag_orderbundle_command_product');
+
+                // On ajoute un lien pour ajouter une nouvelle catégorie
+                var $addLink = $('<a href="#" id="add_category" class="col-sm-2 btn btn-default">Produit</a>');
+                $container.append($addLink);
+
+                // On ajoute un nouveau champ à chaque clic sur le lien d'ajout.
+                $addLink.click(function(e) {
+                    addCategory($container);
+                    e.preventDefault(); // évite qu'un # apparaisse dans l'URL
+                    return false;
+                });
+
+                // On définit un compteur unique pour nommer les champs qu'on va ajouter dynamiquement
+                var index = $container.find(':input').length;
+                addCategory($container);
+               /// On ajoute un premier champ automatiquement s'il n'en existe pas déjà un (cas d'une nouvelle annonce par exemple).
+              /*  if (index == 0) {
+                    addCategory($container);
+                } else {
+                    // Pour chaque catégorie déjà existante, on ajoute un lien de suppression
+                    $container.children('div').each(function() {
+                        addDeleteLink($(this));
+                    });
+                }*/
+
+                // La fonction qui ajoute un formulaire Categorie
+                function addCategory($container) {
+                    // Dans le contenu de l'attribut « data-prototype », on remplace :
+                    // - le texte "__name__label__" qu'il contient par le label du champ
+                    // - le texte "__name__" qu'il contient par le numéro du champ
+                    var $prototype = $($container.attr('data-prototype').replace(/__name__label__/g, 'Produit n°' + (index+1))
+                        .replace(/__name__/g, index));
+
+                    // On ajoute au prototype un lien pour pouvoir supprimer la catégorie
+                    addDeleteLink($prototype);
+
+                    // On ajoute le prototype modifié à la fin de la balise <div>
+                    $container.append($prototype);
+
+                    // Enfin, on incrémente le compteur pour que le prochain ajout se fasse avec un autre numéro
+                    index++;
+                }
+
+                // La fonction qui ajoute un lien de suppression d'une catégorie
+                function addDeleteLink($prototype) {
+                    // Création du lien
+                    $deleteLink = $('<a href="#" class="btn btn-danger">Supprimer</a>');
+
+                    // Ajout du lien
+                    $prototype.append($deleteLink);
+
+                    // Ajout du listener sur le clic du lien
+                    $deleteLink.click(function(e) {
+                        $prototype.remove();
+                        e.preventDefault(); // évite qu'un # apparaisse dans l'URL
+                        return false;
+                    });
+                }
+            });
+    </script>
+#}
+
+{% endblock %}

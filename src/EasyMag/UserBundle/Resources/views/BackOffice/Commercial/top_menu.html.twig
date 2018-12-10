@@ -1,6 +1,6 @@
     <ul class="nav navbar-top-links navbar-right">
         <li>
-            <span class="m-r-sm text-muted welcome-message">Welcome to INSPINIA+ Admin Theme.</span>
+            <span class="m-r-sm text-muted welcome-message">Bienvenue sur EasyMag</span>
         </li>
         <li class="dropdown">
             <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
@@ -10,7 +10,7 @@
                 <li>
                     <div class="dropdown-messages-box">
                         <a href="#" class="pull-left">
-                            <img alt="image" class="img-circle" src="">
+                            <img alt="image" class="img-circle" src="{{ asset('assets/backoffice/img/users/a1.jpg') }}">
                         </a>
                         <div class="media-body">
                             <small class="pull-right">46h ago</small>
@@ -35,8 +35,8 @@
                 <li class="divider"></li>
                 <li>
                     <div class="dropdown-messages-box">
-                        <a href="profile.html" class="pull-left">
-                            <img alt="image" class="img-circle" src="img/profile.jpg">
+                        <a href="" class="pull-left">
+                            <img alt="image" class="img-circle" src="">
                         </a>
                         <div class="media-body ">
                             <small class="pull-right">23h ago</small>
@@ -48,8 +48,8 @@
                 <li class="divider"></li>
                 <li>
                     <div class="text-center link-block">
-                        <a href="mailbox.html">
-                            <i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
+                        <a href="">
+                            <i class="fa fa-envelope"></i> <strong>Lire tous les messages</strong>
                         </a>
                     </div>
                 </li>
@@ -61,16 +61,16 @@
             </a>
             <ul class="dropdown-menu dropdown-alerts">
                 <li>
-                    <a href="#mail">
+                    <a href="#">
                         <div>
-                            <i class="fa fa-envelope fa-fw"></i> You have 16 messages
-                            <span class="pull-right text-muted small">4 minutes ago</span>
+                            <i class="fa fa-envelope fa-fw"></i> Vous avez 16 messages
+                            <span class="pull-right text-muted small">il y a 4 minutes</span>
                         </div>
                     </a>
                 </li>
                 <li class="divider"></li>
                 <li>
-                    <a href="#profil">
+                    <a href="#">
                         <div>
                             <i class="fa fa-twitter fa-fw"></i> 3 New Followers
                             <span class="pull-right text-muted small">12 minutes ago</span>
@@ -79,7 +79,7 @@
                 </li>
                 <li class="divider"></li>
                 <li>
-                    <a href="#option">
+                    <a href="#">
                         <div>
                             <i class="fa fa-upload fa-fw"></i> Server Rebooted
                             <span class="pull-right text-muted small">4 minutes ago</span>
@@ -89,7 +89,7 @@
                 <li class="divider"></li>
                 <li>
                     <div class="text-center link-block">
-                        <a href="#notification">
+                        <a href="#">
                             <strong>See All Alerts</strong>
                             <i class="fa fa-angle-right"></i>
                         </a>
@@ -98,7 +98,7 @@
             </ul>
         </li>
         <li>
-            <a href="{{ path('easy_mag_user_homepage') }}">
+            <a href="{{ path('fos_user_security_logout') }}">
                 <i class="fa fa-sign-out"></i> Log out
             </a>
         </li>

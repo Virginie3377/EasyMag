@@ -49,12 +49,6 @@ class Commercial
      */
     private $email;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="saleArea", type="string", length=255)
-     */
-    private $saleArea;
 
     /**
      *
@@ -69,6 +63,16 @@ class Commercial
      */
     private $customers;
 
+    /**
+     * @ORM\OneToMany(targetEntity="EasyMag\OrderBundle\Entity\Sector", mappedBy="commercial")
+     *
+     */
+    private $sectors;
+
+    public function __toString()
+    {
+        return $this->firstname;
+    }
 
     /**
      * Get id
@@ -176,29 +180,6 @@ class Commercial
         return $this->email;
     }
 
-    /**
-     * Set saleArea
-     *
-     * @param string $saleArea
-     *
-     * @return Commercial
-     */
-    public function setSaleArea($saleArea)
-    {
-        $this->saleArea = $saleArea;
-
-        return $this;
-    }
-
-    /**
-     * Get saleArea
-     *
-     * @return string
-     */
-    public function getSaleArea()
-    {
-        return $this->saleArea;
-    }
 
     /**
      * Set user
@@ -263,5 +244,39 @@ class Commercial
     public function getCustomers()
     {
         return $this->customers;
+    }
+
+    /**
+     * Add sector
+     *
+     * @param \EasyMag\OrderBundle\Entity\Sector $sector
+     *
+     * @return Commercial
+     */
+    public function addSector(\EasyMag\OrderBundle\Entity\Sector $sector)
+    {
+        $this->sectors[] = $sector;
+
+        return $this;
+    }
+
+    /**
+     * Remove sector
+     *
+     * @param \EasyMag\OrderBundle\Entity\Sector $sector
+     */
+    public function removeSector(\EasyMag\OrderBundle\Entity\Sector $sector)
+    {
+        $this->sectors->removeElement($sector);
+    }
+
+    /**
+     * Get sectors
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getSectors()
+    {
+        return $this->sectors;
     }
 }

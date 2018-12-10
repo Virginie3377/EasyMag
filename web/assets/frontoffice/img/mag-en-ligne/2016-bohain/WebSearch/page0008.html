@@ -1,0 +1,166 @@
+<!-- saved from url=(0014)about:internet -->
+<html lang="en" itemscope itemtype="http://schema.org/Book">
+
+<!-- 
+Smart developers always View Source. 
+
+This application was built using Adobe Flex, an open source framework
+for building rich Internet applications that get delivered via the
+Flash Player or to desktops via Adobe AIR. 
+
+Learn more about Flex at http://flex.org 
+// -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta property="og:image" content="content/thumbs/thumb1.jpg" />
+<meta itemprop="image" content="content/thumbs/thumb1.jpg">
+<!--  BEGIN Browser History required section -->
+<link rel="stylesheet" type="text/css" href="../history/history.css" />
+<!--  END Browser History required section -->
+
+<title>L-ESSENTIEL_BOHAIN-2016_web</title>
+<script src="../AC_OETags.js" language="javascript"></script>
+
+<!--  BEGIN Browser History required section -->
+<script src="../history/history.js" language="javascript"></script>
+<!--  END Browser History required section -->
+
+<style type="text/css">
+  body { margin: 0px;
+         overflow:hidden;
+         background-color: ThisisBackgroundColor;
+	 background-image: url(ThisisBackgroundImage);
+         background-repeat:no-repeat;
+         background-position:center;
+       }
+        
+</style>
+
+<script type="text/javascript"> var errorName = null; function isBrowserSupportPlugin() {     var supported = null;     try {         new ActiveXObject("");     }     catch (e) {         errorName = e.name;     }     try {         supported = !!new ActiveXObject("htmlfile");     } catch (e) {         supported =  false;     }     if(errorName != 'ReferenceError' && supported==false){         supported = false;     }else{         supported =true;     }     return supported; } function isMetroIE() {     var matchIE = /MSIE\s([\d.]+)/;     if ((matchIE.test(navigator.userAgent)) && !isBrowserSupportPlugin())         return true;     else         return false; } var iRegex = /android|BlackBerry|Windows Phone|(iP(hone|ad))/i; if (iRegex.test(navigator.userAgent) || isMetroIE()){     var url= "../html5.html?page=7";     if( false &&  window.parent)         window.parent.location=url;         else             window.location =url;             } </script>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+// -----------------------------------------------------------------------------
+// Globals
+// Major version of Flash required
+var requiredMajorVersion = 10;
+// Minor version of Flash required
+var requiredMinorVersion = 0;
+// Minor version of Flash required
+var requiredRevision = 0;
+// -----------------------------------------------------------------------------
+// -->
+</script>
+</head>
+
+<body scroll="no" onload="setBrowserFocus()">
+<script language="JavaScript" type="text/javascript">
+<!--
+
+function closeMe(){return window.close();}
+
+var gotoPage = function(page){
+	if (navigator.appName.indexOf("Microsoft") != -1) {
+		return window['main'].gotoPage(page);
+	}
+	else {
+		return document['main'].gotoPage(page);
+	}
+}
+
+// Version check for the Flash Player that has the ability to start Player Product Install (6.0r65)
+var hasProductInstall = DetectFlashVer(6, 0, 65);
+
+// Version check based upon the values defined in globals
+var hasRequestedVersion = DetectFlashVer(requiredMajorVersion, requiredMinorVersion, requiredRevision);
+
+function getparafromurl() {
+    var url,pos,parastr,para;
+    url = window.location.href;
+    pos = url.indexOf("?")
+    parastr = url.substring(pos+1);
+    return parastr;
+}
+
+function setBrowserFocus(){ document.getElementById('main').focus();}
+
+if ( hasProductInstall && !hasRequestedVersion ) {
+	// DO NOT MODIFY THE FOLLOWING FOUR LINES
+	// Location visited after installation is complete if installation is required
+	var MMPlayerType = (isIE == true) ? "ActiveX" : "PlugIn";
+	var MMredirectURL = window.location;
+    document.title = document.title.slice(0, 47) + " - Flash Player Installation";
+    var MMdoctitle = document.title;
+
+	AC_FL_RunContent(
+		"src", "playerProductInstall",
+		"FlashVars", "MMredirectURL="+MMredirectURL+'&MMplayerType='+MMPlayerType+'&MMdoctitle='+MMdoctitle+"",
+		"width", "100%",
+		"height", "100%",
+		"align", "middle",
+		"id", "main",
+		"quality", "high",
+		"allowFullScreen","true",
+		"FlashVars", getparafromurl(),
+		"bgcolor", "#ffffff",
+		"name", "main",
+		"allowScriptAccess","sameDomain",
+		"type", "application/x-shockwave-flash",
+		"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+} else if (hasRequestedVersion) {
+	// if we've detected an acceptable version
+	// embed the Flash Content SWF when all tests are passed
+	AC_FL_RunContent(
+			"src", "../main?page=8",
+			"width", "100%",
+			"height", "100%",
+			"align", "middle",
+			"allowFullScreen","true",
+			"id", "main",
+			"FlashVars", getparafromurl(),
+			"quality", "high",
+			"bgcolor", "#ffffff",
+			"name", "main",
+			"allowScriptAccess","sameDomain",
+			"type", "application/x-shockwave-flash",
+			"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+  } else {  // flash is too old or we can't detect the plugin
+    var alternateContent = 'Adobe Flash Player not detected. '
+   	+ 'Redirecting to HTML5 version';
+    document.write(alternateContent);  // insert non-flash content
+
+    var url= "../html5.html?page=7";
+    if( false &&  window.parent)
+       window.parent.location=url;
+    else
+       window.location =url;
+  }
+// -->
+</script>
+<noscript>
+  	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+			id="main" width="100%" height="100%"
+			codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
+			<param name="movie" value="../main.swf?page=8" />
+			<param name="quality" value="high" />
+			<param name="allowFullScreen" value="true" />
+			<param name="bgcolor" value="#ffffff" />
+			<param name="allowScriptAccess" value="sameDomain" />
+			<embed src="main.swf" quality="high" bgcolor="#ffffff"
+				width="100%" height="100%" name="main" align="middle"
+				play="true"
+				loop="false"
+				allowFullScreen="true"
+				quality="high"
+				allowScriptAccess="sameDomain"
+				type="application/x-shockwave-flash"
+				pluginspage="http://www.adobe.com/go/getflashplayer">
+			</embed>
+	</object>
+</noscript>
+<noscript> ￼￼TÉLÉPHONE MOBILELe téléphone mobile est devenu un véritable couteau suisse ! Auparavant réservé aux communications téléphoniques et à l’envoi de SMS, on peut désormais faire bien plus de choses avec. Les smartphones sont donc de plus en plus multi usages et répondent à un grand nombre de nos besoins. Toutefois, devant la multitude de smartphones, le choix s’avère bien plus complexe que l’on pouvaitl’imaginer. Ainsi, pour pouvoir choisir le téléphone mobile idéal, il faut se poser les bonnes questionset savoir ce dont on a réellement besoin.N°1 : Quelle utilisation pour votre téléphone mobile ?Le mobile idéal existe mais il s’agit ici d’une question de besoins. Toutes les personnes n’ont pas les mêmes usages d’un téléphone mobile et n’ont donc pas les mêmes besoins. Il est donc nécessaire de dé nir les vôtres pour trouver le smartphone qui vous correspondra à 100 % !Vous devez absolument savoir si vous avez besoin d’un téléphone uniquement pour passer des appels et envoyer des SMS, ou si vous voulez aussi surfer sur Internet, consulter vos mails, des sites web ou télécharger des applications pour votre mobile.• Si pour vous un téléphone ne sert qu’à téléphoner, alors un mobile classique sera amplement suf sant pour vous. Mais vous pouvez toujours opter pour un smartphone sans en utiliser les fonctions nécessitant une connexion Internet.• Si pour vous, un téléphone est aussi là pour vous permettre de prendre des photos et vidéos, de jouer, d’interagir avec vos amis via les réseaux sociaux, de partager toutes sortes d’informations avec vos proches ou vos collègues de travail... alors ne vous posez plus de questions : les smartphones sont faits pour vous !Les smartphones sont donc les mobiles les plus appréciés des consommateurs. Une grande majorité d’entre vous les choisissent pour leurs fonctionnalités multiples. Cependant, il existe divers systèmes d’exploitation.N°2 : Quel système d’application pour votre smartphone ?Choisir le smartphone idéal se fait aussi par le choix d’un système d’exploitation. Il en existe 4 principaux comme :iOS d’Apple • Android de Google • Windows Phone de Microsoft • BlackBerry OSLa différence réside dans l’ergonomie, l’expérience utilisateur, les fonctionnalités ou encore le nombre d’applications proposées au téléchargement.Android de GoogleLe système d’exploitation Android est le plus répandu puisqu’il est équipé sur 80 % de smartphones à l’heure actuelle (Samsung ou encore HTC). L’interface proposée par Google est très  uide et personnalisable facilement. De très nombreux services sont intégrés sur tous les smartphones comprenant cet OS avec notamment le Google PlayStore qui vous permettra d’accéder à plus de 1,5 millions d’applications.iOS d’AppleL’iOS est propre à Apple et est proposé uniquement sur les iPhones contrairement à Android qui est présent chez de nombreux constructeurs. L’interface proposée par Apple est très simple d’utilisation et très  uide. Là aussi, plus de 1,3 millions d’applications sont disponibles sur l’AppStore.￼Vos professionnels de la santéLES MEDECINSBEAUREVOIRFrançois COUSIN4 rue Henri Martin 03 23 09 40 76BOHAIN EN VERMANDOISArmelle MERCIER39 rue Jean Jaurès 03 23 07 23 99MSP Maison Médical du Vemandois : Vincent CAUWET/ Marc LEGRAND/ Marie Claude LION/ Robert NIORT18 rue Elysée Alavoine 03 23 60 86 10 BRANCOURT LE GRANDJean Michel DUCROCQ26 rue de Prémont 03 23 63 43 66 FRESNOY LE GRANDPhilippe DELOBEL690 rue Roger Salengro 03 23 09 10 94 Frédéric GHEWY130 rue de la République 03 23 66 00 08 Dominique REMY10 Place du Gal de Gaulle 03 23 66 01 18 GOUYGuy HUBERT3 rue du Sac 03 23 66 21 27 MONTBREHAINCatherine MENU BOUDERLIQUE￼￼￼￼￼1 rue du DesertNAUROYPierre ROUSSEAU4 rue Bernard PalissyVENDHUILEEric VANDEVILLE9 rue du Calvaire03 23 63 44 64 03 23 09 52 07 03 23 08 18 77￼￼8￼ </noscript> 
+ </body>
+</html>

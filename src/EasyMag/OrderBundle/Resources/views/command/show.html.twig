@@ -1,0 +1,169 @@
+{% extends '@EasyMagUser/BackOffice/Commercial/layout.html.twig' %}
+
+{% block stylesheets %}
+
+{% endblock %}
+
+
+{% block title %}Title{% endblock %}
+
+{% block breadcrumb %}
+    <h2>Commandes</h2>
+    <ol class="breadcrumb">
+        <li>
+            <a href="{{ path('commercial_index' ) }}">{{ "dashboard._"|trans }}</a>
+        </li>
+        <li class="active">
+            <a href="{{ path('command_index' ) }}">Commande</a>
+        </li>
+        <li class="active">
+            <a href="{{ path('command_show', { 'id': command.id }) }}"><strong>{{ customer.company }}</strong></a>
+        </li>
+    </ol>
+{% endblock %}
+
+ {% block content %}
+<div class="row">
+    <div class="col-sm-4">
+        <div class="ibox ">
+            <div class="ibox-content">
+                <div class="tab-content">
+                    <div id="{{ customer.company }}" class="tab-pane active">
+                        <div class="row">
+                            <div class="col-lg-12 text-center">
+                                <h2>{{ customer.company }}</h2>
+                                <span class="text-center">{{ customer.gender }} {{ customer.firstname }} {{ customer.lastname }}</span>
+
+                                <a href="mailto:{{ customer.email }}">
+                                    <button type="button" class="btn btn-primary btn-sm btn-block" style="margin: 10px 0;"><i class="fa fa-envelope"></i>
+                                        Envoyez un Email
+                                    </button>
+                                </a>
+                            </div>
+
+                            <div class="col-lg-12 text-center">
+                                <strong>
+                                   {{ command.product.type|trans }}
+                                </strong>
+                                <div class="ibox no-padding">
+                                    <img alt="image" style="margin: 10px 0;" class="img-responsive" src="{{ asset('assets/backoffice/img/cutomers/img_magazine/p8.jpg') }}">
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="client-detail">
+                            <div class="full-height-scroll text-center">
+
+                                <ul class="list-group clear-list">
+                                    <li class="list-group-item fist-item">
+                                        {% if command.date %}<strong>Vendu le </strong>{{ command.date|date('d-m-Y') }}{% endif %}
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Adresse </strong><br>
+                                        <span class="text-center">{{ customer.address }} <br>{{ customer.postalCode }} {{ customer.city }}</span><br>
+                                        <span class="text-center">{{ customer.phone }}</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Secteur </strong><br>
+                                        <span class="text-center">{{ customer.sector }}</span><br>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Périodicité </strong><br>
+                                        <span class="text-center">{{ sector.periodicity }}</span><br>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Espace publicitaire n° {{ command.product.pubNumber }} </strong><br>
+                                        <span class="text-center">{{ command.product.pubLengthSize }} * {{ command.product.pubWidthSize }}</span><br>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Prix TTC</strong><br>
+                                        <span class="text-center">{{ command.product.price }} €</span><br>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Notes</strong>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua.
+                                        </p>
+                                    </ul>
+                                <div class="col-sm-12 text-center">
+                                    <a href="{{ path('command_edit', { 'id': command.id }) }}">
+                                        <button type="button" class="btn btn-warning">Modifier</button>
+                                    </a>
+                                    <a href="{{ path('command_index') }}">
+                                        <button type="button" class="btn btn-info">
+                                            Retour Listing
+                                        </button>
+                                    </a>
+                                </div>
+                                <div class="col-sm-12 text-center" style="padding-top: 5px;" >
+                                    {{ form_start(delete_form) }}
+                                    <input type="submit" class="btn btn-danger" value="Effacer cette fiche">
+                                    {{ form_end(delete_form) }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>Documents </h5>
+            </div>
+            <div class="ibox-content">
+                <div>
+                    <div class="feed-activity-list">
+                        <div class="feed-element">
+                            <div class="media-body ">
+                                <a href="#modal-fade-add-document" class="btn btn-outline btn-success pull-right"  data-toggle="modal" >
+                                    <i class="fa fa-upload"></i>&nbsp;&nbsp;<span class="bold">Ajout de document</span></a>
+                            </div>
+                        </div>
+                        {%  include '@EasyMagOrder/Document/index.html.twig' with {'entity':'command', 'id':command.id, 'documents':command.documents} %}
+                    </div>
+                    <button class="btn btn-primary btn-block m"><i class="fa fa-arrow-down"></i>Voir plus</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+ <!-- Add Modals Document -->
+ <div id="modal-fade-add-document" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+     <div class="modal-dialog">
+         <div class="modal-content">
+             {{ render(controller('EasyMagOrderBundle:Document:new')) }}
+         </div>
+     </div>
+ </div>
+
+
+{% endblock %}
+
+{% block javascript %}
+<script type="text/javascript">
+    $( document ).ready(function() {
+
+    // Fonction pour afficher le nom du fichier sur les 'input file'
+    $('.inputfile').each(function () {
+    var $input = $(this),
+    $label = $input.next('label');
+
+    $input.on('change', function (e) {
+    var fileName = e.target.value.split('\\').pop();
+
+    if (fileName) {
+    $('#filename-box').val(fileName);
+    } else {
+    $label.html('');
+    }
+    });
+    });
+    });
+    </script>
+{% endblock %}

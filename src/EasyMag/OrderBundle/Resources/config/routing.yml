@@ -1,3 +1,27 @@
 easy_mag_order_back_office_homepage:
     path:     /
     defaults: { _controller: EasyMagOrderBundle:Default:index }
+
+easy_mag_order_client:
+    resource: "@EasyMagOrderBundle/Resources/config/routing_customer.yml"
+    prefix:   /client
+
+easy_mag_order_secteur:
+    resource: "@EasyMagOrderBundle/Resources/config/routing_sector.yml"
+    prefix:   /secteur
+
+easy_mag_order_command:
+    resource: "@EasyMagOrderBundle/Resources/config/routing_command.yml"
+    prefix:   /commande
+
+easy_mag_order_document:
+    resource: "@EasyMagOrderBundle/Resources/config/routing_document.yml"
+    prefix:   /document
+
+easy_mag_order_calendar:
+    path:     /calendar
+    defaults: { _controller: EasyMagOrderBundle:Calendar:index }
+
+sg_datatables_bundle:
+    resource: "@SgDatatablesBundle/Controller/DatatableController.php"
+    type:     annotation

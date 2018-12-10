@@ -5,10 +5,10 @@
         </span>
 
         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-            {% for commercial in commercials %}
-            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">{{ commercial.firstname }} {{ commercial.lastname }}</strong></span>
-                {% endfor %}
-                <span class="text-muted text-xs block">Conseiller en Communication <b class="caret"></b></span>
+
+            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">{{ commercial.firstname ~ ' ' ~ commercial.lastname }}</strong></span>
+
+                <span class="text-muted text-xs block">Conseiller en Comm.<b class="caret"></b></span>
             </span>
         </a>
 

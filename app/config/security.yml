@@ -8,6 +8,7 @@ security:
         ROLE_ADMIN:       ROLE_USER
         ROLE_COMMERCIAL:  ROLE_USER
         ROLE_GRAPHISTE:   ROLE_USER
+        ROLE_CUSTOMER:    ROLE_USER
         ROLE_SUPER_ADMIN: ROLE_ADMIN
 
     # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
@@ -51,3 +52,4 @@ security:
         - { path: ^/admin, role: ROLE_USER }
         - { path: ^/commercial, role: ROLE_USER }
         - { path: ^/graphiste, role: ROLE_USER }
+        - { path: ^/customer, role: ROLE_USER }

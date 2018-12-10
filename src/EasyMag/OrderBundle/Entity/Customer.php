@@ -3,12 +3,14 @@
 namespace EasyMag\OrderBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
- * Customer
  *
  * @ORM\Table(name="customer")
  * @ORM\Entity(repositoryClass="EasyMag\OrderBundle\Repository\CustomerRepository")
+ * @Vich\Uploadable
  */
 class Customer
 {
@@ -31,7 +33,7 @@ class Customer
     /**
      * @var string
      *
-     * @ORM\Column(name="address", type="string", length=255)
+     * @ORM\Column(name="address", type="string", length=255, nullable=true)
      */
     private $address;
 
@@ -52,7 +54,7 @@ class Customer
     /**
      * @var string
      *
-     * @ORM\Column(name="phone", type="string", length=255)
+     * @ORM\Column(name="phone", type="string", length=255, nullable=true)
      */
     private $phone;
 
@@ -66,21 +68,21 @@ class Customer
     /**
      * @var string
      *
-     * @ORM\Column(name="gender", type="string", length=255)
+     * @ORM\Column(name="gender", type="string", length=255, nullable=true)
      */
     private $gender;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="lastname", type="string", length=255)
+     * @ORM\Column(name="lastname", type="string", length=255, nullable=true)
      */
     private $lastname;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="firstname", type="string", length=255)
+     * @ORM\Column(name="firstname", type="string", length=255, nullable=true)
      */
     private $firstname;
 
@@ -108,6 +110,38 @@ class Customer
      *
      */
     private $graphiste;
+
+
+    /**
+     * @ORM\ManyToOne(targetEntity="EasyMag\OrderBundle\Entity\Sector", inversedBy="customers", cascade={"persist"})
+     *
+     */
+    private $sector;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date_ajout", type="datetime")
+     */
+    private $createdAt;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @var string
+     */
+    private $image;
+
+    /**
+     * @Vich\UploadableField(mapping="publicities_images", fileNameProperty="image")
+     * @var File
+     */
+    private $imageFile;
+
+
+    public function __toString()
+    {
+        return $this->company;
+    }
 
     /**
      * Get id
@@ -447,4 +481,79 @@ class Customer
     {
         return $this->graphiste;
     }
+
+
+    /**
+     * Set sector
+     *
+     * @param \EasyMag\OrderBundle\Entity\Sector $sector
+     *
+     * @return Customer
+     */
+    public function setSector(\EasyMag\OrderBundle\Entity\Sector $sector = null)
+    {
+        $this->sector = $sector;
+
+        return $this;
+    }
+
+    /**
+     * Get sector
+     *
+     * @return \EasyMag\OrderBundle\Entity\Sector
+     */
+    public function getSector()
+    {
+        return $this->sector;
+    }
+
+    public function setImageFile(File $image = null)
+    {
+        $this->imageFile = $image;
+
+        if ($image) {
+            $this->createdAt = new \DateTimeImmutable();
+        }
+    }
+
+    public function getImageFile()
+    {
+        return $this->imageFile;
+    }
+
+    public function setImage($image)
+    {
+        $this->image = $image;
+        return $this;
+    }
+
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    /**
+     * Set createdAt
+     *
+     * @param \DateTime $createdAt
+     *
+     * @return Customer
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    /**
+     * Get createdAt
+     *
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
 }

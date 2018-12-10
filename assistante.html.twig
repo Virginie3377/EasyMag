@@ -1,0 +1,88 @@
+<div id="widget_assistante"> 
+    <img class="assistante center-block" src="{{ asset('assets/img/menu/picto_femme.png') }}"
+         alt="Votre assistante dédiée"/> 
+    <div class="help_assistance"> 
+        <header>  <h3 class="text-center">Besoin d'Aide ?</h3> </header>
+         
+        <ul class="list-ul list-unstyled" style="display: none;">
+               {% for phone in app.user.contact.assistanteSuivi.phone %}  {{ dump(phone.master) }}  {% endfor %} 
+            <li class="text-center">Pour toute question<br> contactez votre assistante dédiée</li>
+             
+            <li class="text-center">{{ app.user.contact.assistanteSuivi.firstname }} {{ app.user.contact.assistanteSuivi.lastname }}</li>
+             
+            <li class="text-center"><a href="tel:+33535542078">{#{{ app.user.contact.assistanteSuivi.phone }}#}</a></li>
+             
+            <li class="text-center"><a
+                        href="mailto:alexandra.lefevre@severini.com">{{ app.user.contact.assistanteSuivi.email }} </a>
+            </li>
+             
+        </ul>
+         
+    </div>
+     
+</div>
+
+{% block javascript %}
+    <script>
+
+
+/*  * Gestion de l'affichage de l'assistante  */ 
+
+$(document).ready(function () { 
+    if (window.matchMedia("(max-width: 768px)").matches) { 
+        $('.list-ul').hide(); 
+        $('.assistante').click(function () { 
+            $('.list-ul').slideToggle(500); 
+        }); 
+    } else { 
+
+    if (readCookie('assistante') == null) { 
+            $('.list-ul').slideToggle('show'); 
+    } 
+
+    $('.assistante').click(function () { 
+    $('.list-ul').slideToggle(500); 
+        if (readCookie('assistante') == null)
+        { 
+           createCookie('assistante', false, 7); 
+        } else { 
+            eraseCookie('assistante'); 
+        } 
+    }); 
+    }
+});
+
+
+function createCookie(name,value,days) { 
+    if (days)
+    { 
+        var date = new Date(); 
+        date.setTime(date.getTime()+(days*24*60*60*1000)); 
+        var expires = "; expires="+date.toGMTString(); 
+    } 
+    else var expires = ""; 
+    document.cookie = name+"="+value+expires+"; path=/"; 
+}
+
+  function readCookie(name) { 
+    var nameEQ = name + "="; 
+    var ca = document.cookie.split(';'); 
+    for(var i=0;i < ca.length;i++) { 
+        var c = ca[i]; 
+
+        while (c.charAt(0)==' ')
+            c = c.substring(1,c.length); 
+
+            if (c.indexOf(nameEQ) == 0)
+                return c.substring(nameEQ.length,c.length); 
+    } 
+      return null;
+}
+
+  function eraseCookie(name) { 
+    createCookie(name,"",-1); 
+}
+
+    </script>
+
+{% endblock %}

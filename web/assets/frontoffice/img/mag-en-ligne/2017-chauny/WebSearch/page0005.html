@@ -1,0 +1,321 @@
+<!-- saved from url=(0014)about:internet -->
+<html lang="en" itemscope itemtype="http://schema.org/Book">
+
+<!-- 
+Smart developers always View Source. 
+
+This application was built using Adobe Flex, an open source framework
+for building rich Internet applications that get delivered via the
+Flash Player or to desktops via Adobe AIR. 
+
+Learn more about Flex at http://flex.org 
+// -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta property="og:image" content="content/thumbs/thumb1.jpg" />
+<meta itemprop="image" content="content/thumbs/thumb1.jpg">
+<!--  BEGIN Browser History required section -->
+<link rel="stylesheet" type="text/css" href="../history/history.css" />
+<!--  END Browser History required section -->
+
+<title>2017_chauny</title>
+<script src="../AC_OETags.js" language="javascript"></script>
+
+<!--  BEGIN Browser History required section -->
+<script src="../history/history.js" language="javascript"></script>
+<!--  END Browser History required section -->
+
+<style type="text/css">
+  body { margin: 0px;
+         overflow:hidden;
+         background-color: ThisisBackgroundColor;
+	 background-image: url(ThisisBackgroundImage);
+         background-repeat:no-repeat;
+         background-position:center;
+       }
+        
+</style>
+
+<script type="text/javascript"> var errorName = null; function isBrowserSupportPlugin() {     var supported = null;     try {         new ActiveXObject("");     }     catch (e) {         errorName = e.name;     }     try {         supported = !!new ActiveXObject("htmlfile");     } catch (e) {         supported =  false;     }     if(errorName != 'ReferenceError' && supported==false){         supported = false;     }else{         supported =true;     }     return supported; } function isMetroIE() {     var matchIE = /MSIE\s([\d.]+)/;     if ((matchIE.test(navigator.userAgent)) && !isBrowserSupportPlugin())         return true;     else         return false; } var iRegex = /android|BlackBerry|Windows Phone|(iP(hone|ad))/i; if (iRegex.test(navigator.userAgent) || isMetroIE()){     var url= "../html5.html?page=4";     if( false &&  window.parent)         window.parent.location=url;         else             window.location =url;             } </script>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+// -----------------------------------------------------------------------------
+// Globals
+// Major version of Flash required
+var requiredMajorVersion = 10;
+// Minor version of Flash required
+var requiredMinorVersion = 0;
+// Minor version of Flash required
+var requiredRevision = 0;
+// -----------------------------------------------------------------------------
+// -->
+</script>
+</head>
+
+<body scroll="no" onload="setBrowserFocus()">
+<script language="JavaScript" type="text/javascript">
+<!--
+
+function closeMe(){return window.close();}
+
+var gotoPage = function(page){
+	if (navigator.appName.indexOf("Microsoft") != -1) {
+		return window['main'].gotoPage(page);
+	}
+	else {
+		return document['main'].gotoPage(page);
+	}
+}
+
+// Version check for the Flash Player that has the ability to start Player Product Install (6.0r65)
+var hasProductInstall = DetectFlashVer(6, 0, 65);
+
+// Version check based upon the values defined in globals
+var hasRequestedVersion = DetectFlashVer(requiredMajorVersion, requiredMinorVersion, requiredRevision);
+
+function getparafromurl() {
+    var url,pos,parastr,para;
+    url = window.location.href;
+    pos = url.indexOf("?")
+    parastr = url.substring(pos+1);
+    return parastr;
+}
+
+function setBrowserFocus(){ document.getElementById('main').focus();}
+
+if ( hasProductInstall && !hasRequestedVersion ) {
+	// DO NOT MODIFY THE FOLLOWING FOUR LINES
+	// Location visited after installation is complete if installation is required
+	var MMPlayerType = (isIE == true) ? "ActiveX" : "PlugIn";
+	var MMredirectURL = window.location;
+    document.title = document.title.slice(0, 47) + " - Flash Player Installation";
+    var MMdoctitle = document.title;
+
+	AC_FL_RunContent(
+		"src", "playerProductInstall",
+		"FlashVars", "MMredirectURL="+MMredirectURL+'&MMplayerType='+MMPlayerType+'&MMdoctitle='+MMdoctitle+"",
+		"width", "100%",
+		"height", "100%",
+		"align", "middle",
+		"id", "main",
+		"quality", "high",
+		"allowFullScreen","true",
+		"FlashVars", getparafromurl(),
+		"bgcolor", "#ffffff",
+		"name", "main",
+		"allowScriptAccess","sameDomain",
+		"type", "application/x-shockwave-flash",
+		"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+} else if (hasRequestedVersion) {
+	// if we've detected an acceptable version
+	// embed the Flash Content SWF when all tests are passed
+	AC_FL_RunContent(
+			"src", "../main?page=5",
+			"width", "100%",
+			"height", "100%",
+			"align", "middle",
+			"allowFullScreen","true",
+			"id", "main",
+			"FlashVars", getparafromurl(),
+			"quality", "high",
+			"bgcolor", "#ffffff",
+			"name", "main",
+			"allowScriptAccess","sameDomain",
+			"type", "application/x-shockwave-flash",
+			"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+  } else {  // flash is too old or we can't detect the plugin
+    var alternateContent = 'Adobe Flash Player not detected. '
+   	+ 'Redirecting to HTML5 version';
+    document.write(alternateContent);  // insert non-flash content
+
+    var url= "../html5.html?page=4";
+    if( false &&  window.parent)
+       window.parent.location=url;
+    else
+       window.location =url;
+  }
+// -->
+</script>
+<noscript>
+  	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+			id="main" width="100%" height="100%"
+			codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
+			<param name="movie" value="../main.swf?page=5" />
+			<param name="quality" value="high" />
+			<param name="allowFullScreen" value="true" />
+			<param name="bgcolor" value="#ffffff" />
+			<param name="allowScriptAccess" value="sameDomain" />
+			<embed src="main.swf" quality="high" bgcolor="#ffffff"
+				width="100%" height="100%" name="main" align="middle"
+				play="true"
+				loop="false"
+				allowFullScreen="true"
+				quality="high"
+				allowScriptAccess="sameDomain"
+				type="application/x-shockwave-flash"
+				pluginspage="http://www.adobe.com/go/getflashplayer">
+			</embed>
+	</object>
+</noscript>
+<noscript>  Vos professionnels de la santé à chauny
+Les deNtistes     Lisa KApERsKI
+Le bicarboNate de soUde
+Comment ca marche ?
+Il piège les odeurs en agissant comme une substance tampon qui stabilise le pH des solutions aux environs de 8,1. De cette façon, il empêche les odeurs générées par des substances acides ou fortement basiques de se développer.
+quelques exemples d’utilisations En poudre :
+• Pour absorber les odeurs
+• Pour nettoyer les surfaces
+• Pour lutter contre les allergènes sur les matelas, tapis, moquettes...
+En pâte (mélanger 3 volumes pour 1 volume d’eau): C’est la forme idéale pour l’appliquer à chaque fois qu’il faudra le faire adhérer sur une surface. En solution : dissoudre 50 gr par litre (soit environ 3 cuillères à soupe). On l’utilise :
+• En cuisine (diluer dans le lait, pour nettoyer ou cuire les légumes...)
+• Pour toutes les applications de nettoyage et de trempage (du linge par exemple).
+• Pour les soins du corps dans des bains.
+En mélange :
+Avec le vinaigre (il va réagir en « moussant »), avec l’huile (d’olive...), avec des argiles, ou du savon liquide. Les champs d’applications deviennent alors infinis... ou presque !
+      AuTREVILLE
+Dominique BoIssoN
+52 rue de la République
+CHAuNY
+Monique AZNAVouR
+3 rue Emile Leroy
+03 23 52 14 11 03 23 57 23 01
+126 rue Pasteur
+stéphanie LABouRE
+13 rue de la Chaussée
+Isabelle LEsAGE
+36 rue Journel
+03 23 40 26 98
+06 84 65 14 53
+06 98 98 52 22
+Inaetaly CAssAM/ Ivan CAssAM
+1 place de l’Hôtel de Ville 03 23 39 35 79
+CENTRE DE sANTé
+6 rue Georges Pompidou 03 23 57 80 69
+susana DoMINGuEZ REGALADo
+Bénédicte LEWANDoWsKI
+126 rue Pasteur 06 63 87 79 65
+Emmanuelle MACRA/ sophie pARRA
+55 rue Camille Desmoulins 03 23 57 26 22
+7 rue Alexandre Fourny
+François GRAuX
+1b Place Bouzier
+03 23 38 88 79
+03 23 40 11 87
+ombeline pICouET
+8 rue des remparts
+Marion pINEL
+47 boulevard d’Andenne
+Aurélie poIRET
+8 rue des remparts
+Maïté pRuDHoMME
+11 rue Juliette Lambert
+sonia THEVENIN
+6 avenue du Gal Leclerc
+CoNDREN
+06 52 06 13 06 32 03 23 06 27
+50 02 49 66 40 60 10 87 33 52 05 72 11 28 85
+09 60 47 20 65 41
+Xavier GRusoN/ Alexis sERET
+2b rue Arthur Lacroix
+sébastien GuILBERT
+19 place Saint Martin
+03 23 40 14 14
+03 23 52 06 60
+Brigitte LAMBERT CARMINATI / Didier LAM-
+Catherine ARNouLD DEsuMEuR
+BERT/ Alexandra pANCI
+26 rue des Déportés
+Alexis sERET
+2B rue Arthur Lacroix
+Emmanuel VERNIER
+7 rue Alexandre Fourny
+03 23 52 07 35 06 63 68 15 73 03 23 52 11 26
+8 rue de l’Eglise
+Fanny BIENIosZEK
+8 rue de l’Eglise
+FRIèREs-FAILLouëL
+sylvie AuBRY
+96 rue de Philadelphie
+oGNEs
+Marie Laure DELoFFRE
+27b rue D. Casanova
+sINCENY
+Thomas Vassili LALoNDE
+6 rue du Moulin à vent
+03 23 06 84
+03 23
+06 17
+57 96 86     Les kiNesitherapeUtes
+ Les iNfirmier(e)s
+CHAuNY
+Gérard BECARD
+7 rue Arthur Lacroix 03 23 52 10 63
+Nicolas BRIN
+33 rue Journel 03 23 40 10 74
+Caroline DuVAL/ Julian TELIsCA pETRu
+19 pl du marché couvert 03 23 40 04 93
+Alejandro EsCLApEZ ALoNso
+19 pl du Marché couvert 06 30 33 94 29
+George GHIDIu VAsILE
+19 pl du Marché couvert 06 40 29 97 75
+Delphine & Monique HoFFMANN/ Alain
+ AMIGNY-RouY
+Christelle MouFLE
+3a rue de la République
+AuTREVILLE
+José sANCHEZ
+4 chemin des Berceaux
+BéTHANCouRT-EN-VAuX
+Véronique GERMAIN
+11 rue des Vignes
+CHAuNY
+Laurence BECHTEL
+84 rue de la Chaussée
+63 55 76
+Nathalie BERKoWIEZ/ Françoise DENICouRT
+1 rue de Clèves 03 23 39 46 30
+Carole BIBRE
+47 boulevard d’Andenne 06 15 57 17 33
+Centre de santé
+42 rue Ferdinand Buisson 03 23 52 02 56
+Julie DuCos
+11 rue Juliette Lambert 03 23 56 84 14
+apt6-7routedeGuiscard06 84 67 23 79
+Delphine pIRAuX
+apt6-7routedeGuiscard06 86 80 35 82
+VIRY-NouREuIL
+sylvie BAuER/ Agnès DELANNoY/ sarah
+JouRNEAuX
+43 rue André Ternynck
+Frédéric LApoIRE
+6 place du Gal Leclerc
+Rémy pARMENTIER
+33 rue Journel
+VIRY-NouREuIL
+Daniel HoRGuEs DEBAT
+31 rue Gaston Trioux
+03 23 52 25 25 03 23 39 62 91 03 23 52 10 63
+07 87 93 13 97
+06 11 92 09 24
+03 23 38 15 61
+03 23 52 18 19
+06 69 46 99 31
+Christophe MERCIER/ Claudine pouILLART
+03 23 52 25 87 apt6-7routedeGuiscard03 23 57 27 58
+60 rue Emile Duploye
+VILLEquIER-AuMoNT
+sylvie BAILLEuX Céline NICoLAu
+pRIEuR
+33 rue Gaston Trioux
+Lucie BoNNouVRIEE
+23b rue du 8 Mai 1945
+03 23 39 47 51 06 68 96 74 01
+03 23 57 62 78
+   5
+  </noscript> 
+ </body>
+</html>

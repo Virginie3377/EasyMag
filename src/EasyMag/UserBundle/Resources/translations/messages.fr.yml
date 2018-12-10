@@ -7,6 +7,7 @@ profile:
     flash:
         updated: 'Le profil a été mis à jour.'
     fields:
+        company: Société
         gender: Civilité
         firstname: Prénom
         lastname: Nom
@@ -53,3 +54,78 @@ form:
     password_confirmation: 'Répéter le mot de passe'
     new_password: 'Nouveau mot de passe'
     new_password_confirmation: 'Répéter le nouveau mot de passe'
+    required: Veuillez remplir les champs du formulaire
+
+search:
+    _: Rechercher
+
+sector:
+    _: Secteurs
+    publication: Date de publication
+
+souscriber:
+    _: Nom Prénom
+    address: Adresse
+    zip: Code postal
+    city: Ville
+
+customer:
+    _: Client
+    new: Nouveau client
+    create: Ajouter un client
+    edit: Modifier la fiche client
+
+dashboard:
+    _: Tableau de bord
+
+command:
+    _: Bons de commande
+    id: Ligne N°
+    number: N° commande
+    create: Ajouter un bon de commande
+    quantity: Quantité
+    status: Etat
+    date: Vendu le
+    web: Site web
+    print: Print
+    size: Longueur x Hauteur
+    maquette: Maquette
+    pubNumber: Emplacement
+    pubLengthSize: Hauteur
+    pubWidthSize: Longueur
+    validate: Validé
+    in_progress: En cours
+    number: Numéro de la maquette
+    price: Prix TTC
+    commandnumber: Commande N°
+
+product:
+    _: Produits
+    number : N° maquette
+    price: Prix
+
+bill:
+    _: Factures
+    create: Créer une facture
+
+message:
+    _: Messagerie
+
+calendar:
+    _: Mes rendez-vous
+
+datatable:
+    all: Tous
+
+document:
+    type: Type
+    bdc: Bon de commande
+    bdf: Bon de fabrication
+    devis: Devis
+    facture: Facture
+    autre: Autre
+    created: Importé le
+    file: Fichier
+    nom: Nom
+    command: Numéro de la commande
+

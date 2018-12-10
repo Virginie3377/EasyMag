@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Easy Mag</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700">
+    <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/vendor/font-awesome/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/frontoffice/css/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/frontoffice/css/media-queries.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/frontoffice/css/style.css') }}">
+
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="{{ asset('assets/img/favicon.png') }}">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ asset('assets/frontoffice/ico/apple-touch-icon-144-precomposed.png') }}">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ asset('assets/frontoffice/ico/apple-touch-icon-114-precomposed.png') }}">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('assets/frontoffice/ico/apple-touch-icon-72-precomposed.png') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ asset('assets/frontoffice/ico/apple-touch-icon-57-precomposed.png') }}">
+
+</head>
+
+<body>
+<!-- Top menu -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ path('easy_mag_user_homepage') }}"></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="top-navbar-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="{{ path('easy_mag_user_homepage') }}">Le Magazine</a></li>
+                <!-- <li><a class="scroll-link" href="{{ path('easy_mag_user_homepage') }}">Publications</a></li> -->
+                <li><a href="{{ path('easy_mag_user_homepage') }}">Prestations</a></li>
+                <li><a href="{{ path('easy_mag_user_homepage') }}">Contact</a></li>
+                <li><a href="{{ path('fos_user_security_login') }}"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Login commercial</a></li>
+               {# {% block fos_user_commercial %}
+
+                {% endblock %}#}
+            </ul>
+        </div>
+    </div>
+</nav>
+
+ <!-- Header/Homepage
+    ================================================== -->
+<header id="banner" class="carousel slide zoom carousel-fade" data-ride="carousel">
+
+  <div class="carousel-inner"><!-- Inner wrapper for slides -->
+    <div class="item active"> <!-- First item slider -->
+      <img src="{{ asset('assets/frontoffice/img/mag-en-ligne/01_bg.jpg') }}">
+      <div class="carousel-caption overlay">
+        <div class="content">
+          <div class="text wow bounceIn" data-wow-delay="0.2s">
+            <h1 id="titre-mag">Le Magazine</h1>
+            <hr>
+          </div>
+        </div>
+      </div> <!-- End first item background image slider -->
+    </div> <!-- End first item slider -->
+
+    <div class="item"> <!-- Second item slider -->
+      <img src="{{ asset('assets/frontoffice/img/mag-en-ligne/03_bg.jpg') }}">
+      <div class="carousel-caption">
+        <div class="content">
+          <div class="text wow bounceIn">
+            <h1 id="titre-mag">L'Essentiel de votre ville</h1>
+            <hr>
+          </div>
+        </div>
+      </div> <!-- End second item background image slider -->
+    </div> <!-- End second item slider -->
+
+<!-- Controls -->
+  <a class="left carousel-control" href="#banner" role="button" data-slide="prev">
+    <img src="{{ asset('assets/frontoffice/img/mag-en-ligne/fleche_gauche.png') }}"><!-- Left controls -->
+  </a>
+  <a class="right carousel-control" href="#banner" role="button" data-slide="next">
+    <img src="{{ asset('assets/frontoffice/img/mag-en-ligne/fleche_droite.png') }}"> <!-- Right controls -->
+  </a>
+
+</header>
+
+<!-- Portfolio Section
+================================================== -->
+
+<section id="portfolio" class="grid">
+
+    <figure class="effect-portfolio wow fadeIn" data-wow-duration="1s"> <!-- Portfolio 1 -->
+        <img src="{{ asset('assets/frontoffice/img/mag-en-ligne/2016-st-quentin/content/pages/page1.jpg') }}"> 
+        <figcaption> <!-- Caption -->
+          <h2>Saint Quentin 2016</h2>
+          <p>Cliquez pour consulter le magazine en ligne.</p>
+          <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">Voir la suite</a> <!-- Larger image popup -->
+        </figcaption> <!-- End caption -->   
+    </figure> <!-- End portfolio 1 -->
+
+    <figure class="effect-portfolio wow fadeIn" data-wow-duration="1s"> <!-- Portfolio 2 -->
+        <img src="{{ asset('assets/frontoffice/img/mag-en-ligne/2016-bohain/content/pages/page1.jpg') }}"> 
+        <figcaption> <!-- Caption -->
+          <h2>Bohain 2016</h2>
+          <p>Cliquez pour consulter le magazine en ligne.</p>
+          <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">Voir la suite</a> <!-- Larger image popup -->
+        </figcaption> <!-- End caption -->   
+    </figure> <!-- End portfolio 2 -->
+      
+    <figure class="effect-portfolio wow fadeIn" data-wow-duration="3s"> <!-- Portfolio 3 -->
+        <img src="{{ asset('assets/frontoffice/img/mag-en-ligne/2017-st-quentin-01/content/pages/page1.jpg') }}"> 
+        <figcaption> <!-- Caption -->
+          <h2>Saint Quentin 2017</h2>
+          <p>Cliquez pour consulter le magazine en ligne.</p>
+          <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">Voir la suite</a>
+        </figcaption> <!-- End caption -->   
+    </figure> <!-- End portfolio 3 -->
+
+    <figure class="effect-portfolio wow fadeIn" data-wow-duration="3s"> <!-- Portfolio 5 -->
+        <img src="{{ asset('assets/frontoffice/img/mag-en-ligne/2017-chauny/content/pages/page1.jpg') }}"> 
+        <figcaption> <!-- Caption -->
+          <h2>Chauny 2017</h2>
+          <p>Cliquez pour consulter le magazine en ligne.</p>
+          <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">Voir la suite</a>
+        </figcaption> <!-- End caption -->   
+    </figure> <!-- End portfolio 5 -->
+
+    <figure class="effect-portfolio wow fadeIn" data-wow-duration="3s"> <!-- Portfolio 6 -->
+        <img src="{{ asset('assets/frontoffice/img/mag-en-ligne/2017-peronne/content/pages/page1.jpg') }}"> 
+        <figcaption> <!-- Caption -->
+          <h2>Peronne 2017</h2>
+          <p>Cliquez pour consulter le magazine en ligne.</p>
+          <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">Voir la suite</a>
+        </figcaption> <!-- End caption -->   
+    </figure> <!-- End portfolio 6 -->
+
+    <figure class="effect-portfolio wow fadeIn" data-wow-duration="3s"> <!-- Portfolio 4 -->
+        <img src="{{ asset('assets/frontoffice/img/mag-en-ligne/2017-st-quentin-02/content/pages/page1.jpg') }}"> 
+        <figcaption> <!-- Caption -->
+          <h2>Saint Quentin Printemps/Eté 2018</h2>
+          <p>Cliquez pour consulter le magazine en ligne.</p>
+          <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">Voir la suite</a>
+        </figcaption> <!-- End caption -->   
+    </figure> <!-- End portfolio 4 -->
+
+    <figure class="effect-portfolio wow fadeIn" data-wow-duration="3s"> <!-- Portfolio 7 -->
+        <img src="{{ asset('assets/frontoffice/img/mag-en-ligne/2018-st-quentin/content/pages/page1.jpg') }}"> 
+        <figcaption> <!-- Caption -->
+          <h2>Saint Quentin Automne/Hiver 2018</h2>
+          <p>Cliquez pour consulter le magazine en ligne.</p>
+          <a href="#portfolioModal7" class="portfolio-link" data-toggle="modal">Voir la suite</a>
+        </figcaption> <!-- End caption -->   
+    </figure> <!-- End portfolio 4 -->
+
+    <figure class="effect-portfolio wow fadeIn" data-wow-duration="3s"> <!-- Portfolio 8 -->
+        <img src="{{ asset('assets/frontoffice/img/mag-en-ligne/2018-laon/content/pages/page1.jpg') }}"> 
+        <figcaption> <!-- Caption -->
+          <h2>Laon 2018</h2>
+          <p>Cliquez pour consulter le magazine en ligne.</p>
+          <a href="#portfolioModal8" class="portfolio-link" data-toggle="modal">Voir la suite</a>
+        </figcaption> <!-- End caption -->   
+    </figure> <!-- End portfolio 8 -->
+
+    <figure class="effect-portfolio wow fadeIn" data-wow-duration="3s"> <!-- Portfolio 9 -->
+        <img src="{{ asset('assets/frontoffice/img/mag-en-ligne/2019-guise/content/pages/page1.jpg') }}"> 
+        <figcaption> <!-- Caption -->
+          <h2>Guise 2019</h2>
+          <p>Cliquez pour consulter le magazine en ligne.</p>
+          <a href="#portfolioModal9" class="portfolio-link" data-toggle="modal">Voir la suite</a>
+        </figcaption> <!-- End caption -->   
+    </figure> <!-- End portfolio 9 -->
+
+</section> <!-- End Portfolio Section -->
+
+    <!-- Portfolio Modals -->
+    <!-- Use the modals below to showcase details about your portfolio projects! -->
+
+    <!-- Portfolio Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            
+                            <div class="videoWrapper">
+                               <a href="{{ asset('assets/frontoffice/img/mag-en-ligne/2016-st-quentin/index.html') }} " target="_blank"><img src="{{ asset('assets/frontoffice/img/mag-en-ligne/2016-st-quentin/content/pages/page1.jpg') }}" width="400" alt="L'Essentiel de Saint Quentin"/></a> 
+                            </div>
+                           
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Fermer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h3>L'Essentiel de Bohain - 2017</h3>
+                            <div class="videoWrapper">
+                               <a href="{{ asset('assets/frontoffice/img/mag-en-ligne/2016-bohain/index.html') }} " target="_blank"><img src="{{ asset('assets/frontoffice/img/mag-en-ligne/2016-bohain/content/pages/page1.jpg') }}" width="400" alt="L'Essentiel de Bohain"/></a> 
+                            </div>
+                            <ul class="list-inline">
+                                <li>Date : 2017</li>
+                                <li>Editeur : Métamorphose graphique</li>
+                            </ul>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Fermer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 3 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h3>L'Essentiel de Saint Quentin 2017</h3>
+                             <div class="videoWrapper">
+                               <a href="{{ asset('assets/frontoffice/img/mag-en-ligne/2017-st-quentin-01/index.html') }} " target="_blank"><img src="{{ asset('assets/frontoffice/img/mag-en-ligne/2017-st-quentin-01/content/pages/page1.jpg') }}" width="400" alt="L'Essentiel de Bohain"/></a> 
+                            </div>
+                            <ul class="list-inline">
+                                <li>Date : 2017</li>
+                                <li>Editeur : Métamorphose graphique</li>
+                            </ul>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i>Fermer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Portfolio Modal 4 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h3>L'Essentiel de Saint Quentin Printemps/Eté 2018</h3>
+                             <div class="videoWrapper">
+                               <a href="{{ asset('assets/frontoffice/img/mag-en-ligne/2017-st-quentin-02/index.html') }} " target="_blank"><img src="{{ asset('assets/frontoffice/img/mag-en-ligne/2017-st-quentin-02/content/pages/page1.jpg') }}" width="400" alt="L'Essentiel de Saint-Quentin"/></a> 
+                            </div>
+                            <p>Retrouvez toutes les offres de vos commerçants, les coordonnées des professionnels de la Santé, des salles de sports et des structures près de chez vous.</p>
+                            <ul class="list-inline">
+                                <li>Date : 2018</li>
+                                <li>Editeur : Métamorphose graphique</li>
+                            </ul>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i>Fermer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Portfolio Modal 5 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h3>L'Essentiel de Chauny 2017</h3>
+                             <div class="videoWrapper">
+                               <a href="{{ asset('assets/frontoffice/img/mag-en-ligne/2017-chauny/index.html') }} " target="_blank"><img src="{{ asset('assets/frontoffice/img/mag-en-ligne/2017-chauny/content/pages/page1.jpg') }}" width="400" alt="L'Essentiel de Chauny"/></a> 
+                            </div>
+                            <ul class="list-inline">
+                                <li>Date : 2017</li>
+                                <li>Editeur : Métamorphose graphique</li>
+                            </ul>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i>Fermer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Portfolio Modal 6 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h3>L'Essentiel de Peronne 2017</h3>
+                             <div class="videoWrapper">
+                               <a href="{{ asset('assets/frontoffice/img/mag-en-ligne/2017-peronne/index.html') }} " target="_blank"><img src="{{ asset('assets/frontoffice/img/mag-en-ligne/2017-peronne/content/pages/page1.jpg') }}" width="400" alt="L'Essentiel de Peronne"/></a> 
+                            </div>
+                            <ul class="list-inline">
+                                <li>Date : 2017</li>
+                                <li>Editeur : Métamorphose graphique</li>
+                            </ul>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i>Fermer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Portfolio Modal 7 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h3>L'Essentiel de Saint Quentin Autômne/Hiver 2018</h3>
+                             <div class="videoWrapper">
+                               <a href="{{ asset('assets/frontoffice/img/mag-en-ligne/2018-st-quentin/index.html') }} " target="_blank"><img src="{{ asset('assets/frontoffice/img/mag-en-ligne/2018-st-quentin/content/pages/page1.jpg') }}" width="400" alt="L'Essentiel de Saint Quentin"/></a> 
+                            </div>
+                            <ul class="list-inline">
+                                <li>Date : Autômne/Hiver 2018</li>
+                                <li>Editeur : Métamorphose graphique</li>
+                            </ul>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i>Fermer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Portfolio Modal 8 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h3>L'Essentiel de Laon 2018</h3>
+                             <div class="videoWrapper">
+                               <a href="{{ asset('assets/frontoffice/img/mag-en-ligne/2018-laon/index.html') }} " target="_blank"><img src="{{ asset('assets/frontoffice/img/mag-en-ligne/2018-laon/content/pages/page1.jpg') }}" width="400" alt="L'Essentiel de Laon"/></a> 
+                            </div>
+                            <ul class="list-inline">
+                                <li>Date : 2018</li>
+                                <li>Editeur : Métamorphose graphique</li>
+                            </ul>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i>Fermer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Portfolio Modal 9 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h3>L'Essentiel de Guise 2019</h3>
+                             <div class="videoWrapper">
+                               <a href="{{ asset('assets/frontoffice/img/mag-en-ligne/2019-guise/index.html') }} " target="_blank"><img src="{{ asset('assets/frontoffice/img/mag-en-ligne/2019-guise/content/pages/page1.jpg') }}" width="400" alt="L'Essentiel de Guise"/></a> 
+                            </div>
+                            <ul class="list-inline">
+                                <li>Date : 2019</li>
+                                <li>Editeur : Métamorphose graphique</li>
+                            </ul>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i>Fermer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 footer-about wow fadeInUp">
+                <h3>A propos de nous</h3>
+                <p>
+                    Métamorphose graphique est spécialisée depuis 2009 dans la création de site Internet et la communication globale.
+                </p>
+                <p>
+                    <a class="scroll-link" href="#about-us">En savoir plus</a>
+                </p>
+            </div>
+            <div class="col-sm-4 footer-contact-info wow fadeInDown">
+                <h3>Easy Mag</h3>
+                <p>
+                    Cette plateforme vous permet de visualiser sans stress vos maquettes.
+                </p>
+            </div>
+            <div class="col-sm-4 footer-social wow fadeInUp">
+                <h3>Réseaux sociaux</h3>
+                <p>
+                    <a href="https://www.facebook.com/akyoscomm"><i class="fa fa-facebook"></i></a>
+                    <a href="https://twitter.com/creasiteweb"><i class="fa fa-twitter"></i></a>
+                    <a href="https://plus.google.com/+Akyos_communication"><i class="fa fa-google-plus"></i></a>
+                    <a href="http://www.imgrum.org/tag/akyos"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.pinterest.com"><i class="fa fa-pinterest"></i></a>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 footer-copyright">
+                &copy; Easy Mag by <a href="http://www.akyos.com" target="_blank">Métamorphose graphique</a>
+            </div>
+            <div class="col-sm-6 footer-menu">
+                <ul>
+                    <li><a class="" href="#">Remonter la Page</a></li>
+{#
+                    <li><a class="" href="{{ path('mentions')}}">Mentions légales</a></li>
+#}
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Javascript -->
+<script src="{{ asset('assets/vendor/jquery/jquery-2.2.4.min.js') }}"></script>
+<script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('assets/vendor/jquery/jquery.backstretch.min.js') }}"></script>
+<script src="{{ asset('assets/frontoffice/js/wow.min.js') }}"></script>
+<script src="{{ asset('assets/frontoffice/js/retina-1.1.0.min.js') }}"></script>
+<script src="{{ asset('assets/frontoffice/js/scripts.js') }}"></script>
+<script src="{{ asset('assets/frontoffice/js/flash_messages_box.js') }}"></script>
+
+<!--[if lt IE 10]>
+<script src="{{ asset('assets/frontoffice/js/placeholder.js') }}"></script>
+<![endif]-->
+
+</body>
+
+</html>

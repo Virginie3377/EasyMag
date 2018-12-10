@@ -1,0 +1,166 @@
+<!-- saved from url=(0014)about:internet -->
+<html lang="en" itemscope itemtype="http://schema.org/Book">
+
+<!-- 
+Smart developers always View Source. 
+
+This application was built using Adobe Flex, an open source framework
+for building rich Internet applications that get delivered via the
+Flash Player or to desktops via Adobe AIR. 
+
+Learn more about Flex at http://flex.org 
+// -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta property="og:image" content="content/thumbs/thumb1.jpg" />
+<meta itemprop="image" content="content/thumbs/thumb1.jpg">
+<!--  BEGIN Browser History required section -->
+<link rel="stylesheet" type="text/css" href="../history/history.css" />
+<!--  END Browser History required section -->
+
+<title>L-ESSENTIEL_ST_QUENTIN</title>
+<script src="../AC_OETags.js" language="javascript"></script>
+
+<!--  BEGIN Browser History required section -->
+<script src="../history/history.js" language="javascript"></script>
+<!--  END Browser History required section -->
+
+<style type="text/css">
+  body { margin: 0px;
+         overflow:hidden;
+         background-color: ThisisBackgroundColor;
+	 background-image: url(ThisisBackgroundImage);
+         background-repeat:no-repeat;
+         background-position:center;
+       }
+        
+</style>
+
+<script type="text/javascript"> var errorName = null; function isBrowserSupportPlugin() {     var supported = null;     try {         new ActiveXObject("");     }     catch (e) {         errorName = e.name;     }     try {         supported = !!new ActiveXObject("htmlfile");     } catch (e) {         supported =  false;     }     if(errorName != 'ReferenceError' && supported==false){         supported = false;     }else{         supported =true;     }     return supported; } function isMetroIE() {     var matchIE = /MSIE\s([\d.]+)/;     if ((matchIE.test(navigator.userAgent)) && !isBrowserSupportPlugin())         return true;     else         return false; } var iRegex = /android|BlackBerry|Windows Phone|(iP(hone|ad))/i; if (iRegex.test(navigator.userAgent) || isMetroIE()){     var url= "../html5.html?page=11";     if( false &&  window.parent)         window.parent.location=url;         else             window.location =url;             } </script>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+// -----------------------------------------------------------------------------
+// Globals
+// Major version of Flash required
+var requiredMajorVersion = 10;
+// Minor version of Flash required
+var requiredMinorVersion = 0;
+// Minor version of Flash required
+var requiredRevision = 0;
+// -----------------------------------------------------------------------------
+// -->
+</script>
+</head>
+
+<body scroll="no" onload="setBrowserFocus()">
+<script language="JavaScript" type="text/javascript">
+<!--
+
+function closeMe(){return window.close();}
+
+var gotoPage = function(page){
+	if (navigator.appName.indexOf("Microsoft") != -1) {
+		return window['main'].gotoPage(page);
+	}
+	else {
+		return document['main'].gotoPage(page);
+	}
+}
+
+// Version check for the Flash Player that has the ability to start Player Product Install (6.0r65)
+var hasProductInstall = DetectFlashVer(6, 0, 65);
+
+// Version check based upon the values defined in globals
+var hasRequestedVersion = DetectFlashVer(requiredMajorVersion, requiredMinorVersion, requiredRevision);
+
+function getparafromurl() {
+    var url,pos,parastr,para;
+    url = window.location.href;
+    pos = url.indexOf("?")
+    parastr = url.substring(pos+1);
+    return parastr;
+}
+
+function setBrowserFocus(){ document.getElementById('main').focus();}
+
+if ( hasProductInstall && !hasRequestedVersion ) {
+	// DO NOT MODIFY THE FOLLOWING FOUR LINES
+	// Location visited after installation is complete if installation is required
+	var MMPlayerType = (isIE == true) ? "ActiveX" : "PlugIn";
+	var MMredirectURL = window.location;
+    document.title = document.title.slice(0, 47) + " - Flash Player Installation";
+    var MMdoctitle = document.title;
+
+	AC_FL_RunContent(
+		"src", "playerProductInstall",
+		"FlashVars", "MMredirectURL="+MMredirectURL+'&MMplayerType='+MMPlayerType+'&MMdoctitle='+MMdoctitle+"",
+		"width", "100%",
+		"height", "100%",
+		"align", "middle",
+		"id", "main",
+		"quality", "high",
+		"allowFullScreen","true",
+		"FlashVars", getparafromurl(),
+		"bgcolor", "#ffffff",
+		"name", "main",
+		"allowScriptAccess","sameDomain",
+		"type", "application/x-shockwave-flash",
+		"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+} else if (hasRequestedVersion) {
+	// if we've detected an acceptable version
+	// embed the Flash Content SWF when all tests are passed
+	AC_FL_RunContent(
+			"src", "../main?page=12",
+			"width", "100%",
+			"height", "100%",
+			"align", "middle",
+			"allowFullScreen","true",
+			"id", "main",
+			"FlashVars", getparafromurl(),
+			"quality", "high",
+			"bgcolor", "#ffffff",
+			"name", "main",
+			"allowScriptAccess","sameDomain",
+			"type", "application/x-shockwave-flash",
+			"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+  } else {  // flash is too old or we can't detect the plugin
+    var alternateContent = 'Adobe Flash Player not detected. '
+   	+ 'Redirecting to HTML5 version';
+    document.write(alternateContent);  // insert non-flash content
+
+    var url= "../html5.html?page=11";
+    if( false &&  window.parent)
+       window.parent.location=url;
+    else
+       window.location =url;
+  }
+// -->
+</script>
+<noscript>
+  	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+			id="main" width="100%" height="100%"
+			codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
+			<param name="movie" value="../main.swf?page=12" />
+			<param name="quality" value="high" />
+			<param name="allowFullScreen" value="true" />
+			<param name="bgcolor" value="#ffffff" />
+			<param name="allowScriptAccess" value="sameDomain" />
+			<embed src="main.swf" quality="high" bgcolor="#ffffff"
+				width="100%" height="100%" name="main" align="middle"
+				play="true"
+				loop="false"
+				allowFullScreen="true"
+				quality="high"
+				allowScriptAccess="sameDomain"
+				type="application/x-shockwave-flash"
+				pluginspage="http://www.adobe.com/go/getflashplayer">
+			</embed>
+	</object>
+</noscript>
+<noscript> risotto aUx crevettes, Lait de coco et citroN vertIngrédients pour 4 personnes :300g de riz à risotto (Arborio ou Carnaroli, en grande surface ou dans les épiceries italiennes) 2 cuillères à soupe d’huile d’olive1,5 litre de bouillon de volaille (maison ou reconstitué avec des cubes)20 cl de lait de coco2 citrons verts ou encore mieux un citron vert et un cumbava 250 g de crevettes décortiquées cuites1 pincée de poivre et 1 pincée de selpréparation :Décortiquez les crevettes et coupez-les en 3. Réservez-les au réfrigérateur pendant la cuisson du risotto.Préparer 1,5 litre de bouillon.Versez 2 cuillères à soupe d’huile d’olive dans une sauteuse. Faites y revenir le riz 2 minutes en mélangeant jusqu’à ce qu’il soit nacré. Mouillez ensuite avec la première louche de bouillon, remuez et laissez le riz l’absorber avant de rajouter une nouvelle louche. Procédez ainsi jusqu’à ce que le riz soit presque cuit (comptez 16 minutes). Au lieu d’ajouter les deux dernières louches de bouillon, versez le lait de coco. Ajoutez en même temps les morceaux de crevette et laissez cuire les 2 minutes restantes.Ajoutez juste avant de servir le jus d’un citron vert et son zeste (ou le jus d’un citron vert et 1/2 zeste de cumbava). Si votre citron vert n’a pas beaucoup de jus, goûtez le risotto et n’hésitez pas à en rajouter un second. Poivrez, goûtez et salez si besoin. Régalez-vous!Risotto aux crevettes, lait de de coco et citron vert réalisé par notre chef depuis 2007, Hugues Lebrun.￼￼￼￼12￼Les restos près de chez vous￼￼N°45 : 7x3,5CNo°m4p5o:si4tioxn3,:54 cl de rhum blanc - 2 cl de rhum ambré - 12 cl de jus d’ananas - 4 cl de lait de cocopréparation :• Dans un blender, versez les ingrédients avec 5 ou 6 glaçons et mixez le tout.C’est prêt ! versez dans le verre et dégustez. Peut aussi se réaliser au shaker si c’est juste pour une personne.￼￼￼￼cocktail piña colada￼￼￼￼￼￼￼￼￼￼￼Numéros Utilesmairies & postesdivers￼￼￼￼￼￼￼GAuCHYMairie8 rue Adrien RenardsAINT quENTINMairiePlace Hôtel de VilleAnnexe st Martin132 rue HamAgence postalesAINT quENTIN￼132 rue Ham9 pl Stalingrad, 46 av R. Schuman 36 31Ecole Nationale de Musique03 23 62 77 47 Agence postale : 106 rue d’Isle, 1 rue de Lyon,51 rue Isle 03 23 62 29 3003 23 08 72 7203 23 06 90 0003 23 64 23 40bd Jean Bouinspa aveNUe, UN spa rieN qUe poUrvoUs !Besoin de vous ressourcer ? Embarquement immédiat pour la destination de votre choix.New York, Paris, Tokyo, choisissez la salle qui vous correspond le plus, pour un moment de relaxation unique dans un espaceprivatif.Profitez d’instants magiques dans un cadre original : Spa, Hammam, Sauna, Douche et coin salon et film ou concert de votre choix.De nombreux massages sont également à votre disposition dans une salle dédiée.Renseignements et Réservations sur www.spa-avenue.fr13Auberge de jeunesse03 23 06 94 0503 23 64 61 508 place Stalingrad 03 23 68 41 45Bibliothèque9 rue CanonniersCrèche familiale municipaleEspace Henri MATIssE3 rue T. Gautier 03 23 06 94 28office de Tourisme3 rue Emile Zola 03 23 67 05 00￼￼￼￼￼￼ </noscript> 
+ </body>
+</html>

@@ -1,0 +1,166 @@
+<!-- saved from url=(0014)about:internet -->
+<html lang="en" itemscope itemtype="http://schema.org/Book">
+
+<!-- 
+Smart developers always View Source. 
+
+This application was built using Adobe Flex, an open source framework
+for building rich Internet applications that get delivered via the
+Flash Player or to desktops via Adobe AIR. 
+
+Learn more about Flex at http://flex.org 
+// -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta property="og:image" content="content/thumbs/thumb1.jpg" />
+<meta itemprop="image" content="content/thumbs/thumb1.jpg">
+<!--  BEGIN Browser History required section -->
+<link rel="stylesheet" type="text/css" href="../history/history.css" />
+<!--  END Browser History required section -->
+
+<title>L-ESSENTIEL_BOHAIN-2016_web</title>
+<script src="../AC_OETags.js" language="javascript"></script>
+
+<!--  BEGIN Browser History required section -->
+<script src="../history/history.js" language="javascript"></script>
+<!--  END Browser History required section -->
+
+<style type="text/css">
+  body { margin: 0px;
+         overflow:hidden;
+         background-color: ThisisBackgroundColor;
+	 background-image: url(ThisisBackgroundImage);
+         background-repeat:no-repeat;
+         background-position:center;
+       }
+        
+</style>
+
+<script type="text/javascript"> var errorName = null; function isBrowserSupportPlugin() {     var supported = null;     try {         new ActiveXObject("");     }     catch (e) {         errorName = e.name;     }     try {         supported = !!new ActiveXObject("htmlfile");     } catch (e) {         supported =  false;     }     if(errorName != 'ReferenceError' && supported==false){         supported = false;     }else{         supported =true;     }     return supported; } function isMetroIE() {     var matchIE = /MSIE\s([\d.]+)/;     if ((matchIE.test(navigator.userAgent)) && !isBrowserSupportPlugin())         return true;     else         return false; } var iRegex = /android|BlackBerry|Windows Phone|(iP(hone|ad))/i; if (iRegex.test(navigator.userAgent) || isMetroIE()){     var url= "../html5.html?page=4";     if( false &&  window.parent)         window.parent.location=url;         else             window.location =url;             } </script>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+// -----------------------------------------------------------------------------
+// Globals
+// Major version of Flash required
+var requiredMajorVersion = 10;
+// Minor version of Flash required
+var requiredMinorVersion = 0;
+// Minor version of Flash required
+var requiredRevision = 0;
+// -----------------------------------------------------------------------------
+// -->
+</script>
+</head>
+
+<body scroll="no" onload="setBrowserFocus()">
+<script language="JavaScript" type="text/javascript">
+<!--
+
+function closeMe(){return window.close();}
+
+var gotoPage = function(page){
+	if (navigator.appName.indexOf("Microsoft") != -1) {
+		return window['main'].gotoPage(page);
+	}
+	else {
+		return document['main'].gotoPage(page);
+	}
+}
+
+// Version check for the Flash Player that has the ability to start Player Product Install (6.0r65)
+var hasProductInstall = DetectFlashVer(6, 0, 65);
+
+// Version check based upon the values defined in globals
+var hasRequestedVersion = DetectFlashVer(requiredMajorVersion, requiredMinorVersion, requiredRevision);
+
+function getparafromurl() {
+    var url,pos,parastr,para;
+    url = window.location.href;
+    pos = url.indexOf("?")
+    parastr = url.substring(pos+1);
+    return parastr;
+}
+
+function setBrowserFocus(){ document.getElementById('main').focus();}
+
+if ( hasProductInstall && !hasRequestedVersion ) {
+	// DO NOT MODIFY THE FOLLOWING FOUR LINES
+	// Location visited after installation is complete if installation is required
+	var MMPlayerType = (isIE == true) ? "ActiveX" : "PlugIn";
+	var MMredirectURL = window.location;
+    document.title = document.title.slice(0, 47) + " - Flash Player Installation";
+    var MMdoctitle = document.title;
+
+	AC_FL_RunContent(
+		"src", "playerProductInstall",
+		"FlashVars", "MMredirectURL="+MMredirectURL+'&MMplayerType='+MMPlayerType+'&MMdoctitle='+MMdoctitle+"",
+		"width", "100%",
+		"height", "100%",
+		"align", "middle",
+		"id", "main",
+		"quality", "high",
+		"allowFullScreen","true",
+		"FlashVars", getparafromurl(),
+		"bgcolor", "#ffffff",
+		"name", "main",
+		"allowScriptAccess","sameDomain",
+		"type", "application/x-shockwave-flash",
+		"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+} else if (hasRequestedVersion) {
+	// if we've detected an acceptable version
+	// embed the Flash Content SWF when all tests are passed
+	AC_FL_RunContent(
+			"src", "../main?page=5",
+			"width", "100%",
+			"height", "100%",
+			"align", "middle",
+			"allowFullScreen","true",
+			"id", "main",
+			"FlashVars", getparafromurl(),
+			"quality", "high",
+			"bgcolor", "#ffffff",
+			"name", "main",
+			"allowScriptAccess","sameDomain",
+			"type", "application/x-shockwave-flash",
+			"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+  } else {  // flash is too old or we can't detect the plugin
+    var alternateContent = 'Adobe Flash Player not detected. '
+   	+ 'Redirecting to HTML5 version';
+    document.write(alternateContent);  // insert non-flash content
+
+    var url= "../html5.html?page=4";
+    if( false &&  window.parent)
+       window.parent.location=url;
+    else
+       window.location =url;
+  }
+// -->
+</script>
+<noscript>
+  	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+			id="main" width="100%" height="100%"
+			codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
+			<param name="movie" value="../main.swf?page=5" />
+			<param name="quality" value="high" />
+			<param name="allowFullScreen" value="true" />
+			<param name="bgcolor" value="#ffffff" />
+			<param name="allowScriptAccess" value="sameDomain" />
+			<embed src="main.swf" quality="high" bgcolor="#ffffff"
+				width="100%" height="100%" name="main" align="middle"
+				play="true"
+				loop="false"
+				allowFullScreen="true"
+				quality="high"
+				allowScriptAccess="sameDomain"
+				type="application/x-shockwave-flash"
+				pluginspage="http://www.adobe.com/go/getflashplayer">
+			</embed>
+	</object>
+</noscript>
+<noscript> ￼￼Vos professionnels de la santé￼￼￼￼￼LES INFIRMIER(E)SBEAUREVOIRFlorence DUMORTIER/ Aurélie SALINGUEColette WARNET92 rue de la RépubliqueLEVERGIESFabienne TRIDART3 rue Marie TrocméMONTBREHAIN06 09 09 13 22 03 23 63 95 28￼2 rue Gabriel HanotauxCéline DUPLOUY4 rue de la PostePeggy LENGLET7 rue FaidherbePatrick MICHALAK4 rue de la PosteBELLENGLISEDonya HIDRI DERVILLErue Philippe06 22 87 45 31 06 70 18 62 36 07 70 18 10 27 03 23 07 98 9106 72 21 78 35Karen FRANCOIS/ Christine LONCLE19 bis rue Neuve 03 23 63 91 13NAUROYEtienne CACHEUX/Jérémy GLASSETBOHAIN EN VERMANDOIS4 rue Bernard PalissyPREMONTLinda LOISEL39 rue du Général TysonMaryse LOISEL37 rue du Général TysonSEBONCOURTRachel MAZZINI41 rue Robertine DuboisVENDHUILECSI ASVP32 rue NeuveVILLERETCarine BROUTIN6 ter rue d’En Bas06 26 98 13 3806 19 90 19 04 03 23 09 44 8003 23 08 37 4603 23 66 20 9106 65 51 83 42Nadège BALY3 rue Joseph PetreauxCSI Sainte Marie26 rue Jean Jaurès06 26 21 45 4903 23 07 11 01Bernadette DARRAS/ Jacqueline PATRITTI4 bis rue de la Libération 03 23 68 94 84Vincent DEFOSSE37 rue Général Tyson 06 87 26 21 04Nicolas DRUBAY/ Michèle LADRIERE/ Jérémie LONCQ3 rue Joseph Petreaux 03 23 07 16 81 MSP Maison Médical du Vemandois : Christelle DELAPLACE18 rue Elysée AlavoineRomain FAGNIOT18 rue Elysée AlavoineBONYChristiane PAYEN6 rue du Chateau d’EauESTREESMaïte DESMEE1B rue de L’AbbayeFRESNOY LE GRANDCamille ANDRE164 rue de la RépubliqueCSI CSIC16 Place du Gal de GaulleValérie PIRON92 rue de la RépubliqueAurélie STERBA/ Marilyne STERBA164 rue de la République 03 23 09 07 78LES KINESITHERAPEUTESBELLICOURTJean HERBET9 rue Jean Moulin 06 07 97 34 52BOHAIN EN VERMANDOISJean DENOYELLE/ Matthieu HOYEZ/ David LEGRAND/ Marianne MILLOT/ Philippe MOUTON/ Marc TROUILLET06 83 53 24 9706 50 71 97 3106 81 17 27 6906 33 21 74 9932 rue FagardJean HERBET4 rue de la PosteYves RAUDE32 rue F. de PressenseFRESNOY LE GRAND03 23 07 13 88 03 23 09 44 33 03 23 07 11 37￼06 23 65 11 11 0323091789 06 09 70 78 78Guillaume CORNU/Gwendoline GROENEWEGEN40 rue Laurent Cavalier 03 23 61 30 56Vincent MOREAU40 rue Laurent Cavalier 06 47 58 96 63￼￼￼Vos professionnels de la santéLES NEUROLOGUESBOHAIN EN VERMANDOISMSP Maison Médical du Vemandois : Bassam BOURGHOL18 rue Elisée Alavoine 06 30 00 52 52￼￼￼￼￼￼Sudoku : niveau con rmé solution p 12￼￼5￼ </noscript> 
+ </body>
+</html>

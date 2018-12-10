@@ -1,0 +1,166 @@
+<!-- saved from url=(0014)about:internet -->
+<html lang="en" itemscope itemtype="http://schema.org/Book">
+
+<!-- 
+Smart developers always View Source. 
+
+This application was built using Adobe Flex, an open source framework
+for building rich Internet applications that get delivered via the
+Flash Player or to desktops via Adobe AIR. 
+
+Learn more about Flex at http://flex.org 
+// -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta property="og:image" content="content/thumbs/thumb1.jpg" />
+<meta itemprop="image" content="content/thumbs/thumb1.jpg">
+<!--  BEGIN Browser History required section -->
+<link rel="stylesheet" type="text/css" href="../history/history.css" />
+<!--  END Browser History required section -->
+
+<title>L-ESSENTIEL_ST_QUENTIN</title>
+<script src="../AC_OETags.js" language="javascript"></script>
+
+<!--  BEGIN Browser History required section -->
+<script src="../history/history.js" language="javascript"></script>
+<!--  END Browser History required section -->
+
+<style type="text/css">
+  body { margin: 0px;
+         overflow:hidden;
+         background-color: ThisisBackgroundColor;
+	 background-image: url(ThisisBackgroundImage);
+         background-repeat:no-repeat;
+         background-position:center;
+       }
+        
+</style>
+
+<script type="text/javascript"> var errorName = null; function isBrowserSupportPlugin() {     var supported = null;     try {         new ActiveXObject("");     }     catch (e) {         errorName = e.name;     }     try {         supported = !!new ActiveXObject("htmlfile");     } catch (e) {         supported =  false;     }     if(errorName != 'ReferenceError' && supported==false){         supported = false;     }else{         supported =true;     }     return supported; } function isMetroIE() {     var matchIE = /MSIE\s([\d.]+)/;     if ((matchIE.test(navigator.userAgent)) && !isBrowserSupportPlugin())         return true;     else         return false; } var iRegex = /android|BlackBerry|Windows Phone|(iP(hone|ad))/i; if (iRegex.test(navigator.userAgent) || isMetroIE()){     var url= "../html5.html?page=3";     if( false &&  window.parent)         window.parent.location=url;         else             window.location =url;             } </script>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+// -----------------------------------------------------------------------------
+// Globals
+// Major version of Flash required
+var requiredMajorVersion = 10;
+// Minor version of Flash required
+var requiredMinorVersion = 0;
+// Minor version of Flash required
+var requiredRevision = 0;
+// -----------------------------------------------------------------------------
+// -->
+</script>
+</head>
+
+<body scroll="no" onload="setBrowserFocus()">
+<script language="JavaScript" type="text/javascript">
+<!--
+
+function closeMe(){return window.close();}
+
+var gotoPage = function(page){
+	if (navigator.appName.indexOf("Microsoft") != -1) {
+		return window['main'].gotoPage(page);
+	}
+	else {
+		return document['main'].gotoPage(page);
+	}
+}
+
+// Version check for the Flash Player that has the ability to start Player Product Install (6.0r65)
+var hasProductInstall = DetectFlashVer(6, 0, 65);
+
+// Version check based upon the values defined in globals
+var hasRequestedVersion = DetectFlashVer(requiredMajorVersion, requiredMinorVersion, requiredRevision);
+
+function getparafromurl() {
+    var url,pos,parastr,para;
+    url = window.location.href;
+    pos = url.indexOf("?")
+    parastr = url.substring(pos+1);
+    return parastr;
+}
+
+function setBrowserFocus(){ document.getElementById('main').focus();}
+
+if ( hasProductInstall && !hasRequestedVersion ) {
+	// DO NOT MODIFY THE FOLLOWING FOUR LINES
+	// Location visited after installation is complete if installation is required
+	var MMPlayerType = (isIE == true) ? "ActiveX" : "PlugIn";
+	var MMredirectURL = window.location;
+    document.title = document.title.slice(0, 47) + " - Flash Player Installation";
+    var MMdoctitle = document.title;
+
+	AC_FL_RunContent(
+		"src", "playerProductInstall",
+		"FlashVars", "MMredirectURL="+MMredirectURL+'&MMplayerType='+MMPlayerType+'&MMdoctitle='+MMdoctitle+"",
+		"width", "100%",
+		"height", "100%",
+		"align", "middle",
+		"id", "main",
+		"quality", "high",
+		"allowFullScreen","true",
+		"FlashVars", getparafromurl(),
+		"bgcolor", "#ffffff",
+		"name", "main",
+		"allowScriptAccess","sameDomain",
+		"type", "application/x-shockwave-flash",
+		"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+} else if (hasRequestedVersion) {
+	// if we've detected an acceptable version
+	// embed the Flash Content SWF when all tests are passed
+	AC_FL_RunContent(
+			"src", "../main?page=4",
+			"width", "100%",
+			"height", "100%",
+			"align", "middle",
+			"allowFullScreen","true",
+			"id", "main",
+			"FlashVars", getparafromurl(),
+			"quality", "high",
+			"bgcolor", "#ffffff",
+			"name", "main",
+			"allowScriptAccess","sameDomain",
+			"type", "application/x-shockwave-flash",
+			"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+  } else {  // flash is too old or we can't detect the plugin
+    var alternateContent = 'Adobe Flash Player not detected. '
+   	+ 'Redirecting to HTML5 version';
+    document.write(alternateContent);  // insert non-flash content
+
+    var url= "../html5.html?page=3";
+    if( false &&  window.parent)
+       window.parent.location=url;
+    else
+       window.location =url;
+  }
+// -->
+</script>
+<noscript>
+  	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+			id="main" width="100%" height="100%"
+			codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
+			<param name="movie" value="../main.swf?page=4" />
+			<param name="quality" value="high" />
+			<param name="allowFullScreen" value="true" />
+			<param name="bgcolor" value="#ffffff" />
+			<param name="allowScriptAccess" value="sameDomain" />
+			<embed src="main.swf" quality="high" bgcolor="#ffffff"
+				width="100%" height="100%" name="main" align="middle"
+				play="true"
+				loop="false"
+				allowFullScreen="true"
+				quality="high"
+				allowScriptAccess="sameDomain"
+				type="application/x-shockwave-flash"
+				pluginspage="http://www.adobe.com/go/getflashplayer">
+			</embed>
+	</object>
+</noscript>
+<noscript> stop aUx boUtoNs de fièvre !Ils sont aussi inélégants que difficiles à éliminer.Quelques trucs vont vous permettre d’en venir à bout. Dès qu’un bouton apparaît, appliquez-y une fine tranche de tomate que vous laisserez en place pendant 20 min., puis rincez à l’eau.Autre possibilité : un peu de dentifrice placé pendant un quart d’heure sur le bouton permet de le sécher efficacement.votre pressingLe bicarboNate de soUdeComment ca marche ?Il piège les odeurs en agissant comme une substance tampon qui stabilise le pH des solutions aux environs de 8,1. De cette façon, il empêche les odeurs générées par des substances acides ou fortement basiques de se développer.quelques exemples d’utilisations En poudre :• Pour absorber les odeurs• Pour nettoyer les surfaces• Pour lutter contre les allergènes sur les matelas, tapis, moquettes...En pâte (mélanger 3 volumes pour 1 volume d’eau): C’est la forme idéale pour l’appliquer à chaque fois qu’il faudra le faire adhérer sur une surface. En solution : dissoudre 50 gr par litre (soit environ 3 cuillères à soupe). On l’utilise :• En cuisine (diluer dans le lait, pour nettoyer ou cuire les légumes...)• Pour toutes les applications de nettoyage et de trempage (du linge par exemple).• Pour les soins du corps dans des bains.En mélange :• Avec le vinaigre (il va réagir en « moussant »), avec l’huile (d’olive...), avec des argiles, ou du savon liquide. Les champs d’applications deviennent alors infinis... ou presque !￼￼￼￼￼vos professionnels de la santé￼￼￼￼￼￼Les deNtistessAINT quENTINAlexis ARDENT/ Alix CLEMENT/sandrine DEMACHY/ Alain TRIoLET2B rue Albert Thomas 03 23 65 53 13 sébastien ARNouLD/ Guillaume LE GARREC Jean Christophe & samuel sEuBEJoel FIToussI/ Gérard NAIM4 rue du Président Kennedy 03 23 51 00 33Vanessa GABET6 rue Henri Barbusse 03 23 61 07 37Christophe GAsCoIN/ Etienne HoRNEZ￼￼2 rue de la 3ème DimRadu Horea BosTAN40 rue du Gal Leclerc03 23 08 10 4803 23 68 29 3603 23 62 45 80 06 64 44 11 02 03 23 62 28 27Jean Christophe BRAME/ Elisabeth BRIsNoT NAssoY/ Alain CANTINEAu /Julie LECLERCq Frédéric MoITY17 rue des Etats Généraux 03 23 62 46 46 Jérôme CARoN/Imad EL MAAKCHouI/ Florence oBLET23 68 05 55159 rue Georges Pompidou03 23 08 1668 50 42 5820T rue de la Sous Préfecture03 23 09 67 98CsD Mutualiste30 rue RaspailLidia Ioana CHILBA6 rue Henri BarbusseJoel CRETAL6 place Arnaud BissonHubert DEsJARDINs03 23 06 19 03 23 04 05 03 23 67 75Monique pETIT9 rue Victor BaschLydia RoGoWsKI6 av FaidherbeJean paul sAuNIER2 rue du Capitaine Dumontpaul sCEMAMA23 bd Gambetta03 23 62 67 92 03 23 64 80 63 03 23 65 12 5203 23 64 21 7119B rue du Gouvernement 03 23 64 25 29stéphane spLET/ To Trinh spLET/ Thi Anh TRAN NGuYENFranklin DuRIETZ/ Flore LEMAIRE/ Maria Jose MARTINEZ FERNANDEZ 167 rue Camille Desmoulins 03 23 67 65 Emmanuel FILLIoT15 rue du Colonel Fabien 03 23 62 2510 67100 bd RichelieuFrançois VAN RoY2 rue de l’Abbaye d’Isle03 23 62 14 01 03 23 62 89 7535B bd Henri MartinCorina IVANoV40 rue du Gal LeclercJérôme LEGRAND8 rue Saint AndréChristophe LEMAN167/3 rue du Gal Leclerc 03Aline pARIs￼4￼￼￼￼vos professionnels de la santé Les kiNesitherapeUtesLes pharmacies￼￼￼￼￼￼￼sAINT quENTINsonia BoNNEAu/ Aurélien CoELHo MoREIRA/ Juliana DEMAuRIC/ Améline DuBoIs/ Annick GIoVANNINI/ Cédric HoMBERT/ Thomas LEMAITRE/ Alexandra WILLAME179 bld du Gal Leclerc 03 23 68 14 86Hugues CATRY/ sylvie FLERs/ Ivo RIBEIRo78 rue de Vermand 03 23 64 01 04Marie Catherine CAVERNE/ Jean Jacques THoMAs29 bld E. et R. Pierret 03 23 08 18 65 Cyril DAGNICouRT/ Louis LEFEVRE/ olivier MARIAGE/ François MEuNIER/ patrick pAupIERE14 rue Lecat 03 23 64 84 11Mathieu DANDoY/ Toufik sMAKI39 rue de la pomme rouge 03 23 61 09 52Céline DAussY/ pascal DEMoNT/ steven pREVosT/ Cédric souFFLET113A rue de la Chaussée Romaine03 23 67 18 93stéphane GARITTE/ Julien HIVET/ Armelle KERDREuX/ Guillaume MEsTDAGH10 av de la Résistance 03 23 04 29 44 Bénédicte GAussIN/ Marion JouANNEAu/ Marie Claire MARCELLIN/ Geoffrey & Jean Luc MICHEL/ pierre REMY13B rue Jacques Lescot 03 23 64 06 60Gérard KERNINoN/ sophie TRoCME31 rue de Pontoile 03 23 62 51 15Mariola LIpIEC/ Martine poRRETsAINT quENTINpharmacie 3B37 rue d’Isle03 23 6221 48 03 37 22 41 42 12 21 87 38 83 52 25 38 58 35 80 27 53 30 25 38 48 38 59 16 04 36 24 58 10 24 00 24 46 65 28 22 10 15 64 07 82 49 63￼111 rue P. Brossolettepatricia MICHEL44 rue de GuiseThierry RATTE31 rue de PontoileBernard REIs57 av de la République03 23 62 67 56 03 23 68 12 43 03 23 63 34 8403 23 62 65 22139 rue G. Pompidoupharmacie Navel Blondine102 rue d’Islepharmacie pinchon35 rue de la Sellerie03 23 0803 23 6203 23 62pharmacie Archer Cuisset Christine2 rue Blanchot 03 23 68pharmacie Capellier Marc1 bd Emile et Raymond Pierret 03 23 62pharmacie Debrez paquet patricia98 rue Alexandre Dumas 03 23 62pharmacie de la Basilique21 rue des Toilespharmacie de la place8 rue Croix belle porte03 23 6203 23 06pharmacie de la République80 av de la républiquepharmacie de Rémicourt10 rue de Bellevuepharmacie des 4 Colonnes1 place Crommelin03 23 6203 23 6203 23 62pharmacie de saint quentin4 rue de la Chaussée Romaine03 23 62pharmacie d’Isle8 rue de Guisepharmacie du Centre1 rue Victor Baschpharmacie du palais33 rue Victor Basch03 23 6803 23 6203 23 62pharmacie Loyeux Dubreuil Csudoku : niveau moyen solution p 17￼Gaspar RICo FERRANDEZ/ Alexandra soLER GARCIA/ Camille WEIss72 rue du Général Leclerc033T bld RichelieuBlandine sEBERT18 av BuffonMaryse sEFIKA1 rue Jacques BlanchotJean paul sTEELANDT5 rue de Labon03 23 62 00 39 03 23 65 24 22 03 23 68 33 18 03 23 62 54 30pharmacie saint Jean32 rue du Pdt Kennedypharmacie Templement66 av Robert Schumannpharmacie Vallez1 place Stalingradpharmacie Van Hamme216 rue de Paris03 03 03 03pharmacie quentin de la Tour58 rue Raspailpharmacie saillard20 Bld Henri Martinpharmacie saint Eloi030323 62 23 62 23 08 23 08 23 65 23 68 23 62￼5￼ </noscript> 
+ </body>
+</html>

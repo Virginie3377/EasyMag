@@ -1,0 +1,197 @@
+<!-- saved from url=(0014)about:internet -->
+<html lang="en" itemscope itemtype="http://schema.org/Book">
+
+<!-- 
+Smart developers always View Source. 
+
+This application was built using Adobe Flex, an open source framework
+for building rich Internet applications that get delivered via the
+Flash Player or to desktops via Adobe AIR. 
+
+Learn more about Flex at http://flex.org 
+// -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta property="og:image" content="content/thumbs/thumb1.jpg" />
+<meta itemprop="image" content="content/thumbs/thumb1.jpg">
+<!--  BEGIN Browser History required section -->
+<link rel="stylesheet" type="text/css" href="../history/history.css" />
+<!--  END Browser History required section -->
+
+<title>2017-peronne</title>
+<script src="../AC_OETags.js" language="javascript"></script>
+
+<!--  BEGIN Browser History required section -->
+<script src="../history/history.js" language="javascript"></script>
+<!--  END Browser History required section -->
+
+<style type="text/css">
+  body { margin: 0px;
+         overflow:hidden;
+         background-color: ThisisBackgroundColor;
+	 background-image: url(ThisisBackgroundImage);
+         background-repeat:no-repeat;
+         background-position:center;
+       }
+        
+</style>
+
+<script type="text/javascript"> var errorName = null; function isBrowserSupportPlugin() {     var supported = null;     try {         new ActiveXObject("");     }     catch (e) {         errorName = e.name;     }     try {         supported = !!new ActiveXObject("htmlfile");     } catch (e) {         supported =  false;     }     if(errorName != 'ReferenceError' && supported==false){         supported = false;     }else{         supported =true;     }     return supported; } function isMetroIE() {     var matchIE = /MSIE\s([\d.]+)/;     if ((matchIE.test(navigator.userAgent)) && !isBrowserSupportPlugin())         return true;     else         return false; } var iRegex = /android|BlackBerry|Windows Phone|(iP(hone|ad))/i; if (iRegex.test(navigator.userAgent) || isMetroIE()){     var url= "../html5.html?page=7";     if( false &&  window.parent)         window.parent.location=url;         else             window.location =url;             } </script>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+// -----------------------------------------------------------------------------
+// Globals
+// Major version of Flash required
+var requiredMajorVersion = 10;
+// Minor version of Flash required
+var requiredMinorVersion = 0;
+// Minor version of Flash required
+var requiredRevision = 0;
+// -----------------------------------------------------------------------------
+// -->
+</script>
+</head>
+
+<body scroll="no" onload="setBrowserFocus()">
+<script language="JavaScript" type="text/javascript">
+<!--
+
+function closeMe(){return window.close();}
+
+var gotoPage = function(page){
+	if (navigator.appName.indexOf("Microsoft") != -1) {
+		return window['main'].gotoPage(page);
+	}
+	else {
+		return document['main'].gotoPage(page);
+	}
+}
+
+// Version check for the Flash Player that has the ability to start Player Product Install (6.0r65)
+var hasProductInstall = DetectFlashVer(6, 0, 65);
+
+// Version check based upon the values defined in globals
+var hasRequestedVersion = DetectFlashVer(requiredMajorVersion, requiredMinorVersion, requiredRevision);
+
+function getparafromurl() {
+    var url,pos,parastr,para;
+    url = window.location.href;
+    pos = url.indexOf("?")
+    parastr = url.substring(pos+1);
+    return parastr;
+}
+
+function setBrowserFocus(){ document.getElementById('main').focus();}
+
+if ( hasProductInstall && !hasRequestedVersion ) {
+	// DO NOT MODIFY THE FOLLOWING FOUR LINES
+	// Location visited after installation is complete if installation is required
+	var MMPlayerType = (isIE == true) ? "ActiveX" : "PlugIn";
+	var MMredirectURL = window.location;
+    document.title = document.title.slice(0, 47) + " - Flash Player Installation";
+    var MMdoctitle = document.title;
+
+	AC_FL_RunContent(
+		"src", "playerProductInstall",
+		"FlashVars", "MMredirectURL="+MMredirectURL+'&MMplayerType='+MMPlayerType+'&MMdoctitle='+MMdoctitle+"",
+		"width", "100%",
+		"height", "100%",
+		"align", "middle",
+		"id", "main",
+		"quality", "high",
+		"allowFullScreen","true",
+		"FlashVars", getparafromurl(),
+		"bgcolor", "#ffffff",
+		"name", "main",
+		"allowScriptAccess","sameDomain",
+		"type", "application/x-shockwave-flash",
+		"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+} else if (hasRequestedVersion) {
+	// if we've detected an acceptable version
+	// embed the Flash Content SWF when all tests are passed
+	AC_FL_RunContent(
+			"src", "../main?page=8",
+			"width", "100%",
+			"height", "100%",
+			"align", "middle",
+			"allowFullScreen","true",
+			"id", "main",
+			"FlashVars", getparafromurl(),
+			"quality", "high",
+			"bgcolor", "#ffffff",
+			"name", "main",
+			"allowScriptAccess","sameDomain",
+			"type", "application/x-shockwave-flash",
+			"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+  } else {  // flash is too old or we can't detect the plugin
+    var alternateContent = 'Adobe Flash Player not detected. '
+   	+ 'Redirecting to HTML5 version';
+    document.write(alternateContent);  // insert non-flash content
+
+    var url= "../html5.html?page=7";
+    if( false &&  window.parent)
+       window.parent.location=url;
+    else
+       window.location =url;
+  }
+// -->
+</script>
+<noscript>
+  	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+			id="main" width="100%" height="100%"
+			codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
+			<param name="movie" value="../main.swf?page=8" />
+			<param name="quality" value="high" />
+			<param name="allowFullScreen" value="true" />
+			<param name="bgcolor" value="#ffffff" />
+			<param name="allowScriptAccess" value="sameDomain" />
+			<embed src="main.swf" quality="high" bgcolor="#ffffff"
+				width="100%" height="100%" name="main" align="middle"
+				play="true"
+				loop="false"
+				allowFullScreen="true"
+				quality="high"
+				allowScriptAccess="sameDomain"
+				type="application/x-shockwave-flash"
+				pluginspage="http://www.adobe.com/go/getflashplayer">
+			</embed>
+	</object>
+</noscript>
+<noscript>   Cette illusion s’obtient comme pour les autres types de visage, à l’aide de deux teintes de produits pour le teint en plus de votre teinte naturelle. Appliquez la teinte foncée pour camoufler les zones trop larges, du centre du front aux tempes. Si vous avez une mâchoire haute légèrement marquée, diminuez-la en appliquant la même poudre sur vos zygomatiques. Prenez ensuite la teinte claire pour apporter de la lumière au centre de votre visage : au creux du menton, sur l’arrête du nez, sur le bombé du front et sur l’espace restant entre vos joues et la mâchoire. Pour apporter encore plus de lumière, utilisez des produits irisés ou nacrés. Si vous utilisez des produits liquides, appliquez-les avec une éponge pour le teint pour bien fondre les produits entre eux et éviter les démarcations. Enfin, appliquez votre blush à l’horizontale pour casser la longueur de votre visage.
+Le maquillage des yeux est utile pour attirer l’attention sur eux et la détourner du front. Pour cela, utilisez des couleurs sombres ou flashys et n’hésitez pas à étirer votre maquillage sur l’extérieur de la paupière jusqu’aux tempes pour agrandir vos yeux. Évitez d’accentuer la ligne inférieure, ce qui ferait paraître vos yeux plus petits et plus enfoncés qu’ils ne le sont. Pour casser l’effet petit menton pointu, misez sur une bouche charnue et lumineuse dans des tons chauds. Ne chargez pas les yeux et les lèvres en même temps.
+VoUs aVez UN Visage roNd
+Les visages ronds se caractérisent par un menton arrondi et des joues rebondies qui cachent la structure osseuse : les pommettes et la mâchoire sont très discrètes. Pour atténuer l’effet enfantin de ce type de visage, il vous suffit de quelques astuces qui donneront l’illusion d’un visage plus allongé.
+La première astuce est d’utiliser plusieurs fonds de teint de couleur différentes. Si vous utilisez quotidiennement un fond de teint de la couleur de votre peau, appliquez-le sur l’ensemble de votre visage comme d’habitude. Ensuite, choisissez un produit plus clair et un plus foncé pour jouer avec la lumière et les ombres sur votre visage. Le plus foncé sur les os de vos pommettes en partant des tempes et en estompant jusqu’aux coins de la bouche. Un bronzé légèrement irisé ou une poudre de soleil, surtout l’été, seront parfait pour relever votre teint. Appliquez ensuite un produit une teinte au-dessus de votre carnation sur le front et le menton pour illuminer votre visage et l’allonger subtilement. Enfin pour redéfinir les courbes du visage, utilisez un blush juste sous l’os des pommettes. Pour bien définir le tracé, ouvrez la bouche comme pour former un O et appliquez le blush dans le creux des joues en partant du haut des oreilles jusqu’aux coins des lèvres. Pour favoriser cette application en diagonale, utilisez un pinceau biseauté. Pour agrandir au maximum votre visage, misez sur le regard. N’allongez pas vos sourcils mais accentuez plutôt leur arc pour créer un sentiment d’angles définis qui cassent la rondeur de votre visage. Pour cela, utilisez une poudre et un pinceau biseauté pour les sourcils. Par ailleurs, maquillez plutôt la paupière mobile que le ras de cil inférieur pour ne pas donner l’impression d’un regard tombant. Enfin, étirez bien votre maquillage vers l’extérieur et vers le haut de la paupière pour agrandir vos yeux. Vous pouvez même utiliser une poudre blanche irisée sur l’os de votre arcade sourcilière pour l’accentuer et créer un aspect angulaire. Enfin, pour la bouche, vous pouvez donner un effet de relief en utilisant une touche d’enlumineur très clair ou un rouge à lèvres légèrement plus clair au centre de vos lèvres.
+Vos professionnels de la santé à peronne
+     Les osteopathes
+Les pharmacies     pharmacie sT FuRsY
+    Julie pERDIGEoN
+25 rue Saint Fursy
+sébastien DATCHY
+52/54 av C. De Gaulle
+Daniel TAIX
+pharmacie BECu HIRsCH
+29 rue Saint Fursy 03 22 84 03 11
+Les podoLogUes
+Françoise BoCHART
+26 rue Saint Fursy 03 22 83 03 88 Grégor y oBJoIE
+46 Faubourg de Bretagne 03 22 84 08 70
+06 99 71 55 73
+06 81 59 17 88
+33 ave Mac Orlan
+pharmacie BLoNDEL
+8 Place Louis Daudré
+03 22 84 36 66 03 22 84 02 09
+     8 8
+39 rue Odon Dumont - 80320 CHAULNES 07 61 54 53 05
+pharmacie FRANçoIs DAuDRE
+24 Place Louis Daudré 03 22 84 49 69
+pharmacie BARBIER DAuDRE
+11 Place Louis Daudré 03 22 84 11 79
+   </noscript> 
+ </body>
+</html>

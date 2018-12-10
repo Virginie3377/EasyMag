@@ -1,0 +1,29 @@
+secteur_index:
+    path:     /
+    defaults: { _controller: "EasyMagOrderBundle:Sector:index" }
+    methods:  GET
+
+secteur_show:
+    path:     /{id}/show
+    defaults: { _controller: "EasyMagOrderBundle:Sector:show" }
+    methods:  GET
+
+secteur_new:
+    path:     /new
+    defaults: { _controller: "EasyMagOrderBundle:Sector:new" }
+    methods:  [GET, POST]
+
+secteur_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EasyMagOrderBundle:Sector:edit" }
+    methods:  [GET, POST]
+
+secteur_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EasyMagOrderBundle:Sector:delete" }
+    methods:  DELETE
+
+secteur_index_year:
+    path:     /{datepublication}
+    defaults: { _controller: "EasyMagOrderBundle:Sector:indexYear" }
+    methods:  GET

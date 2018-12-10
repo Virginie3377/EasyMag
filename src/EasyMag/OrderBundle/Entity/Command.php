@@ -4,6 +4,8 @@ namespace EasyMag\OrderBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+
+
 /**
  * Command
  *
@@ -12,6 +14,15 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Command
 {
+    const CIVILITE_MR = "Mr.";
+    const CIVILITE_MME = "Mme.";
+
+    public static $civilites = [
+        'Mr.' => self::CIVILITE_MR,
+        'Mme.' => self::CIVILITE_MME
+    ];
+
+
     /**
      * @var int
      *
@@ -27,6 +38,13 @@ class Command
      * @ORM\Column(name="date", type="datetime")
      */
     private $date;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="commandnumber", type="string", length=255)
+     */
+    private $commandnumber;
 
     /**
      * @var string
@@ -48,10 +66,16 @@ class Command
     private $documents;
 
     /**
-     * @ORM\OneToMany(targetEntity="EasyMag\OrderBundle\Entity\Command_Product", mappedBy="command")
+     * @ORM\ManyToOne(targetEntity="EasyMag\OrderBundle\Entity\Product", inversedBy="commands", cascade={"persist"})
      *
      */
-    private $commands_product;
+    private $product;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="EasyMag\OrderBundle\Entity\Sector", inversedBy="commands")
+     *
+     */
+    private $sector;
 
 
     /**
@@ -89,6 +113,30 @@ class Command
     }
 
     /**
+     * Set coomandnumber
+     *
+     * @param string $commandnumber
+     *
+     * @return Command
+     */
+    public function setCommandnumber($commandnumber)
+    {
+        $this->commandnumber = $commandnumber;
+
+        return $this;
+    }
+
+    /**
+     * Get commandnumber
+     *
+     * @return string
+     */
+    public function getCommandnumber()
+    {
+        return $this->commandnumber;
+    }
+
+    /**
      * Set status
      *
      * @param string $status
@@ -117,7 +165,6 @@ class Command
     public function __construct()
     {
         $this->documents = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->commands_product = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
@@ -178,37 +225,53 @@ class Command
         return $this->documents;
     }
 
+
     /**
-     * Add commandsProduct
+     * Set product
      *
-     * @param \EasyMag\OrderBundle\Entity\Command_Product $commandsProduct
+     * @param \EasyMag\OrderBundle\Entity\Product $product
      *
      * @return Command
      */
-    public function addCommandsProduct(\EasyMag\OrderBundle\Entity\Command_Product $commandsProduct)
+    public function setProduct(\EasyMag\OrderBundle\Entity\Product $product = null)
     {
-        $this->commands_product[] = $commandsProduct;
+        $this->product = $product;
 
         return $this;
     }
 
     /**
-     * Remove commandsProduct
+     * Get product
      *
-     * @param \EasyMag\OrderBundle\Entity\Command_Product $commandsProduct
+     * @return \EasyMag\OrderBundle\Entity\Product
      */
-    public function removeCommandsProduct(\EasyMag\OrderBundle\Entity\Command_Product $commandsProduct)
+    public function getProduct()
     {
-        $this->commands_product->removeElement($commandsProduct);
+        return $this->product;
     }
 
     /**
-     * Get commandsProduct
+     * Set sector
      *
-     * @return \Doctrine\Common\Collections\Collection
+     * @param \EasyMag\OrderBundle\Entity\Sector $sector
+     *
+     * @return Command
      */
-    public function getCommandsProduct()
+    public function setSector(\EasyMag\OrderBundle\Entity\Sector $sector = null)
     {
-        return $this->commands_product;
+        $this->sector = $sector;
+
+        return $this;
     }
+
+    /**
+     * Get sector
+     *
+     * @return \EasyMag\OrderBundle\Entity\Sector
+     */
+    public function getSector()
+    {
+        return $this->sector;
+    }
+
 }

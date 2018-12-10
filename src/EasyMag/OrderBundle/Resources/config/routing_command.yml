@@ -1,0 +1,25 @@
+command_index:
+    path:     /
+    defaults: { _controller: "EasyMagOrderBundle:Command:index" }
+    methods:  [GET, POST]
+
+command_show:
+    path:     /{id}/show
+    defaults: { _controller: "EasyMagOrderBundle:Command:show" }
+    methods:  GET
+
+command_new:
+    path:     /new
+    defaults: { _controller: "EasyMagOrderBundle:Command:new" }
+    methods:  [GET, POST]
+
+command_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EasyMagOrderBundle:Command:edit" }
+    methods:  [GET, POST]
+
+command_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EasyMagOrderBundle:Command:delete" }
+    methods:  DELETE
+
